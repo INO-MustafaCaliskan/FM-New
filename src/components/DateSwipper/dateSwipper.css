@@ -1,0 +1,64 @@
+.date-slider-card{
+    width:60px !important;
+    margin-right:0 !important;
+    padding: 0 !important;
+}
+.date-swipper-card-body{
+    margin:0 !important;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+    
+}
+.meeting-datepicker {
+    margin: 0 10px;
+    padding: 0 10px;
+}
+.swiper-button-prev:after {
+    font-size: 1.5rem;
+    color: #f97a29;
+}
+.schedule-main-swiper  {
+ 
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+} 
+.schedule-swiper{
+ position: initial !important;
+}
+
+.swiper-button-next:after {
+    font-size: 1.5rem;
+    color: #f97a29;
+}
+.meeting-datepicker .card {
+    border: none;
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+.meeting-datepicker .swiper-button-next {
+    right: 0% !important;
+}
+.meeting-datepicker .swiper-button-prev {
+    left: 0% !important;
+}
+  
+  .calendar-card .active {
+    background: #f97a29;
+    color: #fff;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after {
+
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+  
+
+
+  .clendar-card{
+    padding: 5px 0px;
+  }
+

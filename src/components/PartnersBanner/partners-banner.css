@@ -1,0 +1,42 @@
+.sponsor-logo {
+    display: flex;
+    max-height: 100px;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    object-fit: contain;
+    filter: grayscale(0.5);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  
+}
+
+.sponsor-logo:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.sponsor-banner {
+     padding:20px 0px ;
+
+ 
+}
+
+
+.sponsor-banner.static {
+  display: flex;
+  justify-content: center;
+}
+
+.static-sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.static-sponsor-item img {
+  max-height: 90px;
+  object-fit: contain;
+}

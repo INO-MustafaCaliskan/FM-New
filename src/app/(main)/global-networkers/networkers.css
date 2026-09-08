@@ -1,0 +1,275 @@
+.btn:disabled {
+  opacity: 0.25;
+}
+
+/* .btn-primary {
+    width: 100%; height: 3.2rem;
+    background-color: #EF6C00;
+    border-color: #E65100;
+  }
+  .btn-primary:hover {
+    background-color: #E65100;
+    border-color: #E65100;
+  }
+  .btn-outline-primary {
+    width:100%; height: 3.2rem;
+    padding: .75rem 1.5rem;
+    color: #EF6C00;
+    border-color: #EF6C00;
+  }
+  .btn-outline-primary:hover {
+      color: #E65100;
+    background-color: rgba(230, 81, 0, 0.25);
+    border-color: #E65100;
+  } */
+
+.ft-btn-call,
+.ft-btn-wait {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.ft-btn-call,
+.ft-btn-call:active {
+  background-color: #7cb342 !important;
+  border-color: #689f38 !important;
+  color: #fff !important;
+}
+
+.ft-btn-call:hover {
+  color: #fff;
+  background-color: #7cb342 !important;
+  border-color: #689f38 !important;
+  opacity: 0.9;
+}
+
+.ft-btn-wait {
+  background-color: #fbc02d;
+  border-color: #f9a825;
+}
+
+.ft-btn-wait:hover {
+  background-color: #f9a825;
+}
+
+.ft-btn-message {
+  border-color: #689f38 !important;
+  color: #689f38 !important;
+}
+
+.ft-btn-message:hover {
+  background-color: #7cb342;
+  border-color: #689f38;
+  color: #fff !important;
+}
+
+.ft-btn-message:active {
+  color: #689f38 !important;
+}
+
+.moreButtonArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: -7rem;
+  gap: 6px;
+}
+
+.moreButtonArea p {
+  font-size: 11px;
+  font-weight: 400;
+  color: #5d5d5d;
+  margin-top: 5px;
+}
+
+.moreButtonArea button {
+  border: 1.5px solid;
+  padding: 1rem;
+  font-size: 0.8rem;
+  border-color: #f97a29;
+  color: #f97a29;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+.moreButtonArea button:hover {
+  background-color: #f97a29;
+  color: #fff;
+}
+
+.total-networkers-count {
+  font-weight: 600;
+}
+
+.confirm-modal {
+  z-index: 9999;
+  background-color: rgb(0 0 0 / 51%);
+}
+
+.confirm-modal-body {
+  height: 100px;
+}
+
+.confirm-modal-footer {
+  width: 100%;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.confirm-modal-footer > button {
+  width: 100%;
+}
+
+.network-filter-btn button {
+  flex: 1;
+}
+
+.network-filter-btn button {
+  flex: 1;
+}
+
+.networkers-section {
+  margin-top: 30px;
+}
+
+.networker-card .n-card-avatar {
+  width: 100px;
+}
+
+.networker-card .favorite-btn {
+  width: auto;
+  min-width: 100px;
+}
+
+.networker-card .favorite-btn .ino-button {
+  height: 2.5rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding: 0.4rem 0.8rem;
+}
+
+.global-networkers-card {
+  position: relative;
+}
+
+/* Welcome Section for Unauthenticated Users */
+.networkers-welcome-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 1rem;
+}
+
+.welcome-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.welcome-subtitle {
+  font-size: 1.1rem;
+  color: #515151;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.welcome-description {
+  font-size: 1rem;
+  color: #767676;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* Tabs header wrapper with action buttons */
+.tabs-header-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.tabs-header-wrapper .nav-tabs {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  .tabs-header-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* .actions-container {
+    justify-content: flex-end;
+  } */
+}
+
+@media (max-width: 768px) {
+  .tabs-header-wrapper {
+    gap: 0.75rem;
+  }
+  /* 
+  .networker-actions-bar {
+    align-items: start;
+    justify-content: start;
+    flex-shrink: 0;
+    align-self: start;
+    margin-top: 0.25rem;
+    position: relative;
+    top: 0rem;
+    right: 0rem;
+  } */
+
+  /* .actions-container {
+    justify-content: start;
+    align-items: start;
+    gap: 0.5rem;
+  } */
+}
+/* 
+@media (max-width: 576px) {
+  .actions-container {
+    
+    gap: 0.5rem;
+  }
+} */
+
+
+
+.btn-network-remove svg {
+  color: #6c757d !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.btn-network-remove:hover svg {
+  color: #d32f2f !important;
+}
+
+.ft-profile-link {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.ft-profile-link:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+
+.ft-profile-link-text {
+  transition: color 0.2s ease;
+}
+
+.ft-profile-link-text:hover {
+  color: #EF6C00 !important;
+}
+
+.btn-network-add {
+  transition: all 0.2s ease;
+}
+
+.btn-network-add:hover svg {
+  color: #EF6C00 !important;
+}
+

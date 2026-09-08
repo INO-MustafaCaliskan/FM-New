@@ -1,0 +1,48 @@
+.empty-state{
+    min-height:250px;
+
+    height: 100%;
+   
+    border-radius:16px;
+    /* background:#f8fbff; */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:28px;
+}
+
+.empty-state-icon{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    border:2px dashed #b9cbf4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#2f66ff;
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.empty-state h6{
+    margin-bottom:10px;
+    font-size:18px;
+    font-weight:700;
+    color:#1f2937;
+}
+
+.empty-state p{
+    margin:0;
+    max-width:280px;
+    line-height:1.6;
+    color:#64748b;
+    font-size:14px;
+}
+
+
+
+.empty-state.membership{
+    background:#f6f9ff;
+}

@@ -1,0 +1,16 @@
+.dropdown_menu{
+    padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
+    border-radius: var(--bs-dropdown-border-radius);
+}
+
+.dropdown_menu > a{
+    padding: 0.5rem var(--bs-dropdown-item-padding-x);
+}
+
+.dropdown_menu > a:active{
+    background-color: var(--feed-main-color);
+}
+
+.dropdown_menu > a:hover{
+    background-color: #f19d68;
+}

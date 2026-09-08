@@ -1,0 +1,56 @@
+.check-icon {
+  color: #f97a29;
+  font-size: 20px;
+}
+.main-hero-content {
+ 
+}
+.home-showcase__buttons .ino-button-outline {
+  width: 160px;
+  height: 50px;
+  margin-left: 16px;
+}
+.home-showcase__desc {
+  text-align: justify !important;
+  line-height: 24px !important;
+}
+.home-showcase__buttons .ino-button {
+  height: 50px;
+  width: 160px;
+}
+@media screen and (min-width: 991px) {
+  .home-showcase-title {
+    max-width: 526px;
+    line-height: 52px;
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+  }
+}
+@media screen and (max-width: 992px) {
+  .home-showcase-title {
+    margin-bottom: 16px;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  .home-showcase__buttons {
+    padding-bottom: 0;
+  }
+}
+.main-hero-content_span {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.imageContainer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.homeShowcaseImage {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,11 @@
+.feed_content span{
+    line-height: 18px;
+}
+
+.feed_content span[data-emoji]{
+    font-size: 18px;
+}
+
+.feed_content > div > p {
+    margin-bottom: 0;
+}

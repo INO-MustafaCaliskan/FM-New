@@ -1,0 +1,20 @@
+export type OnlineNetworker = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  imageUrl: string;
+  fTalkId: number;
+  companyName: string;
+  categoryName: string | null;
+  jobTitleName: string | null;
+  countryName: string;
+  countryFlag: string;
+  cityName: string;
+  meetingCount: number;
+  isFavorite: boolean;
+  isVerified: boolean;
+  onlineStatus: number;
+  onlineStatusName: string;
+  lastAccessDate: string;
+  timeZone: string;
+};

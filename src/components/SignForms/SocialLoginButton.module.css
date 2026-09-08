@@ -1,0 +1,105 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 6px;
+  border: 1px solid #dadce0;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3c4043;
+  letter-spacing: 0.25px;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.btn:hover:not(:disabled) {
+  background-color: rgba(66,133,244,.08);
+  border-color: rgba(66,133,244,.3);
+}
+
+.btn:active:not(:disabled) {
+  background-color: #f1f3f9;
+  box-shadow: none;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #4285f4;
+  outline-offset: 2px;
+}
+
+/* Apple provider overrides */
+.apple {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+}
+
+.apple:hover:not(:disabled) {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.apple:active:not(:disabled) {
+  background-color: #333;
+}
+
+.apple:focus-visible {
+  outline-color: #000;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.label {
+  /* flex: 1; */
+  text-align: center;
+  /* optical centering — compensate for icon width */
+  margin-right: 18px;
+}
+
+/* Spinner */
+.spinner {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: spin 0.7s linear infinite;
+}
+
+.google .spinner {
+  border-color: #4285f4;
+  border-top-color: transparent;
+}
+
+.apple .spinner {
+  border-color: #fff;
+  border-top-color: transparent;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,58 @@
+.card_container {
+  padding : 8px 0;
+  border-radius: 14px;
+  transition: background-color 0.15s ease;
+}
+
+.user_name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--feed-main-text-color);
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action_btn {
+  height: 28px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.action_btn:active {
+  transform: scale(0.97);
+}
+
+.view_profile {
+  border: 1px solid #e0e0e0;
+  background-color: #FAFAFB;
+  color: var(--feed-main-text-color);
+}
+
+.view_profile:hover {
+  background: #fff5ef;
+  border-color: #f3d1bb;
+  color: #f97a29;
+}
+
+.chat_btn {
+  background-color: #F4F9EC;
+  border: 1px solid #C5E194;
+  color: #7cb342;
+}
+
+.chat_btn:hover {
+  background-color: #E8F4D9;
+  border-color: #7cb342;
+  color: #6a9a38;
+}
+
+.chat_btn svg {
+  color: #7cb342;
+}

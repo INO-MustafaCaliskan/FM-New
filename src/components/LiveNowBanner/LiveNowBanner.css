@@ -1,0 +1,287 @@
+.live-now-banner__grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  justify-content: flex-start;
+}
+.live-now-banner {
+  padding-top: 8rem !important;
+}
+
+@media (max-width: 992.3px) {
+  .live-now-banner__grid {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .live-now-banner__card {
+    border-radius: 12px !important;
+    border-right: none !important;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+    flex: unset;
+  }
+
+  .live-now-banner__card:last-child {
+    border-bottom: none;
+  }
+}
+
+.live-now-banner__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  min-width: 0;
+  position: relative;
+  padding: 2.25rem 1.25rem;
+  border-radius: 0;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  gap: 0.5rem;
+  border-right: 1px solid #f0f0f0;
+}
+
+.live-now-banner__card:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.live-now-banner__card:last-child {
+  border-radius: 0 12px 12px 0;
+  border-right: none;
+}
+
+.live-now-banner__icon {
+  font-size: 1.6rem;
+  color: #e65100;
+  display: block;
+  line-height: 1;
+}
+
+.live-now-banner__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  background: #fff3e0;
+}
+
+.live-now-banner__live-badge {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.live-now-banner__live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  animation: pulse-live 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.live-now-banner__live-text {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #22c55e;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.live-now-banner__icon--live {
+  color: #e53935;
+  animation: pulse-live 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-live {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.live-now-banner__value {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #212121;
+  line-height: 1.2;
+}
+
+.live-now-banner__live-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+  gap: 12px;
+}
+
+.live-now-banner__live-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.live-now-banner__live-left .live-now-banner__label {
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.live-now-banner__live-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.live-now-banner__avatars {
+  display: flex;
+  align-items: center;
+}
+
+.live-now-banner__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  margin-left: -10px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.live-now-banner__avatars .live-now-banner__avatar:first-child {
+  margin-left: 0;
+}
+
+.live-now-banner__avatar-rest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background-color: #e65100;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  margin-left: -10px;
+  border: 2px solid #fff;
+  white-space: nowrap;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.live-now-banner__total-label {
+  font-size: 0.7rem;
+  color: #9e9e9e;
+  font-weight: 500;
+}
+
+.live-now-banner__label {
+  font-size: 0.82rem;
+  color: #424242;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* Stat kartları (2-5. kart) */
+.live-now-banner__card--stat {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 2.25rem 1.25rem;
+}
+
+.live-now-banner__card--stat .live-now-banner__icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.live-now-banner__avatars--stat {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.live-now-banner__avatars--vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  flex-shrink: 0;
+  gap: -6px;
+}
+
+.live-now-banner__avatars--vertical .live-now-banner__avatar {
+  margin-left: 0;
+  margin-top: -6px;
+}
+
+.live-now-banner__avatars--vertical .live-now-banner__avatar:first-child {
+  margin-top: 0;
+}
+
+.live-now-banner__avatar-rest--sm {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  font-size: 0.6rem;
+}
+
+.live-now-banner__stat-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1px;
+}
+
+.live-now-banner__card--stat .live-now-banner__value {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #212121;
+  line-height: 1.2;
+}
+
+.live-now-banner__card--stat .live-now-banner__label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #424242;
+  white-space: nowrap;
+}
+
+.live-now-banner__subtitle {
+  font-size: 0.78rem;
+  color: #9e9e9e;
+  white-space: nowrap;
+}
+
+.live-now-banner__subtitle-highlight {
+  font-weight: 700;
+  color: #e65100;
+}

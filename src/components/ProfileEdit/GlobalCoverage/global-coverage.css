@@ -1,0 +1,91 @@
+.global-covarage-wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+/* LEFT 40% */
+.global-covarage-left {
+  flex: 3;
+}
+
+/* RIGHT 60% */
+.global-covarage-right {
+  flex: 7;
+}
+
+/* INPUT */
+.global-covarage-left input {
+  width: 100%;
+}
+
+/* SELECT */
+.global-covarage-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* LIST */
+.global-covarage-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.global-coverage-limit {
+  margin-top: 8px;
+  color: #dc3545;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ITEM */
+.global-covarage-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f1f1d5;
+  padding: 10px 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  position: relative;
+  transition: 0.2s;
+}
+
+/* FLAG */
+.global-covarage-flag {
+  font-size: 16px;
+}
+
+/* REMOVE BUTTON */
+.global-covarage-remove {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  display: none;
+}
+
+/* HOVER REMOVE */
+.global-covarage-item:hover .global-covarage-remove {
+  display: block;
+}
+
+/* disabled select */
+.global-covarage-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1200px) {
+
+  .global-covarage-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+}

@@ -1,0 +1,49 @@
+.cancel-meeting-modal .modal-content {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.cancel-meeting-modal .modal-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+.cancel-meeting-modal .modal-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.cancel-meeting-modal .modal-body {
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.cancel-modal-footer {
+  border-top: 1px solid #e0e0e0;
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancel-request-btn {
+  background-color: #dc3545 !important;
+  color: white !important;
+  border-color: #dc3545 !important;
+}
+
+.cancel-request-btn:hover {
+  background-color: white !important;
+  color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+.cancel-request-btn:focus,
+.cancel-request-btn:active {
+  background-color: white !important;
+  color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}

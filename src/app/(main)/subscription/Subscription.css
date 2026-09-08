@@ -1,0 +1,52 @@
+
+.transaction-table {
+    line-height: 1.5;
+    /* margin-top: 1rem; */
+}
+
+.transaction-table thead{
+    color: #fff;
+    background-color: #EF6C00;
+    line-height: 2.4rem;
+}
+
+.transaction-table thead th{
+    background-color: inherit;
+    color: white;
+}
+
+.disabled-link {
+    pointer-events: none;
+    color: gray;
+    text-decoration: none;
+}
+
+.subscription-pricing-btn{
+  display: inline-flex;
+  align-items: center;
+  height: 50px !important;
+  gap: 10px;
+  padding: 12px 28px;
+  border: 2px solid #f97a29;
+  border-radius: 0.375rem;
+  background: #fff;
+  color: #f97a29;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .subscription-pricing-btn {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.subscription-pricing-btn:hover {
+  background: #f97a29;
+  color: #fff;
+}

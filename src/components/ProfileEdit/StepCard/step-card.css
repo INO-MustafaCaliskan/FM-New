@@ -1,0 +1,199 @@
+.profile-edit-card {
+
+    background: #fff;
+
+    border-radius: 8px;
+
+    border: 1px solid #ECECEC;
+
+    padding: 20px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .04);
+
+}
+
+.profile-edit-card-header {
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+
+}
+
+.profile-edit-card-header-left {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+}
+
+.profile-edit-card-step {
+
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 50%;
+
+    background-color: #fff;
+    color: #E65100;
+    border-color: #E65100;
+
+    border: 1px solid #E65100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+.profile-edit-card-title {
+
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #222;
+
+}
+
+.profile-edit-card-description {
+
+    margin-top: 6px;
+
+    color: #777;
+
+    font-size: 15px;
+
+}
+
+.profile-edit-save-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    height: 48px;
+
+    padding: 0 28px;
+
+    background-color: #fff;
+    color: #E65100;
+    border-color: #E65100;
+
+    border: 1px solid #E65100;
+
+    border-radius: 0.375rem;
+
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+}
+
+.profile-edit-save-button:hover {
+
+    background: #EF6C00;
+
+    color: #fff;
+    border-color: #E65100;
+}
+
+.profile-edit-save-button-icon {
+    font-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.profile-edit-save-button:hover .profile-edit-save-button-icon {
+    transform: translateX(4px);
+}
+
+.profile-edit-save-button:disabled {
+
+    opacity: .6;
+
+    cursor: not-allowed;
+
+}
+
+.profile-edit-card-body {
+
+    width: 100%;
+
+}
+
+.profile-edit-card-footer {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 24px;
+
+}
+
+@media(max-width:992px) {
+
+    .profile-edit-card {
+
+        padding: 20px;
+
+    }
+
+    .profile-edit-card-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+    .profile-edit-save-button {
+
+        width: 100%;
+
+    }
+
+    .profile-edit-card-footer {
+
+        justify-content: stretch;
+
+    }
+
+
+    .profile-edit-card-description {
+
+        max-width: 300px;
+    }
+
+}
+
+@media(max-width:1200px) {
+
+    .profile-edit-card-description {
+
+        max-width: 300px;
+    }
+
+}

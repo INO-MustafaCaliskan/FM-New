@@ -1,0 +1,55 @@
+.description {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #555;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0 0;
+}
+
+.dividerLine {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.dividerText {
+  padding: 0 0.5rem;
+  color: #888;
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.iconWrapper {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.signupNotice {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.signupLink {
+  color: #EF6C00;
+  font-weight: 600;
+}
+
+.forgot_link {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.forgot_link:hover {
+  color: #f97a29;
+}

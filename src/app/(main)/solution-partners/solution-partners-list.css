@@ -1,0 +1,143 @@
+.solution-partners-card {
+    border-radius: 12px;
+    max-height: 500px !important;
+    justify-content: center;
+
+
+}
+.solution-partners-card > div > h5 {
+    color: #EF6C00;
+}
+
+.solution-partners-avatar {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border: 1px solid #e0e0e094;
+      border-radius: 12px;
+      background-color: #fbfbfb;
+      padding:4px;
+}
+
+.solution-partners--name {
+    font-weight: 600;
+}
+
+.solution-partners-title {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.solution-partners-content {
+    font-size: 15px;
+    color: #444;
+    text-align: justify;
+}
+
+.solution-partners-search-container {
+    display: flex;
+    gap: 10px;
+}
+
+.solution-partners-search-input-wrapper {
+    position: relative;
+}
+
+.solution-partners-search-input {
+    padding: 10px 15px 10px 35px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.solution-partners-search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+}
+.solution-partners-text{
+    text-align: justify;
+}
+.solution-partners-search-button{
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+       background-color: #EF6C00;
+    color: #fff;
+    border: 1px solid #E65100;
+}
+
+.solution-partners-read-more {
+
+    font-size: 15px;
+    border-radius: 4px;
+    color: #6c757d;
+
+
+}
+.solution-partners-pagination{
+    margin-bottom: 30px;
+}
+.solution-partners-read-more:hover {
+
+    color: #EF6C00;
+
+
+}
+ .solution-partners-card-body {
+        height: 280px !important;
+    }
+
+
+@media (max-width: 768px) {
+    .solution-partners-card {
+        height: auto !important;
+      
+    }
+
+
+    .solution-partners-card-body {
+        height: 260px !important;
+    }
+}
+/* 
+@media (min-width: 768.1px) and (max-width: 1000px) {
+    .solution-partners--card {
+
+        padding: 15px;
+    }
+
+ 
+    .image-area {
+          height: 140px !important;
+    }
+    
+}
+@media (min-width: 1000.1px) and (max-width: 1350px) {
+    .solution-partners--card {
+
+        padding: 15px;
+    }
+
+
+     .solution-partners-card-body {
+       
+    }
+}
+@media (min-width: 992.1px) and (max-width: 1000px) {
+
+     .solution-partners-card-body {
+      
+    }
+}
+
+@media (min-width: 1350.1px) and (max-width: 1400px) {
+
+ 
+      .solution-partners-card-body {
+       
+    }
+
+} */

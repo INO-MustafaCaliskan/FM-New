@@ -1,0 +1,29 @@
+.our-soluton-partners {
+  padding-bottom: 50px;
+}
+.our-solution-logo {
+  padding: 25px 50px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.our-solution-logo img {
+  transition: transform 0.25s ease;
+}
+
+.our-solution-logo:hover img {
+  transform: scale(1.08);
+}
+
+
+.solution-partner-btn{
+    background: #ffeeb7;
+    border-radius: 6px;
+    min-width: 150px;
+    padding:7px 15px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, .25);
+}
+.solution-partner-btn:hover {
+    border-radius: 6px;
+    background: #ffeeb79a;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.25);
+}

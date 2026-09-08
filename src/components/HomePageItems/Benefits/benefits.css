@@ -1,0 +1,11 @@
+.benefits-title{
+    position: relative;
+    padding-left: 36px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.description-benefits {
+    margin-top: -15px;
+    font-size: 16px;
+    line-height: 24px;
+}

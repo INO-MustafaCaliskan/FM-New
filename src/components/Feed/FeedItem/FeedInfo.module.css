@@ -1,0 +1,26 @@
+.info_item{
+    color: var(--feed-main-text-color);
+    font-size: 12px;
+}
+
+.info_item.liked{
+    color : var(--bs-danger) !important;
+}
+
+.info_item:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.info_item svg{
+    vertical-align: text-top;
+    color: #6B6C74;
+}
+
+.info_item svg:hover{
+    color: #5B4FE8;
+}
+
+.info_item.liked svg{
+    color: var(--bs-danger) !important;
+}

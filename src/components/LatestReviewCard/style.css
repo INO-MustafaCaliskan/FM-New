@@ -1,0 +1,11 @@
+.latest-review-card {
+  min-height: 420px;
+  border: 1px solid black;
+  min-width: 300px;
+}
+
+@media (max-width: 1200px) {
+  .latest-review-card {
+    width: 100%;
+  }
+}

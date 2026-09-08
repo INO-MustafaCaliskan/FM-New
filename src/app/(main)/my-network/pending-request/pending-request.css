@@ -1,0 +1,225 @@
+/* ── Scoped Styles for Pending Requests Page ─────────────── */
+
+/* ── Back to My Network Link ────────────────────────────── */
+.pending-requests-page .back-to-network-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  padding: 4px 10px 4px 6px;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+  margin-bottom: 6px;
+  width: fit-content;
+}
+
+.pending-requests-page .back-to-network-link .back-arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.pending-requests-page .back-to-network-link:hover {
+  color: #EF6C00 !important;
+  background-color: #fff7ed;
+  text-decoration: none !important;
+}
+
+.pending-requests-page .back-to-network-link:hover .back-arrow-icon {
+  transform: translateX(-3px);
+}
+
+/* ── Request Card & Items ─────────────────────────────────── */
+.pending-requests-page .request-card {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+  background-color: #ffffff !important;
+  overflow: hidden;
+}
+
+.pending-requests-page .request-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  gap: 16px;
+  transition: background-color 0.15s ease;
+}
+
+.pending-requests-page .request-item:last-child {
+  border-bottom: none;
+}
+
+.pending-requests-page .request-item:hover {
+  background-color: #fafafa;
+}
+
+.pending-requests-page .request-user-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.pending-requests-page .request-avatar-wrap {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.pending-requests-page .request-avatar-img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #f3f4f6;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.pending-requests-page .request-avatar-wrap:hover .request-avatar-img {
+  transform: scale(1.05);
+}
+
+.pending-requests-page .request-user-details {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.pending-requests-page .profile-name-link {
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.pending-requests-page .profile-name-link:hover {
+  color: #ef6c00 !important;
+}
+
+.pending-requests-page .request-meta-text {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pending-requests-page .request-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ── Action Buttons ───────────────────────────────────────── */
+.pending-requests-page .btn-req-accept {
+  background: #f97a29 !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  padding: 8px 18px !important;
+  border: 1px solid #f97a29 !important;
+  white-space: nowrap !important;
+  box-shadow: 0 1px 2px rgba(249, 122, 41, 0.2) !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 6px !important;
+  height: 38px;
+  box-sizing: border-box !important;
+}
+
+.pending-requests-page .btn-req-accept:hover {
+  background: #e65100 !important;
+  border-color: #e65100 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(230, 81, 0, 0.3) !important;
+}
+
+.pending-requests-page .btn-req-accept:active {
+  background: #bf4f0d !important;
+  border-color: #bf4f0d !important;
+}
+
+.pending-requests-page .btn-req-decline {
+  background: #ffffff !important;
+  color: #ef4444 !important;
+  border-radius: 8px !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  padding: 8px 18px !important;
+  border: 1.5px solid #fecaca !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 6px !important;
+  height: 38px;
+  box-sizing: border-box !important;
+}
+
+.pending-requests-page .btn-req-decline:hover {
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+  border-color: #f87171 !important;
+}
+
+.pending-requests-page .btn-req-decline:active {
+  background: #fee2e2 !important;
+}
+
+/* ── Mobile Responsive (<= 640px) ─────────────────────────── */
+@media (max-width: 640px) {
+  .pending-requests-page .request-item {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 14px !important;
+    gap: 12px !important;
+  }
+
+  .pending-requests-page .request-user-info {
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .pending-requests-page .request-avatar-img {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .pending-requests-page .request-actions {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    margin-top: 4px !important;
+  }
+
+  .pending-requests-page .btn-req-accept,
+  .pending-requests-page .btn-req-decline {
+    flex: 1 1 50% !important;
+    width: 50% !important;
+    min-width: 0 !important;
+    max-width: 50% !important;
+    height: 38px !important;
+    padding: 8px 10px !important;
+    font-size: 0.82rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+}

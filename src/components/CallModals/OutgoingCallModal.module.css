@@ -1,0 +1,139 @@
+.modalBody {
+    background: radial-gradient(circle at 20% 10%, rgba(239, 108, 0, 0.12), transparent 45%),
+        radial-gradient(circle at 80% 20%, rgba(239, 108, 0, 0.08), transparent 50%),
+        #fff;
+    border-radius: 16px;
+}
+
+.modalContent {
+    position: relative;
+}
+
+.userName {
+    color: rgb(84, 84, 84);
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 14px;
+}
+
+.statusBadge {
+    color: rgb(84, 84, 84);
+    font-size: 16px;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background-color: rgba(239, 108, 0, 0.08);
+    border: 1px solid rgba(239, 108, 0, 0.18);
+    position: relative;
+    margin-top: 4px;
+}
+
+.statusActive {
+    padding-left: 36px;
+}
+
+.statusActive::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #EF6C00;
+    box-shadow: 0 0 0 0 rgba(239, 108, 0, 0.5);
+    animation: statusPulse 1.6s ease-out infinite;
+}
+
+.avatarContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatarContainer::before,
+.avatarContainer::after {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    border: 2px solid rgba(239, 108, 0, 0.45);
+    box-shadow: 0 0 18px rgba(239, 108, 0, 0.25);
+    animation: avatarHalo 2.4s ease-out infinite;
+    pointer-events: none;
+}
+
+.avatarContainer::after {
+    inset: -18px;
+    border-color: rgba(239, 108, 0, 0.28);
+    animation-delay: 1.2s;
+}
+
+.buttonsContainer {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.button {
+    font-size: 1em;
+    color: #fff;
+    background-color: #6e7881;
+    padding: 1em 1.6em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.confirmButton {
+    background-color: #7CB342;
+}
+
+.rejectButton {
+    background-color: #E53935;
+}
+
+.preparingText {
+    margin-top: 6px;
+    color: #6e7881;
+    font-size: 14px;
+}
+
+@keyframes avatarHalo {
+    0% {
+        transform: scale(0.98);
+        opacity: 0.8;
+    }
+    60% {
+        transform: scale(1.12);
+        opacity: 0.25;
+    }
+    100% {
+        transform: scale(1.18);
+        opacity: 0;
+    }
+}
+
+@keyframes statusPulse {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(239, 108, 0, 0.5);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(239, 108, 0, 0);
+        opacity: 0.85;
+    }
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 0 rgba(239, 108, 0, 0);
+        opacity: 0;
+    }
+}

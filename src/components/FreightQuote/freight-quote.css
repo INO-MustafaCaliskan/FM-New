@@ -1,0 +1,228 @@
+.freight-quote-section {
+  position: relative;
+}
+
+.freight-quote-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.freight-quote-subtitle {
+  margin-top: 10px;
+  color: #5f6572;
+  max-width: 760px;
+}
+
+.freight-quote-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #a04f12;
+  border: 1px solid #ffd8be;
+  background: linear-gradient(180deg, #fff7f0 0%, #ffefe2 100%);
+}
+
+.freight-quote-live-pill::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f97a29;
+  box-shadow: 0 0 0 4px rgba(249, 122, 41, 0.16);
+}
+
+.freight-quote-all-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #f97a29 0%, #ff9a58 100%);
+  box-shadow: 0 10px 20px rgba(249, 122, 41, 0.2);
+}
+
+.freight-quote-all-btn:hover,
+.freight-quote-all-btn:focus {
+  background: linear-gradient(135deg, #ef6f1d 0%, #ff8a43 100%);
+}
+
+.freight-quote-table-shell {
+  border-radius: 16px;
+  border: 1px solid #f0e5dc;
+  background: radial-gradient(circle at top right, #fff7f0 0%, #ffffff 35%);
+  box-shadow: 0 12px 30px rgba(44, 34, 22, 0.08);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.freight-quote-table {
+  margin-bottom: 0;
+}
+
+.freight-quote-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid #ecd6c3;
+  background: #fff7f0;
+  color: #5a3b26;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.freight-quote-table tbody tr {
+  transition: background-color 0.25s ease;
+}
+
+.freight-quote-table tbody tr:hover {
+  background-color: #fff8f2;
+}
+
+.freight-quote-location {
+  min-width: 178px;
+  color: #243447;
+  font-size: 14px;
+}
+
+.freight-quote-flag {
+  border-radius: 4px;
+  border: 1px solid #efe4da;
+  object-fit: cover;
+}
+
+.freight-quote-mode {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.freight-quote-mode--road {
+  color: #915907;
+  background-color: #ffe8c9;
+}
+
+.freight-quote-mode--sea {
+  color: #165070;
+  background-color: #dff2ff;
+}
+
+.freight-quote-mode--air {
+  color: #4f3f98;
+  background-color: #ece8ff;
+}
+
+.freight-quote-details {
+  max-width: 280px;
+  color: #556070;
+}
+
+.freight-quote-detail-tag-cell {
+  min-width: 110px;
+}
+
+.freight-quote-requested {
+  color: #1ea963;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.freight-quote-cell-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.freight-quote-cell-icon {
+  color: #2f6fe4;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.freight-quote-cell-icon--square {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid #7ea8f3;
+  border-radius: 1px;
+  display: inline-block;
+  background: transparent;
+}
+
+.freight-quote-mode-text {
+  color: #243447;
+  font-weight: 600;
+}
+
+.freight-quote-details-main {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.freight-quote-detail-tag {
+  display: inline-block;
+  color: #2f6fe4;
+  font-weight: 600;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+}
+
+.freight-quote-view-btn {
+  border-radius: 8px;
+  font-weight: 600;
+  border-color: #f7b689;
+  color: #bf5b12;
+  background-color: #fff5ed;
+  transition: all 0.2s ease;
+}
+
+.freight-quote-view-btn:hover,
+.freight-quote-view-btn:focus {
+  border-color: #ef6f1d;
+  color: #ffffff;
+  background: linear-gradient(135deg, #f97a29 0%, #ff9a58 100%);
+  box-shadow: 0 8px 16px rgba(249, 122, 41, 0.22);
+}
+
+.freight-quote-view-btn:focus-visible {
+  box-shadow: 0 0 0 0.2rem rgba(249, 122, 41, 0.28);
+}
+
+.freight-quote-table-shell::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.freight-quote-table-shell::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.freight-quote-table-shell::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .freight-quote-subtitle {
+    text-align: left;
+  }
+
+  .freight-quote-all-btn {
+    width: 100%;
+  }
+
+  .freight-quote-table-shell {
+    max-height: 360px !important;
+  }
+}

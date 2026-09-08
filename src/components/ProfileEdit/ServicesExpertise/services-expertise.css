@@ -1,0 +1,194 @@
+/* ═══════════════════════════════════════════════════════════
+   Services & Expertise – 3-column checkbox grid
+   ═══════════════════════════════════════════════════════════ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ── Column ── */
+.service-column {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* ── Column Header ── */
+.service-column-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.service-column-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 40px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.service-column-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.service-column-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.service-column-subtitle {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── Group colour tokens ── */
+
+/* Transport Modes – Blue */
+.group-transport .service-column-header-icon {
+  background: #1F4DB7;
+}
+.group-transport .service-column-title {
+  color: #1F4DB7;
+}
+.group-transport .service-icon {
+  color: #1F4DB7;
+}
+.group-transport .form-check-input:checked {
+  background-color: #1F4DB7 !important;
+  border-color: #1F4DB7 !important;
+}
+
+/* Specialized Solutions – Green */
+.group-specialized .service-column-header-icon {
+  background: #1F8A43;
+}
+.group-specialized .service-column-title {
+  color: #1F8A43;
+}
+.group-specialized .service-icon {
+  color: #1F8A43;
+}
+.group-specialized .form-check-input:checked {
+  background-color: #1F8A43 !important;
+  border-color: #1F8A43 !important;
+}
+
+/* Service Types – Purple */
+.group-service .service-column-header-icon {
+  background: #5B2E91;
+}
+.group-service .service-column-title {
+  color: #5B2E91;
+}
+.group-service .service-icon {
+  color: #5B2E91;
+}
+.group-service .form-check-input:checked {
+  background-color: #5B2E91 !important;
+  border-color: #5B2E91 !important;
+}
+
+/* ── Service Items list ── */
+.service-column-items {
+  display: flex;
+  flex-direction: column;
+  padding:10px 20px 10px 15px;
+}
+
+.service-column-items .form-check {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 9px 5px 9px 30px;
+  transition: background 0.15s ease;
+}
+
+.service-column-items .form-check:hover {
+  background: #f9fafb;
+}
+
+.service-column-items .form-check-input {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  cursor: pointer;
+  margin-top: 0;
+  border: 1.5px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.service-column-items .form-check-input:focus {
+  box-shadow: none;
+}
+
+.service-column-items .form-check-label {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 100%;
+}
+
+/* ── Label with icon ── */
+.service-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.service-icon {
+  font-size: 16px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-column-header {
+    padding: 16px 14px 12px;
+  }
+
+  .service-column-items .form-check {
+    padding: 8px 14px;
+  }
+
+  .service-label {
+    font-size: 13px;
+  }
+}

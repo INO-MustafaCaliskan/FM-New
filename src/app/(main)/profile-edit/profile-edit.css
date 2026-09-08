@@ -1,0 +1,112 @@
+.profile-edit-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding:20px 0px;
+}
+
+.profile-edit-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+/* 
+  position: sticky;
+  top: 120px; 
+  align-self: flex-start; */
+}
+
+.profile-edit-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .profile-edit-page {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .profile-edit-sidebar {
+    width: 100%;
+  }
+
+  .profile-edit-content {
+    width: 100%;
+  }
+}
+
+/* UploadImage - avatar variant (only used on this page) */
+.profile-edit-upload .upload-image-avatar-variant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-edit-upload .upload-image-avatar-label {
+    align-self: flex-start;
+    font-weight: 700;
+    font-size: 15px;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.profile-edit-upload .upload-image-avatar-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.profile-edit-upload .upload-image-avatar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f2f2f2;
+}
+
+.profile-edit-upload .upload-image-avatar-camera {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #16294d;
+    border: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.profile-edit-upload .upload-image-avatar-hint {
+    font-size: 13px;
+    color: #8a8a8a;
+    text-align: center;
+    margin: 0;
+}
+
+.profile-edit-upload .upload-image-avatar-change-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 9px 16px;
+    background: #fff;
+    border: 1px solid #d8dce1;
+    border-radius: 8px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.profile-edit-upload .upload-image-avatar-change-btn:hover {
+    background: #f8f9fa;
+}

@@ -1,0 +1,229 @@
+.notification-btn {
+    height: 35px;
+    /* padding: 0.6rem; */
+    background-color: transparent;
+    border-radius: 7px;
+    margin-top: 0;
+    border: 1px solid #f97a29;
+    position: relative;
+  }
+  
+  .notification-btn:hover{
+    border-color: #585858 !important;
+  }
+  
+  .btn.show{
+    border-color: #f97a29 !important;
+  }
+   
+  
+  .notification-btn:hover svg {
+    color: #585858 !important;
+  }
+
+  .notification-header {
+    border-bottom: 1px solid #eded;
+    padding-left: 0.4rem;
+    justify-content: space-between;
+    /*padding-right: 0.4rem;*/
+    padding: 1rem;
+  }
+  
+  .notification-header h6 {
+    color: #333;
+  }
+  
+  .notification-settings:hover{
+    cursor : pointer;
+  }
+
+  .notification-settings svg {
+    font-size: 1.5rem;
+    color: #717171;
+  }
+
+
+.notification-all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #ec6b00;
+  color: #fff;
+  padding: 0.6rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.notification-content {
+  position: relative;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  flex : 1;
+}
+
+.notification-content i {
+  position: relative;
+}
+
+.notification-content .nt-title {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 0.3rem !important;
+  font-size: 1rem;
+  text-wrap: wrap;
+}
+
+.notification-content .nt-description, .notification-content .dt {
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+  text-wrap: wrap;
+}
+
+.notification-content .dt{
+  color: #818181;
+  font-size: 12px;
+}
+
+.notification-count {
+  position: absolute;
+  top: -0.5rem;
+  background: #f41c2f;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
+
+.notification-loading {
+  justify-content: center;
+  margin-top: 1rem;
+  color: #f97a29;
+  min-height: 38vh;
+  vertical-align: middle;
+  align-items: center;
+  display: none;
+}
+
+.notification-dropdown {
+  z-index: 1000;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  left: auto !important;
+  right: -0.2rem;
+  top: 4.6rem;
+  width: 22rem;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  padding-top: 1rem;
+  border-radius: 10px;
+}
+
+.notification-dropdown::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.notification-dropdown::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+.notification-dropdown::-webkit-scrollbar-thumb {
+  background-color: #909090;
+  border-radius: 5px;
+}
+
+.notification-dropdown ul li {
+  border-bottom: 1px solid;
+}
+
+.notification-dropdown ul li:last-child {
+  border-bottom: none !important;
+}
+
+.notification-dropdown ul li.unread {
+  background: #ededed;
+}
+
+.notification-dropdown .dropdown-item {
+  border-bottom: 1px solid #ededed !important;
+}
+
+.notification-dropdown .dropdown-item:hover{
+  background-color: #eaeaea !important;
+}
+
+.notification-dropdown .dropdown-item.unread{
+  background-color: #ffd7d7 !important;
+}
+
+.notification-profile {
+  border-radius: 14px;
+  text-align: center;
+  width: 55px !important;
+}
+
+.notification-profile img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #d5d5d5;
+}
+
+
+.notification-container {
+  padding : 0.5rem 0.3rem;
+}
+
+/* .notification-pop-container {
+  width: 300px;
+  height: 73px;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 150px;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  margin: 0 0.3rem 0.6rem auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+} */
+
+.notification-all a:hover {
+  color: #fff;
+}
+
+.notification-all a {
+  color: #fff;
+}
+
+.notification-profile i {
+  font-size: 1.9rem;
+  margin-top: 0.6rem;
+}
+
+.notification-dropdown ul li a:hover {
+  color: #f97a29 !important;
+}
+
+
+.notification-wrapper {
+  cursor: pointer;
+}
+
+.notification-wrapper:hover {
+  background-color: transparent !important;
+}

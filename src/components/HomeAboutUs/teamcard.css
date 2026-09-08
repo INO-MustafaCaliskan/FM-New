@@ -1,0 +1,122 @@
+.team-card-main {
+  padding: 0px 10px 0px 10px;
+  margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.team-card {
+  border: 1px solid #eaeaea !important;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 255px;
+  min-height: 340px;
+  position: relative;
+}
+.team-card-info > .card-text{
+    hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: break-word;
+}
+.team-image {
+  border-radius: 10px;
+  width: 100%;
+  height: 295px;
+  object-fit: cover;
+  box-shadow: 0 6px #fc8f00;
+  border-radius: 12px !important;
+}
+
+.linkedin-icon {
+  position: absolute;
+  top: 7px;
+  right: -10px;
+  z-index: 9;
+}
+
+.linkedin-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+@media (min-width: 992.1px) and (max-width: 1200px) {
+  .team-card-main {
+    padding: 0px 20px;
+    margin: 20px 0px;
+  }
+
+  .team-card {
+    border: 1px solid #eaeaea !important;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 255px;
+    min-height: 350px;
+    position: relative;
+
+  }
+
+  .team-image {
+    
+    border-radius: 10px;
+    width: 100%;
+    height: 295px;
+    object-fit: cover;
+  }
+
+}
+
+@media (min-width: 1200.1px) and (max-width: 1300px) {
+ 
+
+.team-card-info > .card-title{
+  font-size: 14px;
+}
+.team-card-info > .card-text{
+  font-size: 13px;
+}
+
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1992px) {
+  .team-card {
+    max-width: 200px;
+    max-height: 350px;
+  }
+
+  .team-image {
+   
+    height: 243px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    width: 100%;
+    max-width: 200px;
+    min-height: 290px;
+  }
+
+  .team-image {
+    
+    width: 100%;
+    height: 250px;
+  }
+
+}
+
+@media (max-width: 668px) {
+  .team-card-main {
+    padding: 0px 0px;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

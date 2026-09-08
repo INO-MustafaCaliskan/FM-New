@@ -1,0 +1,56 @@
+.phone-number-select-wrapper {
+  width: 100%;
+}
+
+.phone-number-select-wrapper .phone-code-select {
+  border: none;
+  height: 2.8rem;
+  margin-left: 2px;
+  padding: 0.175rem 0;
+  max-width: 95px ;
+}
+
+.phone-number-select-wrapper .phone-number-input {
+  padding-left: 100px;
+}
+
+.phone-number-select-wrapper .phone-code-select-wrapper {
+  position: absolute;
+
+  padding: 0.275rem 0;
+}
+
+.phone-single-value {
+  font-size: 10px !important;
+  margin-right: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.phone-single-value img {
+  width: 16px !important;
+  height: 12px !important;
+  margin-right: 4px !important;
+}
+
+@media (max-width: 885px) {
+  .phone-number-select-wrapper .phone-code-select {
+    max-width: 80px ;
+  }
+
+  .phone-number-select-wrapper .phone-number-input {
+    padding-left: 83px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 725px) {
+  .phone-number-select-wrapper .phone-code-select {
+    max-width: 100px ;
+  }
+
+  .phone-number-select-wrapper .phone-number-input {
+    padding-left:100px;
+    font-size: 0.9rem ;
+  }
+}

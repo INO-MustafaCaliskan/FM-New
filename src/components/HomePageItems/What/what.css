@@ -1,0 +1,61 @@
+.accordion-header .accordion-button {
+  color: #000;
+}
+
+.accordion-header .accordion-button:not(.collapsed) {
+  /* background-color: #f8f9fa; */
+  background-color: #fff;
+  color: #000;
+}
+
+.accordion.active .accordion-header {
+  background-color: #d0d0d0;
+}
+/* Remove border from Accordion */
+.accordion-item {
+  border: none;
+}
+
+.accordion-header {
+  border: none;
+}
+
+.accordion-body {
+  border-top: none;
+}
+
+/* Ensure the accordion button does not have a border */
+.accordion-button {
+  border: none;
+  box-shadow: none; /* Remove the default shadow to make it look borderless */
+}
+
+/* Remove the border when the accordion button is collapsed */
+.accordion-button:not(.collapsed) {
+  border: none;
+  box-shadow: none; /* Remove the default shadow when active */
+}
+
+/* Optional: Add padding or margins if needed */
+.accordion-button {
+  padding: 10px 15px; /* Adjust padding to your preference */
+}
+
+/* Optional: Add background color changes to maintain consistency */
+.accordion-header {
+  background-color: #f0f0f0; /* Change to your desired background color */
+}
+
+.swiper-slide {
+  width: 200px;
+}
+.swiper-wrapper {
+  display: flex;
+}
+.what-title {
+  font-weight: 700;
+}
+.what-image {
+  width: 100px;
+  height: 100px;
+}

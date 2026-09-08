@@ -1,0 +1,256 @@
+@media screen and (max-width: 576px) {
+  .header-container {
+    padding: 0 12px;
+  }
+}
+
+
+header {
+  background-color: #fff;
+}
+
+.dropdown-item {
+  padding: 0;
+}
+.dropdown-menu {
+  padding: 0;
+  border-radius: 12px;
+}
+
+.user-status-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-bottom: 0 !important;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  flex: 1;
+}
+.user-status-btn i {
+  position: static !important;
+  margin: 0 !important;
+  flex-shrink: 0;
+}
+.user-status-btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  color: #0f172a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+.user-status-btn.active-status {
+  background-color: #fdf5f0;
+  border-color: #fbc6a9;
+  color: #e36a1c;
+}
+.header-countdown{
+  min-height: 90px;
+  background-color: #f39153;
+}
+.profile-menu-item {
+  padding: 14px 20px;
+  width: 100%;
+  color: #334155 !important;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px;
+  font-weight: 500;
+  border-top: 1px solid #e2e8f0;
+  position: relative;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+.profile-menu-item:hover {
+  background-color: #fff7f2 !important;
+  color: #f97a29 !important;
+  padding-left: 24px;
+}
+
+.profile-menu-item-sign-out {
+  padding: 14px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #fff !important;
+  background: #e12727;
+  cursor: pointer;
+  border-top: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+.profile-menu-item-sign-out:hover {
+  background: #c81e1e;
+  color: #fff !important;
+}
+
+.user-available .accordion-button:not(.collapsed) {
+    color: #58759e;
+    background-color: transparent;
+}
+
+.profile-menu-item:not(:last-child)::before {
+  display: none;
+}
+
+.profile-menu-item:last-child {
+  color: #fff !important;
+  background: #e12727;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.profile-menu-item:last-child:hover {
+  background: #c81e1e !important;
+  color: #fff !important;
+}
+
+.active-nav-link{
+  color : #EF6C00 !important;
+}
+
+.header-profile-nav .dropdown-menu {
+  width: 300px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header-profile-nav .dropdown-header {
+  white-space: unset;
+}
+
+.header-profile-nav .profile-top {
+  background: linear-gradient(135deg, #f97a29 0%, #ff8a43 100%);
+  padding: 20px;
+  border-bottom: none;
+}
+
+.header-profile-nav .profile-img {
+  object-fit: cover;
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header-profile-nav .profile-name {
+  margin: 0;
+}
+
+.header-profile-nav ::selection {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.header-profile-nav .profile-name span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.header-profile-nav .profile-name .timezone-span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.header-profile-nav .profile-name span:last-child {
+  font-size: 11px;
+  padding-top: 2px;
+  opacity: 0.8;
+}
+
+.header-profile-nav .dropdown-item:active {
+  background-color: #fff7f2 !important;
+}
+
+.header-profile-nav .accordion {
+  border-radius: 0;
+}
+
+.header-profile-nav .accordion-item {
+  border: none;
+}
+
+.header-profile-nav .accordion-button {
+  padding: 16px 20px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #334155;
+  background-color: #fff;
+  box-shadow: none !important;
+  border-top: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.header-profile-nav .accordion-button i {
+  position: static !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.header-profile-nav .accordion-button:hover {
+  background-color: #fafafa;
+}
+
+.header-profile-nav .accordion-button:not(.collapsed) {
+  background-color: #fafafa;
+  color: #0f172a;
+}
+
+.header-profile-nav .accordion-button::after {
+  background-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.header-profile-nav .accordion-body {
+  padding: 16px 20px;
+  background-color: #fafafa;
+  border-bottom: none;
+}
+
+.header-profile-nav .accordion-body .d-flex.flex-column {
+  flex-direction: row !important;
+  gap: 12px;
+}
+
+.header-profile-nav .accordion .accordion-item[disabled] button{
+  background-color: #d1d1d1;
+  cursor: not-allowed;
+}
+
+.header-profile-nav .accordion .accordion-item[disabled] button::after{
+  background-image: none !important;
+}
+
+@media (max-width: 768px) {
+ .profile-menu-item-sign-out{
+  padding: 15px 0px 15px 0px;
+ 
+}
+}
+
+.header-nav-items .navbar-collapse-mobile a {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.header-nav-items .navbar-collapse-mobile a:hover {
+  color: #f97a29;
+}

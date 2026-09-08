@@ -1,0 +1,24 @@
+.action-items-container {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.action-item {
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.action-item:hover {
+  background-color: #f8f9fa;
+}
+
+.action-item .border-bottom {
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.action-flag-icon {
+  object-fit: cover;
+  height: 20px;
+}

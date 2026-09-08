@@ -1,0 +1,30 @@
+.comment_content{
+    background-color: var(--comment-background-color);
+}
+
+.comment_text{
+    color: var(--feed-main-text-color);
+}
+
+.comment_text span{
+    line-height: 18px;
+}
+
+.comment_text span[data-emoji]{
+    font-size: 18px;
+}
+
+.comment_text > p {
+    margin-bottom: 0;
+}
+
+.comment_user_full_name{
+    font-size: 13px;
+    color: var(--feed-main-text-color);
+    font-weight: 600;
+}
+
+.comment_date{
+    font-size: 12px;
+    color: var(--bs-secondary-color);
+}

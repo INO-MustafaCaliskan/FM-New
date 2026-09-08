@@ -1,0 +1,12 @@
+.team-section {
+  display: flex;
+  align-items: center;
+  justify-content: center !important ;
+}
+.team-list {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

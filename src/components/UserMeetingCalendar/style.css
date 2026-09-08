@@ -1,0 +1,20 @@
+.block-button-custom {
+    width: 160px;
+    height: 3rem;
+    background-color: #fff !important;
+    color: #E65100 !important;
+    border: 1px solid #E65100 !important;
+    border-radius:50px !important;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.block-button-custom:hover {
+    background-color: #E65100 !important;
+    color: #fff !important;
+    border-color: #E65100 !important;
+}
+.fc-toolbar .fc-button.fc-today-button {
+    text-transform: capitalize !important;
+  }
+  
+  

@@ -1,0 +1,28 @@
+.general_container{
+    position: relative;
+}
+
+.picker_image{
+    cursor: pointer;
+}
+
+.picker_container{
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    --emoji-size: 30px;
+}
+
+/* Emoji picker kütüphanesinin emoji boyutunu override etme  şuan kapalı istenilirse açılabilir yukardai değişkeni dikkate alır*/
+/* .picker_container :global(.epr-emoji-img),
+.picker_container :global(.epr-emoji) {
+    font-size: var(--emoji-size) !important;
+}
+
+.picker_container :global(.epr-emoji-category-content) {
+    --epr-emoji-size: var(--emoji-size) !important;
+}
+
+.picker_container :global(.epr-btn span){
+    font-size: var(--emoji-size) !important;
+} */

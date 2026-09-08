@@ -1,0 +1,198 @@
+/* ── Slider shell ───────────────────────────────────────────────────────── */
+.sliderShell {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Step wrapper (form / otp) ───────────────────────────────────────────── */
+.step {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.stepForm {
+  transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+}
+
+.stepFormHidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.stepFormVisible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  position: relative;
+}
+
+.stepOtp {
+  transition: opacity 0.25s ease 0.25s, visibility 0s;
+  text-align: center;
+}
+
+.stepOtpHidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.stepOtpVisible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  position: relative;
+}
+
+/* ── Form step elements ──────────────────────────────────────────────────── */
+.trialText {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #555;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0 0;
+}
+
+.dividerHr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.dividerSpan {
+  padding: 0 0.5rem;
+  color: #888;
+  font-size: 13px;
+}
+
+.passwordWrap {
+  position: relative;
+}
+
+.criteriaMessage {
+  display: block;
+}
+
+.alreadyAccount {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.alreadyAccountLink {
+  color: #ef6c00;
+  font-weight: 600;
+}
+
+/* ── OTP step elements ───────────────────────────────────────────────────── */
+.backBtn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0 0 1.25rem 0;
+  display: block;
+}
+
+.envelopeCircle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff4ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.otpTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.4rem;
+}
+
+.otpSubtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.otpEmail {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.verifyBtn {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.resendText {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.resendBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.resendBtnActive {
+  cursor: pointer;
+  color: #ef6c00;
+}
+
+.resendBtnDisabled {
+  cursor: default;
+  color: #bbb;
+}
+
+.spamHint {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* ── OTP input ───────────────────────────────────────────────────────────── */
+.otpWrap {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.otpBox {
+  width: 48px;
+  height: 56px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+  caret-color: #ef6c00;
+}
+
+.otpBoxFilled {
+  border-color: var(--otp-active, #ef6c00);
+  background: var(--otp-filled-bg, #fff7f2);
+}
+
+.otpBoxEmpty {
+  background: #fff;
+}

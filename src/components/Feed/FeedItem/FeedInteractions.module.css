@@ -1,0 +1,57 @@
+.interaction_area {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid #F0F0F2;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Default / unactivated state */
+.neutral {
+  background-color: #FAFAFB;
+  color: #6B6C74;
+}
+
+.neutral:hover {
+  background-color: #F2F1FF;
+  border-color: #E3E0FF;
+  color: #5B4FE8;
+}
+
+.neutral:hover svg {
+  color: #5B4FE8;
+}
+
+/* Liked state */
+.liked {
+  background-color: #FFF5EE;
+  border-color: #FFD9BC;
+  color: #f97a29;
+}
+
+.liked:hover {
+  background-color: #FFE8D4;
+  border-color: #f97a29;
+  color: #f97a29;
+}
+
+.liked svg {
+  color: #f97a29;
+}

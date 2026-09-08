@@ -1,0 +1,80 @@
+# ============================================================
+
+# LLM ACCESS POLICY (llms.txt)
+
+# Site: [https://freighttalk.com/](https://freighttalk.com/)
+
+# Purpose: Control AI (LLM) crawling, indexing & training usage
+
+# ============================================================
+
+User-Agent: *
+
+# ============================================================
+
+# AI USAGE PERMISSIONS
+
+# ============================================================
+
+# Allowed values: allow | disallow
+
+Training: disallow
+Indexing: allow
+Embeddings: disallow
+
+# ============================================================
+
+# PUBLIC AI-READABLE CONTENT
+
+# ============================================================
+
+Allow: /
+Allow: /about-us/
+Allow: /about/
+Allow: /pricing/
+Allow: /faq/
+Allow: /contact-us/
+Allow: /news-and-blog/
+
+# ============================================================
+
+# LEGAL & POLICY — BLOCKED FROM AI
+
+# ============================================================
+
+Disallow: /privacy-policy/
+Disallow: /terms-and-conditions/
+Disallow: /warranty-policy/
+Disallow: /cookie-policy/
+
+# ============================================================
+
+# USER / AUTH / PRIVATE AREAS — BLOCKED
+
+# ============================================================
+
+Disallow: /verification/
+Disallow: /account-settings/
+Disallow: /subscription/
+Disallow: /forgot-password/
+Disallow: /global-networkers/
+Disallow: /my-meetings/
+Disallow: /chat/
+
+# ============================================================
+
+# API & AUTH — STRICTLY BLOCKED
+
+# ============================================================
+
+Disallow: /api/
+Disallow: /auth/
+
+# ============================================================
+
+# METADATA
+
+# ============================================================
+
+Contact: mailto:hello@freighttalk.com
+Policy: [https://freighttalk.com/privacy-policy/](https://freighttalk.com/privacy-policy/)

@@ -1,0 +1,154 @@
+.network-stats-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.network-stat-card {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07) !important;
+  background-color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.network-stat-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.network-stat-icon-wrapper.connections-icon {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.network-stat-icon-wrapper.countries-icon {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.network-stat-details {
+  flex-grow: 1;
+}
+
+.network-stat-header {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.network-stat-info-icon {
+  color: #6b7280;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.network-stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.network-stat-trend {
+  font-size: 13px;
+  color: #16a34a; /* green */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.network-stat-trend i {
+  margin-right: 4px;
+  font-size: 10px;
+}
+
+/* Right Card */
+.top-countries-card {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07) !important;
+  background-color: #ffffff !important;
+  padding: 24px;
+  height: 100%;
+}
+
+.top-countries-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.country-stat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.country-stat-row:last-child {
+  margin-bottom: 0;
+}
+
+.country-flag {
+  font-size: 20px;
+  margin-right: 12px;
+  width: 24px;
+  text-align: center;
+}
+
+.country-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  width: 100px; /* fixed width for alignment */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 16px;
+}
+
+.country-progress-wrapper {
+  flex-grow: 1;
+  height: 6px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 16px;
+}
+
+.country-progress-bar {
+  height: 100%;
+  background-color: #16a34a;
+  border-radius: 4px;
+}
+
+.country-count {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  min-width: 24px;
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  .network-stat-col {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: #f97a29;
+  --bs-tooltip-color: #fff;
+}

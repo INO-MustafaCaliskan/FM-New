@@ -1,0 +1,237 @@
+.networker-page-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  align-self: center;
+  margin-top: 0.25rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.networker-page-actions-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.networker-page-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.networker-page-action-icon {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Button Colors */
+.btn-get-quote {
+  background-color: #4caf50;
+}
+
+.btn-get-quote:hover {
+  background-color: #43a047;
+}
+
+.btn-air-tracking {
+  background-color: #2196f3;
+}
+
+.btn-air-tracking:hover {
+  background-color: #1976d2;
+}
+
+.btn-container-tracking {
+  background-color: #009688;
+}
+
+.btn-container-tracking:hover {
+  background-color: #00796b;
+}
+
+.btn-freight-index {
+  background-color: #9c27b0;
+}
+
+.btn-freight-index:hover {
+  background-color: #7b1fa2;
+}
+
+.networker-card-button-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .networker-page-actions-container {
+    justify-content: flex-end;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+
+  .networker-page-action-btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    width: auto;
+    min-width: 150px;
+    justify-content: center;
+  }
+
+  .networker-page-networker-actions-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    flex-shrink: 0;
+    align-self: start;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+
+  }
+
+  .networker-page-action-icon {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .networker-page-action-btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .networker-page-action-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .networker-page-actions-bar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    margin-top: 0.25rem;
+    position: relative;
+    top: 0rem;
+    right: 0rem;
+  }
+
+  .networker-page-actions-container {
+   
+    padding: 0;
+    justify-content: start;
+    align-items: start;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .networker-page-action-btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+  }
+
+  .networker-page-action-icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .networker-page-actions-container {
+   
+
+    gap: 0.5rem;
+    justify-content: stretch;
+  }
+
+  .networker-page-action-btn {
+    display: flex;
+    padding: 0.9rem 1.6rem;
+    font-size: 0.9rem;
+    flex: 1;
+    min-width: 70px;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .networker-page-action-icon {
+    font-size: 0.9rem;
+  }
+}
+
+/* Active State */
+.networker-page-action-btn:active {
+  transform: translateY(0);
+}
+
+/* Focus State for accessibility */
+.networker-page-action-btn:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
+
+/* @media (max-width: 1200px) {
+  .tabs-header-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .actions-container {
+    justify-content: flex-end;
+  }
+
+} */
+
+
+
+/* @media (max-width: 768px) {
+  .tabs-header-wrapper {
+    gap: 0.75rem;
+  }
+
+  .networker-actions-bar {
+    align-items: start;
+    justify-content: start;
+    flex-shrink: 0;
+    align-self: start;
+    margin-top: 0.25rem;
+    position: relative;
+    top: 0rem;
+    right: 0rem;
+  }
+
+  .actions-container {
+    justify-content: start;
+    align-items: start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .actions-container {
+
+    gap: 0.5rem;
+  }
+} */

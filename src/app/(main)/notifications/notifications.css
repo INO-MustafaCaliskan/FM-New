@@ -1,0 +1,21 @@
+.notification-all-table{  
+    overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.my-meeting-table-component {
+  min-width: 600px;
+}
+
+
+@media (max-width: 768px) {
+  .my-meeting-table-component {
+    min-width: 1000px; 
+  }
+
+  .my-meeting-table-component td,
+  .my-meeting-table-component th {
+    white-space: nowrap; /* Satırlar taşmasın */
+  }
+}

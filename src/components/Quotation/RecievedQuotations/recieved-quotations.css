@@ -1,0 +1,243 @@
+.rfq-table {
+    margin-bottom: 0;
+}
+
+.rfq-table thead th {
+    background: #fafafa;
+    color: #8c8c8c;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.rfq-table tbody td {
+    font-size: 13px;
+    color: #595959;
+    vertical-align: middle;
+}
+
+.rfq-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.rfq-ref {
+    font-weight: 600;
+    color: #262626;
+}
+
+.rfq-user {
+    font-size: 12px;
+    color: #8c8c8c;
+}
+
+.rfq-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3px 10px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.rfq-status-badge.sent {
+    background: #fff7e6;
+    color: #d48806;
+    border: 1px solid #d48806;
+}
+
+.rfq-status-badge.closed {
+    background: #ffe6e6;
+    color: #ad0505;
+    border: 1px solid #ad0505;
+    width:60px;
+}
+
+.rfq-status-badge.open {
+    background: #f6ffed;
+    color: #52c41a;
+    border: 1px solid #52c41a;
+    width:60px;
+}
+
+.close-rfq-modal-body {
+    display: flex;
+    margin: 20px 0px 20px 0px;
+    align-items: center;
+    line-height: 23px;
+    color: #595959;
+}
+
+.rfq-view-btn {
+    border: 0;
+    background: transparent;
+    color: #1677ff;
+    font-weight: 600;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.rfq-view-btn:hover {
+    text-decoration: underline;
+}
+
+.rfq-close-btn {
+    border: 0;
+    background: transparent;
+    color: #ce3c18;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.rfq-search-btn:hover {
+    color: #d48806;
+}
+
+.rfq-close-btn:hover {
+    text-decoration: underline;
+}
+
+.rfq-view-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    color: #595959
+}
+
+.rfq-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.rfq-table-actions,
+.rfq-table-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rfq-export-btn {
+    height: 44.8px;
+    border: 1px solid hsl(0, 0%, 80%);
+    ;
+    background: #fff;
+    border-radius: 4px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rfq-search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 4px;
+    padding: 0 12px;
+    height: 44.8px;
+}
+
+.rfq-search-input {
+    border: none;
+    outline: none;
+    width: 220px;
+}
+
+.rfq-filter-select {
+    height: 44.8px;
+    min-width: 180px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 0 12px;
+}
+
+.rfq-close-footer {
+    border-top: 1px solid #eef2f7;
+    padding: 20px;
+
+    gap: 12px;
+}
+
+.rfq-btn-cancel {
+    min-width: 80px;
+    height: 34px;
+    border-radius: 4px !important;
+    border: 1px solid #d0d5dd !important;
+    background: #fff !important;
+    color: #344054 !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease;
+}
+
+.rfq-btn-cancel:hover {
+    background: #f8f9fc !important;
+    border-color: #98a2b3 !important;
+}
+
+.rfq-btn-confirm {
+    min-width: 130px;
+    height: 34px;
+    border-radius: 4px !important;
+    border: none !important;
+    background-color: #f97a29;
+    color: white !important;
+    font-weight: 500 !important;
+
+    transition: all 0.2s ease;
+}
+
+.rfq-btn-confirm:hover {
+    transform: translateY(-1px);
+    background-color: #cc5104;
+}
+
+.rfq-btn-confirm:active,
+.rfq-btn-cancel:active {
+    transform: translateY(0);
+}
+
+.rfq-table tbody tr.rfq-unread-row td {
+    background-color: #fff4e5d2;
+}
+
+.rfq-table-list-filter-select {
+    min-width: 220px;
+}
+
+@media only screen and (max-width:600px) {
+
+    .rfq-search-input {
+
+        width: 100%;
+    }
+
+    .rfq-table-filters {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .rfq-table-list-filter-select {
+        min-width: 100%;
+    }
+
+    .rfq-filter-select {
+
+        min-width: 250px;
+
+    }
+}

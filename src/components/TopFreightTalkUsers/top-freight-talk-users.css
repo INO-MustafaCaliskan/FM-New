@@ -1,0 +1,592 @@
+.top-freight-talk-users {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.top-freight-talk-users__title {
+  color: #101828;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.top-freight-talk-users__title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.top-freight-talk-users__subtitle {
+  max-width: 680px;
+  color: #667085;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.top-freight-talk-users__header-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+.top-freight-talk-users__featured-inner-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.top-freight-talk-users__view-all {
+  color: #0f1d52;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.top-freight-talk-users__view-all:hover {
+  color: #f97a29;
+}
+
+.top-freight-talk-users__view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #f97a29 0%, #ff9a58 100%);
+  box-shadow: 0 10px 20px rgba(249, 122, 41, 0.2);
+}
+
+.top-freight-talk-users__view-all-btn:hover,
+.top-freight-talk-users__view-all-btn:focus {
+  color: #ffffff;
+  background: linear-gradient(135deg, #ef6f1d 0%, #ff8a43 100%);
+}
+
+.top-freight-talk-users__featured-head,
+.top-freight-talk-users__list-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.top-freight-talk-users__filter {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.top-freight-talk-users__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(350px, 0.95fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.top-freight-talk-users__featured-panel,
+.top-freight-talk-users__list-panel {
+  border: 1px solid #edf0f7;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+}
+
+.top-freight-talk-users__panel-title {
+  margin: 0;
+  color: #101828;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.top-freight-talk-users__featured-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+  max-width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.top-freight-talk-users__featured-row::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.top-freight-talk-users__featured-row::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.top-freight-talk-users__featured-nav {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-freight-talk-users__scroll-btn {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e4e7ec;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0f1d52;
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+}
+
+.top-freight-talk-users__scroll-btn:hover,
+.top-freight-talk-users__scroll-btn:focus {
+  border-color: #f97a29;
+  color: #ffffff;
+  background: #f97a29;
+}
+
+.top-freight-talk-users__scroll-btn:focus-visible {
+  outline: 2px solid rgba(249, 122, 41, 0.35);
+  outline-offset: 2px;
+}
+
+.top-freight-talk-users__scroll-icon {
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  display: block;
+}
+
+.top-freight-talk-users__scroll-icon--left {
+  transform: rotate(135deg);
+}
+
+.top-freight-talk-users__scroll-icon--right {
+  transform: rotate(-45deg);
+}
+
+.top-freight-talk-users__card {
+  position: relative;
+  flex: 0 0 280px;
+  border-radius: 18px;
+  border: 1px solid #e8edf4;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-snap-align: start;
+}
+
+.top-freight-talk-users__rank-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 28px;
+  height: 34px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(180deg, #ffbf3c 0%, #f0a400 100%);
+  box-shadow: 0 10px 20px rgba(240, 164, 0, 0.2);
+}
+
+.top-freight-talk-users__card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.top-freight-talk-users__avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0f1d52 0%, #3e5ad8 100%);
+  box-shadow: 0 10px 20px rgba(15, 29, 82, 0.18);
+  flex: 0 0 auto;
+}
+
+.top-freight-talk-users__avatar-image,
+.top-freight-talk-users__list-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-freight-talk-users__card-person {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.top-freight-talk-users__card-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.top-freight-talk-users__card-name,
+.top-freight-talk-users__list-name {
+  margin: 0;
+  color: #101828;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.top-freight-talk-users__card-company,
+.top-freight-talk-users__list-location {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.top-freight-talk-users__flag {
+  flex: 0 0 auto;
+  font-size: 15px;
+}
+
+.top-freight-talk-users__stars,
+.top-freight-talk-users__list-stars {
+  color: #f59e0b;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.top-freight-talk-users__rating-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.top-freight-talk-users__rating {
+  border-radius: 10px;
+  padding: 6px 10px;
+  background: #eaf7ed;
+  color: #1c8f44;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.top-freight-talk-users__reviews {
+  color: #98a2b3;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.top-freight-talk-users__quote {
+  margin: 4px 0 0;
+  color: #344054;
+  font-size: 14px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.top-freight-talk-users__card-body {
+  margin-top: 6px;
+  padding-top: 0;
+}
+
+.top-freight-talk-users__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-freight-talk-users__author-avatar,
+.top-freight-talk-users__list-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: #ffffff;
+  background: linear-gradient(135deg, #f97a29 0%, #ffb074 100%);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.top-freight-talk-users__author-name {
+  color: #101828;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.top-freight-talk-users__author-company {
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.top-freight-talk-users__list-head {
+  margin-bottom: 10px;
+}
+
+.top-freight-talk-users__month-filter {
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #0f1d52;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+
+.top-freight-talk-users__filter-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 5;
+  min-width: 160px;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.12);
+  padding: 6px;
+}
+
+.top-freight-talk-users__filter-option {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.top-freight-talk-users__filter-option:hover,
+.top-freight-talk-users__filter-option.is-active {
+  background: #fff4ea;
+  color: #f97a29;
+}
+
+.top-freight-talk-users__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.top-freight-talk-users__list-item {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 8px;
+  border-radius: 16px;
+  border: 1px solid #edf0f7;
+  background: #ffffff;
+  padding: 8px 10px;
+  min-width: 0;
+}
+
+.top-freight-talk-users__rank {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #667085;
+  font-size: 13px;
+  font-weight: 800;
+  background: #f2f4f7;
+}
+
+.top-freight-talk-users__rank--list {
+  width: 36px;
+  height: 36px;
+}
+
+.top-freight-talk-users__list-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.top-freight-talk-users__list-avatar {
+  width: 38px;
+  height: 38px;
+}
+
+.top-freight-talk-users__list-name {
+  font-size: 14px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.top-freight-talk-users__list-meta {
+  flex: 0 0 auto;
+  text-align: right;
+  min-width: 74px;
+}
+
+.top-freight-talk-users__list-rating {
+  border-radius: 10px;
+  padding: 5px 9px;
+  background: #eaf7ed;
+  color: #1c8f44;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.top-freight-talk-users__list-reviews {
+  color: #98a2b3;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .top-freight-talk-users__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .top-freight-talk-users__list-head {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .top-freight-talk-users__month-filter {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-freight-talk-users__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-freight-talk-users__layout {
+    gap: 14px;
+  }
+
+  .top-freight-talk-users__featured-inner-header {
+    flex-direction: column;
+  }
+
+  .top-freight-talk-users__header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .top-freight-talk-users__title {
+    font-size: 24px;
+  }
+
+  .top-freight-talk-users__card {
+    flex: 0 0 min(88vw, 300px);
+  }
+
+  .top-freight-talk-users__featured-nav {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .top-freight-talk-users__scroll-btn {
+    display: none;
+  }
+
+  .top-freight-talk-users__list-item {
+    grid-template-columns: auto auto minmax(0, 1fr);
+    align-items: flex-start;
+  }
+
+  .top-freight-talk-users__list-meta {
+    grid-column: 1 / -1;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .top-freight-talk-users__list-rating {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .top-freight-talk-users__list-item {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .top-freight-talk-users__rank--list {
+    grid-row: 1;
+  }
+
+  .top-freight-talk-users__list-avatar {
+    grid-row: 2;
+  }
+
+  .top-freight-talk-users__list-content {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-freight-talk-users__featured-panel,
+  .top-freight-talk-users__list-panel {
+    padding: 12px;
+  }
+
+  .top-freight-talk-users__list-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-freight-talk-users__month-filter {
+    margin-left: 0;
+  }
+
+  .top-freight-talk-users__panel-title {
+    font-size: 18px;
+  }
+}

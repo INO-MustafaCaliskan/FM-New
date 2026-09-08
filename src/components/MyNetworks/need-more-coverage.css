@@ -1,0 +1,28 @@
+.coverage-subcard {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.coverage-subcard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.coverage-btn {
+  font-size: 9px !important;
+  font-weight: 600 !important;
+  color: #f97a29 !important;
+  border: none !important;
+  background-color: rgba(249, 122, 41, 0.1) !important;
+  border-radius: 6px !important;
+  padding: 5px 4px !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.coverage-btn:hover {
+  background-color: rgba(249, 122, 41, 0.18) !important;
+  color: #e65100 !important;
+}

@@ -1,0 +1,415 @@
+.my-networks-list-card {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07) !important;
+  background-color: #ffffff !important;
+}
+
+.my-networks-list-card .table-responsive {
+  overflow-x: auto !important;
+  min-height: 200px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Filter Bar ───────────────────────────────────────────── */
+.my-networks-filters .search-icon {
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+/* Shared base for search input and selects */
+.my-networks-filters .filter-input,
+.my-networks-filters .filter-select {
+  height: 44px;
+  min-height: 44px;
+  border-radius: 8px !important;
+  border: 1.5px solid #e5e7eb !important;
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.4;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.my-networks-filters .filter-input:hover,
+.my-networks-filters .filter-select:hover {
+  border-color: #d1d5db !important;
+}
+
+.my-networks-filters .filter-input:focus,
+.my-networks-filters .filter-select:focus {
+  border-color: #f97a29 !important;
+  box-shadow: 0 0 0 3px rgba(249, 122, 41, 0.12) !important;
+  outline: none !important;
+}
+
+/* ── Search input ─────────────────────────────────────────── */
+.my-networks-filters .filter-input {
+  padding-left: 44px !important;
+  padding-right: 14px !important;
+}
+
+.my-networks-filters .filter-input::placeholder {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* ── Select dropdowns ─────────────────────────────────────── */
+.my-networks-filters .filter-select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  padding-left: 14px !important;
+  padding-right: 36px !important;
+  /* Custom chevron icon */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%239ca3af' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 14px 14px !important;
+  cursor: pointer;
+}
+
+/* Dropdown option list panel */
+.my-networks-filters .filter-select option {
+  color: #374151;
+  background-color: #ffffff;
+  font-size: 0.875rem;
+  padding: 8px 12px;
+}
+
+/* Firefox: limit the native dropdown height */
+.my-networks-filters .filter-select[size] {
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* Webkit: native option list scroll */
+.my-networks-filters .filter-select::-webkit-scrollbar {
+  width: 6px;
+}
+.my-networks-filters .filter-select::-webkit-scrollbar-track {
+  background: #f9fafb;
+  border-radius: 8px;
+}
+.my-networks-filters .filter-select::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 8px;
+}
+
+/* ── Rows-per-page mini select ────────────────────────────── */
+.filter-select {
+  height: 36px;
+  min-height: 36px;
+  border-radius: 8px !important;
+  border: 1.5px solid #e5e7eb !important;
+  color: #374151;
+  font-size: 0.82rem;
+  background-color: #ffffff;
+  padding-left: 10px !important;
+  padding-right: 30px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239ca3af' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 10px center !important;
+  background-size: 12px 12px !important;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.filter-select:hover {
+  border-color: #d1d5db !important;
+}
+
+.filter-select:focus {
+  border-color: #f97a29 !important;
+  box-shadow: 0 0 0 3px rgba(249, 122, 41, 0.12) !important;
+  outline: none !important;
+}
+
+
+/* ── Table ────────────────────────────────────────────────── */
+.my-networks-table {
+  font-size: 0.875rem;
+  white-space: nowrap;
+  table-layout: fixed;
+  width: 100%;
+  min-width: 820px;
+}
+
+.my-networks-table thead th {
+  border-bottom: 1px solid #e5e7eb !important;
+  border-top: 1px solid #e5e7eb !important;
+  font-weight: 600;
+  color: #111827;
+  padding: 12px 10px;
+}
+
+.my-networks-table tbody td {
+  padding: 10px 10px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.my-networks-table tbody tr:hover td {
+  background-color: #fafafa;
+}
+
+.my-networks-table .col-fav {
+  width: 44px;
+}
+
+.my-networks-table .col-name {
+  width: 220px;
+}
+
+.my-networks-table .col-company {
+  width: 160px;
+}
+
+.my-networks-table .col-country {
+  width: 150px;
+}
+
+.my-networks-table .col-category {
+  width: 150px;
+}
+
+.my-networks-table .col-actions {
+  width: 130px;
+}
+
+/* ── Avatar ───────────────────────────────────────────────── */
+.avatar-placeholder {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #6b7280;
+  font-size: 0.9rem;
+}
+
+
+.avatar-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ── Actions ──────────────────────────────────────────────── */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.action-icons > * {
+  transition: color 0.18s ease;
+}
+
+.action-icons > *:hover {
+  color: #f97a29 !important;
+}
+
+.star-icon:hover {
+  color: #f4b400 !important;
+}
+
+.hide-dropdown-arrow::after {
+  display: none !important;
+}
+
+.action-dropdown-menu {
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10) !important;
+  border: 1px solid #f3f4f6 !important;
+  min-width: 160px;
+  padding: 6px 0 !important;
+  z-index: 1050 !important;
+}
+
+.action-dropdown-item {
+  font-size: 0.875rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px;
+  color: #374151 !important;
+}
+
+.action-dropdown-item:hover,
+.action-dropdown-item:focus {
+  background-color: #f9fafb !important;
+  color: #111827 !important;
+}
+
+.action-dropdown-item.action-dropdown-item-danger {
+  color: #ef4444 !important;
+}
+
+.action-dropdown-item.action-dropdown-item-danger:hover,
+.action-dropdown-item.action-dropdown-item-danger:focus {
+  background-color: #fef2f2 !important;
+  color: #dc2626 !important;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .my-networks-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .my-networks-filters .search-wrapper,
+  .my-networks-filters .filter-input,
+  .my-networks-filters .filter-select {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .network-filter-btn {
+    width: 100%;
+  }
+
+  .network-filter-btn > * {
+    flex: 1 1 0;
+  }
+}
+
+/* ── Custom Orange Tooltip ────────────────────────────────── */
+.custom-orange-tooltip {
+  --bs-tooltip-bg: #ffffff;
+  --bs-tooltip-color: #111827;
+  font-size: 0.82rem;
+  font-weight: 500;
+  z-index: 99999;
+}
+
+.custom-orange-tooltip .tooltip-inner {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.custom-orange-tooltip.bs-tooltip-top .tooltip-arrow::before,
+.custom-orange-tooltip.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+  border-top-color: #f97a29 !important;
+}
+
+.custom-orange-tooltip.bs-tooltip-bottom .tooltip-arrow::before,
+.custom-orange-tooltip.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+  border-bottom-color: #f97a29 !important;
+}
+
+.custom-orange-tooltip.bs-tooltip-start .tooltip-arrow::before,
+.custom-orange-tooltip.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+  border-left-color: #f97a29 !important;
+}
+
+.custom-orange-tooltip.bs-tooltip-end .tooltip-arrow::before,
+.custom-orange-tooltip.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+  border-right-color: #f97a29 !important;
+}
+
+/* ── Top Header Navigation Tabs ───────────────────────────── */
+.network-nav-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.network-nav-tab {
+  background-color: #ffffff !important;
+  color: #EF6C00 !important;
+  border: 1.5px solid #EF6C00 !important;
+  border-radius: 8px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  padding: 8px 18px !important;
+  min-width: 155px;
+  height: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+}
+
+.network-nav-tab:hover {
+  background-color: #EF6C00 !important;
+  border-color: #EF6C00 !important;
+  color: #ffffff !important;
+}
+
+.network-nav-tab.active {
+  background-color: #EF6C00 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #EF6C00 !important;
+  box-shadow: 0 2px 6px rgba(239, 108, 0, 0.25) !important;
+}
+
+.network-nav-tab.active:hover {
+  background-color: #E65100 !important;
+  border-color: #E65100 !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .network-nav-tabs-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .network-nav-tab {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 8px 10px !important;
+    font-size: 0.82rem !important;
+    height: 40px;
+  }
+}
+
+/* ── Pending Count Badge ───────────────────────────────────── */
+.nav-tab-badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  min-width: 23px;
+  height: 23px;
+  border-radius: 9px;
+  padding: 0 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; 
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}

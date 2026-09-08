@@ -1,0 +1,103 @@
+.business-profile-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 32px;
+}
+
+.business-profile-card {
+    border: 1px solid #ececec;
+    border-radius: 14px;
+    padding: 10px;
+    background: #fff;
+}
+
+.business-profile-card-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.business-profile-card-title h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.business-profile-card-title span {
+    font-size: 14px;
+    color: #7b7b7b;
+}
+
+.business-profile-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+}
+
+.business-profile-options .form-check {
+    margin: 0;
+    
+}
+
+.business-profile-options .form-check-label {
+    cursor: pointer;
+    font-size: 12px;
+    color: #1f1f1f;
+    margin-top: 4px;
+    padding-left: 8px;
+}
+
+.business-profile-options input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.business-profile-counter {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #777;
+}
+
+.business-profile-counter span {
+    color: #d88509;
+}
+
+.business-profile-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+@media (max-width:1300px) {
+
+    .business-profile-top {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .business-profile-options {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .business-profile-card {
+        padding: 18px;
+    }
+
+    .business-profile-card-title h5 {
+        font-size: 16px;
+    }
+
+    .business-profile-section-title {
+        font-size: 20px;
+    }
+
+}

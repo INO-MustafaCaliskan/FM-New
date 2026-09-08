@@ -1,0 +1,253 @@
+/* Base Button Styles */
+.ino-button {
+    font-weight: 500;
+    background-color: #EF6C00;
+    color: #fff;
+    border: 1px solid #E65100;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      height: 3.2rem;
+}
+
+.ino-button:hover {
+    background-color: #fff;
+    color: #E65100;
+    border-color: #E65100;
+}
+
+/* .ino-button:active {
+    background-color: #EF6C00 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+} */
+
+/* Outline Button Styles */
+.ino-button-outline {
+    width: 160px;
+    height: 3.2rem;
+    background-color: #fff;
+    color: #E65100;
+    border: 1px solid #E65100;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.no-background {
+    background-color: transparent;
+    font-weight: 800;
+    color: #E65100;
+    border: none;
+}
+.no-background:hover{
+    color: #eba179;
+    border: none;
+}
+.ino-button-outline:hover {
+    background-color: #EF6C00;
+    color: #fff;
+    border-color: #EF6C00;
+}
+
+.ino-button-outline:active {
+    background-color: #fff !important;
+    color: #E65100 !important;
+    border-color: #EF6C00 !important;
+}
+
+/* Blue Button Styles */
+.ino-button-blue {
+    background-color: transparent;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+}
+
+.ino-button-blue:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+.ino-button-blue:active {
+    background-color: blue;
+    color: #fff;
+    border-color: blue;
+}
+
+/* Blue Outline Button Styles */
+.ino-button-blue-outline {
+    background-color: #fff;
+    color: blue;
+    border: 1px solid blue;
+}
+
+.ino-button-blue-outline:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+.ino-button-blue-outline:active {
+    background-color: #fff;
+    color: blue;
+    border-color: blue;
+}
+
+/* Green Button Styles */
+
+.ino-button-green{
+    background-color: #7CB342 !important;
+    border: 1px solid #689F38  !important;
+    color: #fff !important;
+}
+
+.ino-button-green:hover {
+    color: #7CB342 !important;
+    background-color: #fff !important;
+}
+
+.ino-button-green:active {
+    background-color: green;
+    color: #fff;
+    border-color: green;
+}
+
+/* Green Outline Button Styles */
+.ino-button-green-outline {
+    background-color: transparent;
+    color: #689F38;
+    border: 1px solid #689F38;  
+}
+
+.ino-button-green-outline:hover {
+    background-color: #7CB342;
+    color: #fff;
+    border-color: #689F38;
+}
+
+.ino-button-green-outline:active {
+    background-color: #fff;
+    color: green;
+    border-color: green;
+}
+
+/* Red Button Styles */
+.ino-button-red {
+    background-color: transparent;
+    color: red;
+    border: 1px solid red;
+}
+
+.ino-button-red:hover {
+    background-color: red;
+    color: #fff;
+    border-color: red;
+}
+
+.ino-button-red:active {
+    background-color: red;
+    color: #fff;
+    border-color: red;
+}
+
+/* Red Outline Button Styles */
+.ino-button-red-outline {
+    background-color: #fff;
+    color: red;
+    border: 1px solid red;
+}
+
+.ino-button-red-outline:hover {
+    background-color: red;
+    color: #fff;
+    border-color: red;
+}
+
+.ino-button-red-outline:active {
+    background-color: #fff;
+    color: red;
+    border-color: red;
+}
+
+/* Gray Button Styles */
+.ino-button-gray {
+    background-color: #6c757d;
+    color: #fff;
+    border: 1px solid #6c757d;
+    transition: opacity 0.3s;
+}
+
+.ino-button-gray:hover {
+    opacity: 0.8;
+}
+
+.ino-button-gray:active {
+    opacity: 0.9;
+}
+
+/* Gray Outline Button Styles */
+.ino-button-gray-outline {
+    background-color: #fff;
+    color: #6c757d;
+    border: 1px solid #6c757d;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.ino-button-gray-outline:hover {
+    background-color: #6c757d;
+    color: #fff;
+    border-color: #6c757d;
+}
+
+.ino-button-gray-outline:active {
+    background-color: #fff;
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Light Blue Button Styles */
+.ino-button-lightBlue {
+    background-color: transparent;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+}
+
+.ino-button-lightBlue:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+.ino-button-lightBlue:active {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+/* Light Blue Outline Button Styles */
+.ino-button-lightBlue-outline {
+    background-color: #fff;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+}
+
+.ino-button-lightBlue-outline:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+.ino-button-lightBlue-outline:active {
+    background-color: #fff;
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Size Adjustments */
+.btn-size-reschedule {
+    width: 120px !important;
+    height: 32px !important;
+}
+
+.ino-button:disabled{
+    background-color: lightslategray;
+    color: #fff;
+    cursor: not-allowed;
+}

@@ -1,0 +1,12 @@
+.ino-breadcrumb {
+  font-size: 0.9rem;
+}
+.breadcrumb-item.active {
+  color: sandybrown;
+}
+.breadcrumb-item {
+  color: var(--bs-breadcrumb-item-active-color);
+}
+ol {
+  margin-bottom: 0 !important;
+}

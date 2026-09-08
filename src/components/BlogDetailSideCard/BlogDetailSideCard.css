@@ -1,0 +1,30 @@
+.blog-link:hover {
+    transform: scale(1.05);
+}
+
+.blog-side-image {
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.blog-side-image:hover {
+    transform: scale(1.1);
+}
+
+.blog-side-title {
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.blog-side-date {
+    transition: transform 0.3s ease;
+}
+
+.blog-link:hover .blog-side-title {
+    color: #f97a29;
+    transform: scale(1.1);
+}
+
+.blog-link:hover .blog-side-date {
+    transform: scale(1.1);
+}

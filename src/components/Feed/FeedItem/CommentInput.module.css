@@ -1,0 +1,68 @@
+.editor_container {
+  min-height: var(--min-height-comment-input);
+  background: #f0f2f5;
+  border-radius: 4px;
+  max-width: 100%;
+  position: relative;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.editor_inner {
+  position: relative;
+  padding: 10px 15px;
+}
+
+/* .editor_inner p{
+  margin : 0;
+} */
+
+.editor_input {
+  min-height: var(--min-height-comment-input);
+  resize: none;
+  font-size: 15px;
+  position: relative;
+  tab-size: 1;
+  outline: 0;
+  padding: 0;
+  caret-color: #444;
+  width: 100%;
+}
+
+.editor_input [contenteditable="true"] {
+  min-height: var(--min-height-comment-input);
+  outline: 0;
+  user-select: text;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.editor_input [data-lexical-editor="true"] {
+  min-height: var(--min-height-comment-input);
+  outline: 0;
+}
+
+.editor_placeholder {
+  color: #999;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 10px;
+  left: 15px;
+  font-size: 15px;
+  user-select: none;
+  display: inline-block;
+  pointer-events: none;
+}
+
+
+.comment_input_wrapper{
+  background-color: var(--comment-background-color);;
+  cursor: text;
+}
+
+
+.send_comment_btn:disabled{
+  border: none;
+}

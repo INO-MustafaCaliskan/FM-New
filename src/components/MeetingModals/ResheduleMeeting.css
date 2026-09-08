@@ -1,0 +1,19 @@
+
+
+ 
+  .block-item {
+  
+    padding: 0px !important;
+    margin: 0px !important ;
+    
+  }
+  .block-item > p{
+    width: 100px;
+    margin: 0px !important ;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px 5px;
+    background-color: lightgrey;
+    color: #fff;
+  }

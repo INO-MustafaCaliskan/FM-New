@@ -1,0 +1,74 @@
+.air-tracking-content {
+    padding: 0px 0;
+        text-align: justify;
+    align-items: start;
+}
+
+.under-construction-container {
+    background: #fff;
+    padding: 3px 2rem 2rem 2rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+}
+
+.page-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    background: #4d9aff;
+    font-weight: 500;
+    background-color: #1b6bad;
+   
+}
+
+.construction-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 40px 10px;
+    min-height: 320px;
+    background: #fde6c46c;
+    gap: 15px;
+}
+
+.status-badge {
+    display: inline-block;
+    background: #ffb84d;
+    color: #333;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.construction-message p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .under-construction-container {
+        padding: 40px 20px;
+    }
+
+    .under-construction-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .status-badge {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

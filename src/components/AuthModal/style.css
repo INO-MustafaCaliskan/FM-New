@@ -1,0 +1,80 @@
+.auth-modal-footer-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.auth-modal-footer-card {
+  flex: 1;
+}
+.auth-modal-header {
+  flex-direction: row-reverse;
+}
+.auth-modal-sign-in {
+  color: #f97a29;
+  font-weight: bold;
+  cursor: pointer;
+}
+.auth-modal-sign-in-link {
+  cursor: pointer;
+  font-weight: bold;
+}
+.auth-modal-orange {
+  background-color: #f97a29;
+  color: #fff;
+}
+.auth-modal-green {
+  background-color: rgb(50, 164, 50);
+  color: #fff;
+}
+.auth-modal-blue {
+  background-color: #0984e3;
+  color: #fff;
+}
+.auth-modal-purple {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+.auth-modal-footer-card-span {
+  font-weight: 600;
+}
+.auth-modal-title {
+  font-weight: 600;
+  font-size: 3rem;
+}
+.auth-modal-title-alt {
+  font-weight: 600;
+  font-size: 3rem;
+  color: #f97a29;
+}
+.auth-modal-hr {
+  color: #f97a29;
+  border: 1px solid #f97a29;
+  width: 50px;
+}
+.auth-modal-description {
+  font-size: 1.2rem;
+  color: #5d5d5d;
+  font-weight: 600;
+  line-height: 2rem;
+  text-align: justify;
+}
+.auth-modal-description span {
+  font-weight: 600;
+  color: #f97a29;
+}
+@media (max-width: 1200px) {
+  .auth-modal-image-wrapper {
+    display: none;
+  }
+  .footer-cards-wrapper {
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}

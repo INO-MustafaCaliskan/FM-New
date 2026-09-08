@@ -1,0 +1,51 @@
+.iv{
+    position: relative;
+}
+
+.iv_view_port{
+    overflow: hidden;
+    position: relative;
+}
+
+.iv_container{
+    touch-action: pan-y pinch-zoom;
+}
+
+.iv_slide{
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.iv_slide_inner{
+    height: 400px;
+    background-color: var(--main-media-bg);;
+}
+
+.iv_slider_image{
+    max-height: 400px;
+    width: auto;
+    object-fit: cover;
+}
+
+.iv_navigation{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.iv_navigation_button{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.iv_navigation_button:hover {
+  background-color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+.iv_navigation_button svg{
+    fill: #65686c;
+}

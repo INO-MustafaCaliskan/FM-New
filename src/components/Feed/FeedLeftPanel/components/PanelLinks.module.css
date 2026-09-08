@@ -1,0 +1,37 @@
+/* PanelLink.module.css */
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: #FAFAFB;
+  border: 1px solid #F0F0F2;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2B2C33;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.link:hover {
+  background: #fff5ef;
+  border-color: #f3d1bb;
+  color: #f97a29;
+}
+
+.link:hover .chevron {
+  transform: translateX(2px);
+  color: #f97a29;
+}
+
+.link:active {
+  transform: scale(0.98);
+}
+
+.chevron {
+  color: #B5B6BD;
+  transition: transform 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
+}

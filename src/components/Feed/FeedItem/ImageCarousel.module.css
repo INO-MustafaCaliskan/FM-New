@@ -1,0 +1,43 @@
+.embla{
+    position: relative;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.embla__navigation{
+    position : absolute; 
+    top: 50%; 
+    width: 100%; 
+    transform: translateY(-50%);
+}
+.embla__prev,
+.embla__next{
+    background-color: rgba(255,255,255,0.6);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.embla__prev:hover,
+.embla__next:hover {
+  background-color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+.embla__prev svg,
+.embla__next svg{
+    fill: #65686c;
+}

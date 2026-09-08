@@ -1,0 +1,312 @@
+.refer-page-wrap {
+  max-width: 1180px;
+}
+
+.refer-card {
+  border: 1px solid #eceff3;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+}
+
+.refer-hero-graphic {
+  width: min(100%, 360px);
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.refer-hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.hero-envelope {
+  width: 80px;
+  height: 72px;
+  border: 1px solid #cfd6de;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a7480;
+  background: #ffffff;
+}
+
+.hero-dot {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #d9e1ea;
+}
+
+.hero-dot-orange {
+  top: 4px;
+  right: 28px;
+  color: #ff5f1a;
+}
+
+.hero-dot-green {
+  bottom: 4px;
+  right: 58px;
+  color: #2ca642;
+}
+
+.hero-dot-blue {
+  bottom: 6px;
+  right: 4px;
+  color: #3168d6;
+}
+
+.referral-input-group .input-group-text,
+.referral-country-group .input-group-text {
+  background: #ffffff;
+  color: #8c97a3;
+  border-color: #d9dfe6;
+}
+
+.referral-input-group .form-control,
+.referral-input-group .form-select,
+.referral-country-group .form-select {
+  border-color: #d9dfe6;
+}
+
+.referral-input-group .form-select:focus,
+.referral-input-group .form-control:focus,
+.referral-country-group .form-select:focus {
+  box-shadow: none;
+  border-color: #c8d0db;
+}
+
+.referral-country-group {
+  width: 130px;
+}
+
+.referral-add-btn {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  border-color: #ff7a33;
+  color: #ff6a2a;
+}
+
+.referral-add-btn:hover {
+  background: #ff6a2a;
+  color: #ffffff;
+  border-color: #ff6a2a;
+}
+
+.referral-important-box {
+  background: #eef8ef;
+  border: 1px solid #d7ead8;
+}
+.referral-important-box-ft {
+  background: #fff3d8;
+}
+.text-success-ft {
+  color: #ff5f1a;
+}
+
+.referral-ack-box {
+  background: #eef3fb;
+  border: 1px solid #d8e3f5;
+}
+
+.referral-ack-checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+.referral-submit-btn {
+  background: #ff5f1a;
+  border: 1px solid #ff5f1a;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.referral-submit-btn:hover {
+  background: #ef540f;
+  border-color: #ef540f;
+  color: #ffffff;
+}
+
+.referral-stat-card {
+  border: 1px solid #eceff3;
+  border-radius: 12px;
+}
+
+.referral-stat-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-orange-soft {
+  background: #fff3ee;
+}
+
+.bg-green-soft {
+  background: #eef9ef;
+}
+
+.bg-blue-soft {
+  background: #edf3ff;
+}
+
+.referral-table {
+  border: 1px solid #eceff3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.referral-table thead th {
+  background: #f8f9fb;
+  color: #6b7681;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid #eceff3;
+}
+
+.referral-table td {
+  font-size: 14px;
+  color: #2f3b49;
+  vertical-align: middle;
+  text-transform: none !important;
+}
+
+.referral-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-orange {
+  background: #ff8a3d;
+}
+
+.bg-green {
+  background: #5cbf63;
+}
+
+.bg-blue {
+  background: #4f8cf7;
+}
+
+.status-pill {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-pill-warning {
+  background: #fff3d8;
+  color: #ff8a3d;
+}
+.copied-message {
+  margin-top: 50px;
+}
+
+.status-pill-success {
+  background: #e6f7ea;
+  color: #237b2c;
+}
+
+.status-pill-primary {
+  background: #e8f0ff;
+  color: #295ec0;
+}
+
+.referral-copy-btn {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.referral-copy-btn:disabled {
+  animation: successPulse 0.5s ease;
+}
+.referral-link-title {
+  font-weight: 600;
+  margin: 0;
+  color: #2f3b49;
+}
+.referral-link-text {
+  font-size: 14px;
+  color: #ff5f1a;
+  margin: 0;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.referral-note-icon {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #d4dbe4;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.referral-important-box p {
+  max-width: 99%;
+}
+.bs-text-justify-p {
+  text-align: justify !important;
+  text-align-last: left; /* Son satırı sola hizala */
+  hyphens: auto; /* Kelime kırma için */
+  word-break: break-word;
+}
+
+@media (max-width: 767px) {
+  .refer-hero-graphic {
+    min-width: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .refer-hero-image {
+    max-height: 120px;
+    object-position: center;
+  }
+
+  .referral-country-group {
+    width: 118px;
+  }
+
+  .referral-submit-btn {
+    font-size: 13px;
+  }
+}

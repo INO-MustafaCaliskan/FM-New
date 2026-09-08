@@ -1,0 +1,155 @@
+.account-setings-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+  flex-wrap: nowrap;
+  border: none;
+}
+
+.account-setings-tab>li {
+  width: 100% !important;
+}
+
+.account-setings-tab>li>button {
+  padding: 18px;
+  font-weight: 500;
+}
+
+.label-area {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.label-img {
+  border-radius: 7px;
+  object-fit: contain;
+}
+
+.label-form-settings {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: linear-gradient(180deg,
+      rgba(245, 245, 245, 1) 0%,
+      rgba(245, 245, 245, 1) 5%,
+      rgba(255, 255, 255, 1) 100%);
+}
+
+.upload_label {
+  background: #ef6c00;
+  color: #fff;
+  display: inline-block;
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#upload_file {
+  visibility: hidden;
+  display: none;
+}
+
+.file-name-block {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.upload-area {
+  margin-left: 0px;
+  margin-top: 15px;
+}
+
+.date-talk {
+  -webkit-appearance: none;
+  appearance: none;
+
+  padding-left: 35px !important;
+  box-sizing: border-box;
+}
+
+.form-control-container {
+  display: flex;
+  gap: 0px;
+  /* İstediğiniz boşluk değerini ayarlayabilirsiniz */
+}
+
+.images-button {
+  background-color: #f97a29 !important;
+  border: 1px solid #f97a29 !important;
+  border-radius: 10px !important;
+  padding: 7px 10px !important;
+}
+
+.images-button:hover {
+  background-color: #e95b00 !important;
+}
+
+.talk-select.is-invalid {
+  border-color: #dc3545;
+  /* Bootstrap kırmızı hata rengi */
+}
+
+.invalid-feedback {
+  display: block;
+  color: #dc3545;
+  /* Bootstrap kırmızı hata rengi */
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+}
+
+/* .phone-number-input {
+  flex: 1;
+}
+.phone-number-select-wrapper .phone-number-input {
+  padding-left: 40% !important;
+}
+
+@media (max-width: 768px) {
+  .phone-number-select-wrapper .phone-number-input {
+    padding-left: 25% !important;
+  }
+} */
+
+.uploadBtn {
+  background-color: #ef6c00 !important;
+  border-color: #e65100 !important;
+  padding: 2px 10px !important;
+  display: block !important;
+  height: 40px !important;
+  width: 119px !important;
+  border-radius: 12px !important;
+
+  left: 10px !important;
+}
+
+.account-settings-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  height: 50px !important;
+  gap: 10px;
+  padding: 12px 28px;
+  border: 2px solid #f97a29;
+  border-radius: 0.375rem;
+  background: #fff;
+  color: #f97a29;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .account-settings-profile-btn {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.account-settings-profile-btn:hover {
+  background: #f97a29;
+  color: #fff;
+}

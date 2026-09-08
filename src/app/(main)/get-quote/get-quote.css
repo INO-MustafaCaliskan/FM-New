@@ -1,0 +1,114 @@
+
+.get-quote-content {
+  padding: 0px 0;
+  background: #fff;
+    padding:  2rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.under-construction-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+ 
+}
+
+.under-construction-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.construction-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.status-badge {
+  display: inline-block;
+  background: #ffb84d;
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.construction-message p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+  max-width: 500px;
+}
+.quote-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.quote-tabs button {
+  border: none;
+  background: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+.get-quote-card{
+  padding: 1rem  1rem  2rem 1rem;
+}
+.quote-tabs button.active {
+  border-bottom-color: #0d6efd;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .under-construction-container {
+    padding: 40px 20px;
+  }
+
+  .under-construction-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .status-badge {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+.quote-info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.quote-info-card {
+  border: 1px solid #f0e7db;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  min-height: 160px;
+}
+
+.quote-info-card h6 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.quote-info-card p {
+  margin: 0;
+  line-height: 1.5;
+  color: #555;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .quote-info-cards {
+    grid-template-columns: 1fr;
+  }
+}

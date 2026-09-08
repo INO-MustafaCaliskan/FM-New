@@ -1,0 +1,38 @@
+.referral-modal-check-icon {
+  height: 48px;
+  width: 48px;
+  font-weight: 700;
+  color: #ffff;
+  background: #7cb342;
+  border-radius: 50%;
+  padding: 10px;
+}
+.referral-modal-email-text {
+  color: rgb(18, 101, 185);
+}
+.referral-success-modal-hr {
+  border: 1px solid #e0e0e0;
+}
+
+.referral-success-message > p > span {
+  color: green;
+  font-weight: 700;
+}
+.referral-success-message-info {
+  background: #eef9ee;
+}
+.referral-modal-success-icon {
+  height: 48px;
+  width: 48px;
+  font-weight: 700;
+  color: #5cbf63;
+  background: #eef9ee;
+  border-radius: 50%;
+  padding: 4px;
+}
+.referral-success-message-text-bottom {
+  font-weight: 700;
+}
+.referral-success-modal-header  {
+    border-bottom: none;
+}

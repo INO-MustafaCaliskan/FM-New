@@ -1,0 +1,343 @@
+/* ─── Modal Size ─────────────────────────────────────── */
+
+.modal-xl {
+  max-width: min(1300px, 95vw) !important;
+
+}
+
+/* ─── Modal Header ───────────────────────────────────── */
+
+.rfq-modal-header {
+  /* background: linear-gradient(135deg, #f97a29 0%, #f97929f5 100%); */
+  border-bottom: none;
+  padding: 20px 24px;
+}
+
+.rfq-modal-title {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.rfq-modal-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rfq-modal-ref-no {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Status Badge ───────────────────────────────────── */
+
+.rfq-status-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.rfq-status-badge--open     { background: #e8f5e9; color: #2e7d32; }
+.rfq-status-badge--closed   { background: #fce4ec; color: #c62828; }
+.rfq-status-badge--pending  { background: #fff8e1; color: #f57f17; }
+.rfq-status-badge--awarded  { background: #e3f2fd; color: #1565c0; }
+.rfq-status-badge--default  { background: #f1f5f9; color: #475569; }
+
+/* ─── Modal Body ─────────────────────────────────────── */
+
+.rfq-modal-body {
+  background: #f8fafc;
+  max-height: 65vh;
+  overflow-y: auto;
+  padding: 20px 24px;
+}
+
+.rfq-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.rfq-modal-body::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.rfq-modal-body::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.rfq-modal-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ─── Loading ────────────────────────────────────────── */
+
+.rfq-loading-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+/* ─── Document Header Card ───────────────────────────── */
+
+.rfq-doc-header {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-left: 6px solid #f97a29;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.rfq-doc-header-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* ─── Summary Stats ──────────────────────────────────── */
+
+.rfq-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f8fafc;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  margin-top: 4px;
+}
+
+.rfq-stat {
+  flex: 1 1 120px;
+  padding: 12px 20px;
+  border-right: 1px solid #e2e8f0;
+  min-width: 100px;
+}
+
+.rfq-stat:last-child {
+  border-right: none;
+}
+
+.rfq-stat__value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.rfq-stat__unit {
+  font-size: 12px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.rfq-stat__label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* ─── Section ────────────────────────────────────────── */
+
+.rfq-section {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px 8px 20px;
+}
+
+.rfq-section-header {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #475569;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid;
+}
+
+/* ─── Field ──────────────────────────────────────────── */
+
+.rfq-field-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+
+.rfq-field-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.rfq-field-value--large {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ─── Cargo Card ─────────────────────────────────────── */
+
+.rfq-cargo-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 16px 4px 16px;
+  margin-bottom: 9px;
+  overflow: hidden;
+}
+
+.rfq-cargo-card .row > [class*="col-"] {
+  min-width: 0;
+}
+
+.rfq-cargo-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 24px;
+}
+
+.rfq-cargo-fields + .rfq-cargo-fields {
+  margin-top: 14px;
+}
+
+.rfq-field-auto {
+  min-width: 0;
+}
+
+.rfq-cargo-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rfq-cargo-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #bfdbfe;
+}
+
+/* ─── Additional Info ────────────────────────────────── */
+
+.rfq-additional-text {
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.7;
+  margin: 0;
+  padding: 4px 0 8px;
+}
+
+/* ─── Modal Footer ───────────────────────────────────── */
+
+.rfq-modal-footer {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 12px 24px;
+}
+
+.rfq-detail-modal-close-btn {
+  background: #1e293b !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 8px 24px !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color:#e2e8f0;
+}
+.rfq-detail-modal-close-btn:hover {
+  background: #253349!important;
+
+  color:#e2e8f0;
+}
+
+/* ─── Button Modifiers ───────────────────────────────── */
+
+.rfq-detail-modal-delete-btn {
+  background: #dc3545 !important;
+  color: white !important;
+}
+.rfq-detail-modal-delete-btn:hover {
+  background: #c82333 !important;
+}
+
+.rfq-detail-modal-edit-btn {
+  background: #0f172a !important;
+  color: white !important;
+}
+.rfq-detail-modal-edit-btn:hover {
+  background: #1e293b !important;
+}
+
+.rfq-detail-modal-cancel-btn {
+  background: #6c757d !important;
+  color: white !important;
+}
+.rfq-detail-modal-cancel-btn:hover {
+  background: #5a6268 !important;
+}
+
+/* ─── Edit Mode Wrapper ──────────────────────────────── */
+
+.rfq-edit-wrap {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .rfq-modal-body {
+    padding: 14px 16px;
+    max-height: 85vh;
+  }
+
+  .rfq-doc-header {
+    padding: 16px;
+  }
+
+  .rfq-modal-ref-no {
+    font-size: 17px;
+  }
+
+  .rfq-stat__value {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 575px) {
+  .modal-xl {
+    margin: 8px !important;
+  }
+
+  .rfq-stat {
+    flex: 1 1 80px;
+    padding: 10px 12px;
+  }
+}

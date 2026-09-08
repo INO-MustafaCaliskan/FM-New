@@ -1,0 +1,211 @@
+/* ── Scoped Styles for Send Requests Page ─────────────────── */
+
+/* ── Back to My Network Link ────────────────────────────── */
+.send-requests-page .back-to-network-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  padding: 4px 10px 4px 6px;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+  margin-bottom: 6px;
+  width: fit-content;
+}
+
+.send-requests-page .back-to-network-link .back-arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.send-requests-page .back-to-network-link:hover {
+  color: #EF6C00 !important;
+  background-color: #fff7ed;
+  text-decoration: none !important;
+}
+
+.send-requests-page .back-to-network-link:hover .back-arrow-icon {
+  transform: translateX(-3px);
+}
+
+/* ── Request Card & Items ─────────────────────────────────── */
+.send-requests-page .request-card {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+  background-color: #ffffff !important;
+  overflow: hidden;
+}
+
+.send-requests-page .request-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  gap: 16px;
+  transition: background-color 0.15s ease;
+}
+
+.send-requests-page .request-item:last-child {
+  border-bottom: none;
+}
+
+.send-requests-page .request-item:hover {
+  background-color: #fafafa;
+}
+
+.send-requests-page .request-user-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.send-requests-page .request-avatar-wrap {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.send-requests-page .request-avatar-img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #f3f4f6;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.send-requests-page .request-avatar-wrap:hover .request-avatar-img {
+  transform: scale(1.05);
+}
+
+.send-requests-page .request-user-details {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.send-requests-page .profile-name-link {
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.send-requests-page .profile-name-link:hover {
+  color: #ef6c00 !important;
+}
+
+.send-requests-page .request-meta-text {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.send-requests-page .request-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ── Status Badge ─────────────────────────────────────────── */
+.send-requests-page .status-badge-awaiting {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1.5px solid #fde68a;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  height: 38px;
+  box-sizing: border-box;
+}
+
+/* ── Cancel Button ────────────────────────────────────────── */
+.send-requests-page .btn-req-cancel {
+  background: #ffffff !important;
+  color: #ef4444 !important;
+  border-radius: 8px !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  border: 1.5px solid #fecaca !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  height: 38px;
+  box-sizing: border-box !important;
+}
+
+.send-requests-page .btn-req-cancel:hover {
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+  border-color: #f87171 !important;
+}
+
+.send-requests-page .btn-req-cancel:active {
+  background: #fecaca !important;
+}
+
+/* ── Mobile Responsive (<= 640px) ─────────────────────────── */
+@media (max-width: 640px) {
+  .send-requests-page .request-item {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 14px !important;
+    gap: 12px !important;
+  }
+
+  .send-requests-page .request-user-info {
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .send-requests-page .request-avatar-img {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .send-requests-page .request-actions {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    margin-top: 4px !important;
+  }
+
+  .send-requests-page .status-badge-awaiting {
+    padding: 6px 12px !important;
+    font-size: 0.78rem !important;
+    flex: 1 1 auto !important;
+    justify-content: center !important;
+    height: 36px !important;
+  }
+
+  .send-requests-page .btn-req-cancel {
+    flex: 0 0 auto !important;
+    height: 36px !important;
+    padding: 6px 14px !important;
+    font-size: 0.82rem !important;
+  }
+}

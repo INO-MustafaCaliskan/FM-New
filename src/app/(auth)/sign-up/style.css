@@ -1,0 +1,13 @@
+/* .phone-number-select-wrapper .phone-number-input {
+    padding-left: 40% !important;
+} */
+
+.form-check > label > a{
+    color: #EF6C00;
+}
+
+/* @media (max-width: 1000px) {
+    .phone-number-select-wrapper .phone-number-input {
+        padding-left: 100px!important;
+    }
+} */

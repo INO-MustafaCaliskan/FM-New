@@ -1,0 +1,41 @@
+.growth-item {
+  margin-bottom: 8px;
+}
+
+.growth-item:last-child {
+  margin-bottom: 0;
+}
+
+.growth-item .border-bottom {
+  border-bottom: 1px solid #f9fafb !important; /* Very subtle border */
+}
+
+.growth-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+/* 2 invitations accepted (dark green on light green) */
+.growth-icon-green {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+/* network expanded to Germany (dark orange on light orange) */
+.growth-icon-orange {
+  background-color: #ffedd5;
+  color: #c2410c;
+}
+
+/* John Smith joined (another shade of green) */
+.growth-icon-green-light {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+/* pending invitations (dark blue on light blue) */
+.growth-icon-blue {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
