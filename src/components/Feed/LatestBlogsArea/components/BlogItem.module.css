@@ -1,4 +1,4 @@
-.item {
+﻿.item {
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -19,7 +19,7 @@
 }
 
 .item:hover .title {
-  color: #f97a29;
+  color: #E3071C;
 }
 
 .dot {
@@ -27,7 +27,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #f97a29;
+  background-color: #E3071C;
   margin-top: 7px;
   opacity: 0.85;
 }

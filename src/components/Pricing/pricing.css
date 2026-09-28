@@ -18,7 +18,7 @@
   transition: color 0.3s ease-in-out;
 }
 .pricing-card-icon:hover {
-  color: #ef6c00 !important;
+  color: #084896 !important;
 }
 .most-popular-badge {
   position: absolute;
@@ -152,7 +152,7 @@
   background: rgb(249, 122, 41);
   background: linear-gradient(
     90deg,
-    rgba(249, 122, 41, 1) 26%,
+    rgba(227, 7, 28, 1) 26%,
     rgba(254, 179, 2, 1) 100%
   );
 }
@@ -165,7 +165,7 @@
 }
 
 .generic_content.active {
-  border: 1px solid #f97a29;
+  border: 1px solid #E3071C;
 }
 
 /*PRICE COLOR CODE START*/
@@ -212,12 +212,12 @@
 
 /* .generic_content .generic_feature_list ul li:hover {
     background-color: #e4e4e4;
-    border-left: 5px solid #f97a29;
+    border-left: 5px solid #E3071C;
   } */
 
 .generic_content .generic_price_btn button {
-  border: 1px solid #f97a29;
-  color: #f97a29;
+  border: 1px solid #E3071C;
+  color: #E3071C;
 }
 
 .generic_content .per_person_badge {
@@ -275,7 +275,7 @@
 
 .generic_content.active .generic_head_price .generic_head_content .head_bg,
 .generic_content:hover .generic_head_price .generic_head_content .head_bg {
-  border-color: #f97a29 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #f97a29;
+  border-color: #E3071C rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #E3071C;
   color: #fff;
 }
 
@@ -286,13 +286,13 @@
 
 .generic_content:hover .generic_price_btn button,
 .generic_content.active .generic_price_btn button {
-  background-color: #f97a29;
+  background-color: #E3071C;
   color: #fff;
 }
 
 .generic_content:hover .per_person_badge,
 .generic_content.active .per_person_badge {
-  border-color: #e65100 !important;
+  border-color: #A00111 !important;
 }
 
 .generic_content:hover .per_person_badge .text-secondary,
@@ -303,8 +303,8 @@
 .generic_content.active .per_person_badge .per-person-text,
 .generic_content.active .corporate-user-icon,
 .generic_content.active .custom-pricing-text {
-  color: #e65100 !important;
-  border-color: #e65100;
+  color: #A00111 !important;
+  border-color: #A00111;
 }
 
 .generic_content:hover .corporate-user-icon,
@@ -534,15 +534,15 @@
   align-items: center;
   width: 200px;
   height: 3rem;
-  background-color: #ef6c00;
+  background-color: #084896;
   color: #fff;
-  border-color: #e65100;
+  border-color: #A00111;
 }
 
 .pricing-button-no-outline:hover {
   background-color: #fff;
-  border-color: #e65100;
-  color: #e65100;
+  border-color: #A00111;
+  color: #A00111;
 }
 
 .pricing-payment-section {
@@ -550,10 +550,10 @@
 }
 
 .all-packages-btn {
-  border: 1px solid #f97a29;
+  border: 1px solid #E3071C;
   border-radius: 50px;
   background-color: #fff;
-  color: #f97a29;
+  color: #E3071C;
   display: inline-block;
   font-size: 18px;
   outline: medium none;
@@ -564,8 +564,8 @@
 }
 
 .all-packages-btn:hover {
-  border: 1px solid #f97a29;
-  background-color: #f97a29;
+  border: 1px solid #E3071C;
+  background-color: #E3071C;
   color: #fff;
 }
 .error-text {

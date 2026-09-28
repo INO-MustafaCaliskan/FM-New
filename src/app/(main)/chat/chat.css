@@ -1,4 +1,4 @@
-.connect-360-wrapper {
+﻿.connect-360-wrapper {
   display: flex;
   border: 1px solid #ededed;
   border-radius: 6px;
@@ -273,7 +273,7 @@
 }
 
 .chat_actions ul li.active {
-  background-color: #f97a29 !important;
+  background-color: #E3071C !important;
   color: #fff;
 }
 
@@ -348,7 +348,7 @@
 }
 
 .recent-chat-user-item.active {
-  border-left: 5px solid #f97a29;
+  border-left: 5px solid #E3071C;
   background-color: #fef2ea;
 }
 
@@ -493,7 +493,7 @@
 }
 
 .recent-chat-content-header i.fa-ellipsis-h:hover {
-  background: #f97a29;
+  background: #E3071C;
   color: #ffffff;
 }
 
@@ -569,7 +569,7 @@
 }
 
 .me-msg-content::selection {
-  color: #f97a29 !important;
+  color: #E3071C !important;
   background-color: #fff !important;
 }
 

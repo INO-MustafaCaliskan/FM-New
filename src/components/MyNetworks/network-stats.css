@@ -1,4 +1,4 @@
-.network-stats-wrapper {
+﻿.network-stats-wrapper {
   margin-bottom: 1.5rem;
 }
 
@@ -31,7 +31,7 @@
 
 .network-stat-icon-wrapper.countries-icon {
   background-color: #fff3e0;
-  color: #ef6c00;
+  color: #084896;
 }
 
 .network-stat-details {
@@ -149,6 +149,6 @@
 }
 
 .custom-tooltip {
-  --bs-tooltip-bg: #f97a29;
+  --bs-tooltip-bg: #E3071C;
   --bs-tooltip-color: #fff;
 }

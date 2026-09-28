@@ -1,4 +1,4 @@
-.editor_placeholder{
+﻿.editor_placeholder{
   color: #999;
   overflow: hidden;
   position: absolute;
@@ -50,7 +50,7 @@
 .add_image_icon{
     margin-right: 8px;
     cursor: pointer;
-    color: #f97a29;
+    color: #E3071C;
 }
 
 .attachment_wrapper{

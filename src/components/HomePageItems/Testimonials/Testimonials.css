@@ -1,4 +1,4 @@
-
+﻿
 .testimonials-swiper{
     border:none;
     border-radius: 15px;
@@ -29,9 +29,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-top: 1px solid #E65100 ;
-    border-left: 1px solid #E65100 ;
-    border-bottom: 1px solid #E65100 ;
+    border-top: 1px solid #A00111 ;
+    border-left: 1px solid #A00111 ;
+    border-bottom: 1px solid #A00111 ;
     border-radius: 15px 0 0 15px;
     padding:10px 10px 10px 80px;
     width: 85%;
@@ -39,7 +39,7 @@
 
 }
 /* .testimonials-content h6:hover{
-    color:#E65100;
+    color:#A00111;
     cursor: pointer;
 } */
 .comment-area{
@@ -58,13 +58,13 @@
     position: absolute;
     left:0;
     bottom:8.3rem;
-    color:#E65100
+    color:#A00111
 }
 .quote-right-icon{
     position: absolute;
     right:0;
     top:8rem;
-    color: #E65100;
+    color: #A00111;
 }
 /* .testimonials-card:hover{ 
     border-radius: 15px;
@@ -141,9 +141,9 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      border-top: 1px solid #E65100 ;
-      border-left: 1px solid #E65100 ;
-      border-bottom: 1px solid #E65100 ;
+      border-top: 1px solid #A00111 ;
+      border-left: 1px solid #A00111 ;
+      border-bottom: 1px solid #A00111 ;
       border-radius: 15px 0 0 15px;
       padding:10px 10px 10px 60px;
       width: 95%;

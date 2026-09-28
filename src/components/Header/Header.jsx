@@ -26,10 +26,10 @@ const Header = () => {
         <Navbar expand="lg" className=''>
           <Navbar.Brand href="/">
             <Image
-              src="/images/freight-talk-logo.jpg"
-              alt="Freight Talk"
-              width={200}
-              height={60}
+              src="/images/FM_Logo.png"
+              alt="Freight Midpoint"
+              width={280}
+              height={80}
               priority
             />
           </Navbar.Brand>

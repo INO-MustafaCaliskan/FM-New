@@ -8,7 +8,7 @@ export const NonUserHeader = ({pricingInfo}) => {
           <section id="pricing-info-section">
             <div className="static-page__content pricing-page__content">
               <Image
-                src={pricingInfo.ImageUrl || "/images/freight-talk-logo.png"}
+                src={pricingInfo.ImageUrl || "/images/FM_Logo.png"}
                 alt="Freight Talk"
                 width={400}
                 height={100}

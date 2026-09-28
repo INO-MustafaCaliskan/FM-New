@@ -1,4 +1,4 @@
-
+﻿
 .accordion-button.faq-accordion-btn{
  
     padding: 1rem 1.25rem;
@@ -10,7 +10,7 @@
 
 .accordion-button:not(.collapsed) {
     color: #fff;
-    background-color: #f97a29 !important;
+    background-color: #E3071C !important;
     box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
 }
 

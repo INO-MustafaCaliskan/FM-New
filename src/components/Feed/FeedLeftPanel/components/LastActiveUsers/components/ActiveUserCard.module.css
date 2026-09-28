@@ -1,4 +1,4 @@
-.card_container {
+﻿.card_container {
   padding : 8px 0;
   border-radius: 14px;
   transition: background-color 0.15s ease;
@@ -38,7 +38,7 @@
 .view_profile:hover {
   background: #fff5ef;
   border-color: #f3d1bb;
-  color: #f97a29;
+  color: #E3071C;
 }
 
 .chat_btn {

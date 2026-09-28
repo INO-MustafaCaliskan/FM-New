@@ -1,4 +1,4 @@
-.ft-profile-page-image {
+﻿.ft-profile-page-image {
     width: 150px !important;
     height: 150px !important;
     position: relative;
@@ -71,7 +71,7 @@
 
 .profile-sidebar-job {
     font-size: 0.8rem;
-    color: #f97a29;
+    color: #E3071C;
     font-weight: 600;
     margin: 0 0 0.15rem;
     text-align: center;
@@ -254,7 +254,7 @@
 
 .profile-connect-button {
     width: 100%;
-    background-color: #f97a29;
+    background-color: #E3071C;
     color: #ffffff;
     border: none;
     border-radius: 6px;

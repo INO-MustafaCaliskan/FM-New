@@ -1,4 +1,4 @@
-.account-setings-tab {
+﻿.account-setings-tab {
   display: flex;
   flex-direction: row;
   justify-content: space-between !important;
@@ -37,7 +37,7 @@
 }
 
 .upload_label {
-  background: #ef6c00;
+  background: #084896;
   color: #fff;
   display: inline-block;
   width: auto;
@@ -76,8 +76,8 @@
 }
 
 .images-button {
-  background-color: #f97a29 !important;
-  border: 1px solid #f97a29 !important;
+  background-color: #E3071C !important;
+  border: 1px solid #E3071C !important;
   border-radius: 10px !important;
   padding: 7px 10px !important;
 }
@@ -113,8 +113,8 @@
 } */
 
 .uploadBtn {
-  background-color: #ef6c00 !important;
-  border-color: #e65100 !important;
+  background-color: #084896 !important;
+  border-color: #A00111 !important;
   padding: 2px 10px !important;
   display: block !important;
   height: 40px !important;
@@ -130,10 +130,10 @@
   height: 50px !important;
   gap: 10px;
   padding: 12px 28px;
-  border: 2px solid #f97a29;
+  border: 2px solid #E3071C;
   border-radius: 0.375rem;
   background: #fff;
-  color: #f97a29;
+  color: #E3071C;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -150,6 +150,6 @@
 
 
 .account-settings-profile-btn:hover {
-  background: #f97a29;
+  background: #E3071C;
   color: #fff;
 }

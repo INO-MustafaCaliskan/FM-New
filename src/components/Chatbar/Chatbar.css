@@ -1,4 +1,4 @@
-
+﻿
 .tooltip-inner {
     min-width: 150px !important;
     text-align: start;
@@ -103,7 +103,7 @@
   
 
   .chatbox .chatbox-top .chatbox-icons .quick-message-small:hover {
-    background: #f97a29;
+    background: #E3071C;
     color: #ffffff;
   }
   
@@ -238,7 +238,7 @@
   }
 
   .message-box-holder .message-box:not(.message-partner)::selection{
-    color: #f97a29 !important;
+    color: #E3071C !important;
     background-color: #fff !important;
   }
 
@@ -260,7 +260,7 @@
     content: "";
     position: absolute;
     border: 10px solid transparent;
-    border-top: 10px solid #f97a29;
+    border-top: 10px solid #E3071C;
     border-right: none;
     bottom: -22px;
     right: 10px;
@@ -346,7 +346,7 @@
   }
   
   .message-send {
-    background: #f97a29;
+    background: #E3071C;
     color: white;
     font-size: 12px;
     padding: 0 15px;

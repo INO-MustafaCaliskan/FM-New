@@ -1,4 +1,4 @@
-.blog-link:hover {
+﻿.blog-link:hover {
     transform: scale(1.05);
 }
 
@@ -21,7 +21,7 @@
 }
 
 .blog-link:hover .blog-side-title {
-    color: #f97a29;
+    color: #E3071C;
     transform: scale(1.1);
 }
 

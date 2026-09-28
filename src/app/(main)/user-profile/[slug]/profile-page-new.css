@@ -81,7 +81,7 @@
 }
 
 .write-button-member {
-    background-color: #f59e0b;
+    background-color: #0869F2;
     border: none;
 }
 
@@ -107,7 +107,7 @@
     left: 0;
     right: 0;
     height: 1.5px;
-    background: linear-gradient(90deg, #f97a29, #f59e0b);
+    background: linear-gradient(90deg, #E3071C, #0869F2);
 }
 
 .profile-info-section-header {
@@ -120,7 +120,7 @@
 }
 
 .profile-info-section-header svg {
-    color: #f97a29;
+    color: #E3071C;
     flex-shrink: 0;
     font-size: 17px;
     padding: 0px;
@@ -152,7 +152,7 @@
     gap: 5px;
     margin-top: 0.75rem;
     font-size: 0.8rem;
-    color: #f97a29;
+    color: #E3071C;
     text-decoration: none;
     word-break: break-all;
 }
@@ -236,46 +236,46 @@
 }
 
 .write-button-member-span {
-    color: #f97a29;
+    color: #E3071C;
     border: none !important;
 }
 
 .write-button {
-    border: 1px solid #f97a29;
+    border: 1px solid #E3071C;
     background-color: #ffffffff;
-    color: #f97a29;
+    color: #E3071C;
     border-radius: 4px;
 }
 
 .write-button:hover {
     color: #ffffff;
-    background-color: #f97a29;
+    background-color: #E3071C;
 }
 
 .write-button-submit {
     background-color: #ffffffff;
-    color: #f97a29;
+    color: #E3071C;
     border-radius: 4px;
-    border: 1px solid #f97a29;
+    border: 1px solid #E3071C;
 }
 
 .write-button-submit:hover {
     color: #ffffff;
-    background-color: #f97a29;
-    border: 1px solid #f97a29;
+    background-color: #E3071C;
+    border: 1px solid #E3071C;
 }
 
 .more-reviews-button {
     background-color: #ffffffff;
-    color: #f97a29;
+    color: #E3071C;
     border-radius: 4px;
-    border: 1px solid #f97a29;
+    border: 1px solid #E3071C;
 }
 
 .more-reviews-button:hover:not(:disabled) {
     color: #ffffff;
-    background-color: #f97a29;
-    border: 1px solid #f97a29;
+    background-color: #E3071C;
+    border: 1px solid #E3071C;
 }
 
 .more-reviews-button:disabled {
@@ -284,7 +284,7 @@
 }
 
 .more-reviews-box {
-    border: 1px solid #f97a29;
+    border: 1px solid #E3071C;
     border-radius: 4px;
 }
 
@@ -386,7 +386,7 @@
 .review-rating-hint {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #f59e0b;
+    color: #0869F2;
     margin: 0;
     min-height: 1.25rem;
 }
@@ -413,8 +413,8 @@
 }
 
 .review-textarea:focus {
-    border-color: #f97a29;
-    box-shadow: 0 0 0 3px rgba(249, 122, 41, 0.12);
+    border-color: #E3071C;
+    box-shadow: 0 0 0 3px rgba(227, 7, 28, 0.12);
 }
 
 .review-modal-footer {
@@ -519,7 +519,7 @@
     top: 0;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(180deg, #f97a29, #f59e0b);
+    background: linear-gradient(180deg, #E3071C, #0869F2);
     border-radius: 12px 0 0 12px;
 }
 
@@ -529,18 +529,18 @@
 }
 
 .review-card-highlighted {
-    border-color: #f97a29 !important;
-    box-shadow: 0 0 0 3px rgba(249, 122, 41, 0.18) !important;
+    border-color: #E3071C !important;
+    box-shadow: 0 0 0 3px rgba(227, 7, 28, 0.18) !important;
     animation: review-highlight-pulse 1.5s ease-out;
 }
 
 @keyframes review-highlight-pulse {
     0% {
-        box-shadow: 0 0 0 6px rgba(249, 122, 41, 0.35);
+        box-shadow: 0 0 0 6px rgba(227, 7, 28, 0.35);
     }
 
     100% {
-        box-shadow: 0 0 0 3px rgba(249, 122, 41, 0.18);
+        box-shadow: 0 0 0 3px rgba(227, 7, 28, 0.18);
     }
 }
 
@@ -556,7 +556,7 @@
     height: 42px;
     min-width: 42px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #f97a29, #f59e0b);
+    background: linear-gradient(135deg, #E3071C, #0869F2);
     color: #ffffff;
     font-size: 0.8rem;
     font-weight: 700;
@@ -582,7 +582,7 @@
 }
 
 .review-author-name:hover {
-    color: #f97a29;
+    color: #E3071C;
     text-decoration: underline;
 }
 
@@ -850,13 +850,13 @@
 }
 
 .info-icon {
-    color: #f97a29;
+    color: #E3071C;
     font-size: 20px;
     flex-shrink: 0;
 }
 
 .website-link {
-    color: #f97a29;
+    color: #E3071C;
     margin-left: 4px;
     font-size: 13px;
 }
@@ -895,7 +895,7 @@
 }
 
 .website-footer-link {
-    color: #f97a29;
+    color: #E3071C;
     font-size: 11px;
     min-width: 180px;
 }
@@ -996,12 +996,12 @@
 }
 
 .review-title-icon {
-    color: #EF6C00;
+    color: #084896;
     font-size: 18px;
 }
 
 .company-stars {
-    color: #f59e0b;
+    color: #0869F2;
     margin-bottom: 8px;
     letter-spacing: 2px;
 }
@@ -1017,7 +1017,7 @@
     align-items: center;
 
     gap: 5px;
-    color: #EF6C00;
+    color: #084896;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
@@ -1071,7 +1071,7 @@
 .coverage-title h2 {
     font-size: 45px;
     font-weight: 700;
-    color: #EF6C00;
+    color: #084896;
     margin: 0;
 }
 

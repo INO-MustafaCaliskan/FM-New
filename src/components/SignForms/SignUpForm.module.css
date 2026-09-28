@@ -1,4 +1,4 @@
-/* ── Slider shell ───────────────────────────────────────────────────────── */
+﻿/* ── Slider shell ───────────────────────────────────────────────────────── */
 .sliderShell {
   position: relative;
   overflow: hidden;
@@ -87,7 +87,7 @@
 }
 
 .alreadyAccountLink {
-  color: #ef6c00;
+  color: #084896;
   font-weight: 600;
 }
 
@@ -154,7 +154,7 @@
 
 .resendBtnActive {
   cursor: pointer;
-  color: #ef6c00;
+  color: #084896;
 }
 
 .resendBtnDisabled {
@@ -185,11 +185,11 @@
   border-radius: 10px;
   outline: none;
   transition: border-color 0.15s, background 0.15s;
-  caret-color: #ef6c00;
+  caret-color: #084896;
 }
 
 .otpBoxFilled {
-  border-color: var(--otp-active, #ef6c00);
+  border-color: var(--otp-active, #084896);
   background: var(--otp-filled-bg, #fff7f2);
 }
 

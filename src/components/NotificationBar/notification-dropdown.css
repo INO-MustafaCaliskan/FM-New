@@ -1,10 +1,10 @@
-.notification-btn {
+﻿.notification-btn {
     height: 35px;
     /* padding: 0.6rem; */
     background-color: transparent;
     border-radius: 7px;
     margin-top: 0;
-    border: 1px solid #f97a29;
+    border: 1px solid #E3071C;
     position: relative;
   }
   
@@ -13,7 +13,7 @@
   }
   
   .btn.show{
-    border-color: #f97a29 !important;
+    border-color: #E3071C !important;
   }
    
   
@@ -102,7 +102,7 @@
 .notification-loading {
   justify-content: center;
   margin-top: 1rem;
-  color: #f97a29;
+  color: #E3071C;
   min-height: 38vh;
   vertical-align: middle;
   align-items: center;
@@ -216,7 +216,7 @@
 }
 
 .notification-dropdown ul li a:hover {
-  color: #f97a29 !important;
+  color: #E3071C !important;
 }
 
 

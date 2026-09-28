@@ -14,15 +14,15 @@
 .coverage-btn {
   font-size: 9px !important;
   font-weight: 600 !important;
-  color: #f97a29 !important;
+  color: #E3071C !important;
   border: none !important;
-  background-color: rgba(249, 122, 41, 0.1) !important;
+  background-color: rgba(227, 7, 28, 0.1) !important;
   border-radius: 6px !important;
   padding: 5px 4px !important;
   transition: all 0.2s ease-in-out;
 }
 
 .coverage-btn:hover {
-  background-color: rgba(249, 122, 41, 0.18) !important;
-  color: #e65100 !important;
+  background-color: rgba(227, 7, 28, 0.18) !important;
+  color: #A00111 !important;
 }

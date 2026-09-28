@@ -14,8 +14,8 @@
 .ss-btn-spinner {
     width: 18px;
     height: 18px;
-    border: 2.5px solid rgba(230, 81, 0, 0.2);
-    border-top-color: #E65100;
+    border: 2.5px solid rgba(160, 1, 17, 0.2);
+    border-top-color: #A00111;
     border-radius: 50%;
     animation: ss-spin 0.7s linear infinite;
     flex-shrink: 0;
@@ -57,7 +57,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #E65100;
+    color: #A00111;
     flex-shrink: 0;
 }
 
@@ -102,8 +102,8 @@
 
 .ss-input-wrapper--active,
 .ss-input-wrapper:focus-within {
-    border-color: #E65100;
-    box-shadow: 0 0 0 3px rgba(230, 81, 0, 0.1);
+    border-color: #A00111;
+    box-shadow: 0 0 0 3px rgba(160, 1, 17, 0.1);
 }
 
 .ss-input-prefix,
@@ -171,7 +171,7 @@
 
 .ss-icon-btn--edit:hover {
     background: #fff3eb;
-    color: #E65100;
+    color: #A00111;
 }
 
 .ss-btn-group {
@@ -180,7 +180,7 @@
 }
 
 .ss-icon-btn--save {
-    background: #E65100;
+    background: #A00111;
     color: #fff;
 }
 
@@ -293,7 +293,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #E65100;
+    background: #A00111;
     flex-shrink: 0;
     margin-top: 5px;
 }

@@ -1,4 +1,4 @@
-/* ── Scoped Styles for Send Requests Page ─────────────────── */
+﻿/* ── Scoped Styles for Send Requests Page ─────────────────── */
 
 /* ── Back to My Network Link ────────────────────────────── */
 .send-requests-page .back-to-network-link {
@@ -22,7 +22,7 @@
 }
 
 .send-requests-page .back-to-network-link:hover {
-  color: #EF6C00 !important;
+  color: #084896 !important;
   background-color: #fff7ed;
   text-decoration: none !important;
 }
@@ -99,7 +99,7 @@
 }
 
 .send-requests-page .profile-name-link:hover {
-  color: #ef6c00 !important;
+  color: #084896 !important;
 }
 
 .send-requests-page .request-meta-text {

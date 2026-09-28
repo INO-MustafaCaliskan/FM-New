@@ -1,4 +1,4 @@
-.solution-partners-card {
+﻿.solution-partners-card {
     border-radius: 12px;
     max-height: 500px !important;
     justify-content: center;
@@ -6,7 +6,7 @@
 
 }
 .solution-partners-card > div > h5 {
-    color: #EF6C00;
+    color: #084896;
 }
 
 .solution-partners-avatar {
@@ -64,9 +64,9 @@
     padding: 8px 16px;
     border-radius: 5px;
     border: none;
-       background-color: #EF6C00;
+       background-color: #084896;
     color: #fff;
-    border: 1px solid #E65100;
+    border: 1px solid #A00111;
 }
 
 .solution-partners-read-more {
@@ -82,7 +82,7 @@
 }
 .solution-partners-read-more:hover {
 
-    color: #EF6C00;
+    color: #084896;
 
 
 }

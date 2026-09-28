@@ -1,4 +1,4 @@
-@media screen and (max-width: 576px) {
+﻿@media screen and (max-width: 576px) {
   .header-container {
     padding: 0 12px;
   }
@@ -70,7 +70,7 @@ header {
 }
 .profile-menu-item:hover {
   background-color: #fff7f2 !important;
-  color: #f97a29 !important;
+  color: #E3071C !important;
   padding-left: 24px;
 }
 
@@ -113,7 +113,7 @@ header {
 }
 
 .active-nav-link{
-  color : #EF6C00 !important;
+  color : #084896 !important;
 }
 
 .header-profile-nav .dropdown-menu {
@@ -129,7 +129,7 @@ header {
 }
 
 .header-profile-nav .profile-top {
-  background: linear-gradient(135deg, #f97a29 0%, #ff8a43 100%);
+  background: linear-gradient(135deg, #E3071C 0%, #ff8a43 100%);
   padding: 20px;
   border-bottom: none;
 }
@@ -252,5 +252,5 @@ header {
 }
 
 .header-nav-items .navbar-collapse-mobile a:hover {
-  color: #f97a29;
+  color: #E3071C;
 }

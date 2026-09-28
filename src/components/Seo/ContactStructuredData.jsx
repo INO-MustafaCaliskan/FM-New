@@ -10,7 +10,7 @@ export default function ContactStructuredData() {
       "@type": "Organization",
       "name": "Freight Talk",
       "url": "https://freighttalk.com/",    
-      "logo": "https://freighttalk/images/freight-talk-logo.png",
+      "logo": "https://freighttalk/images/FM_Logo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Cinarli Mah. Ankara Asfalti Cd. Mistral Izmir No: 15 Ic Kapi No: 391",

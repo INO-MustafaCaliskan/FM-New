@@ -1,4 +1,4 @@
-/* ─── Modal Size ─────────────────────────────────────── */
+﻿/* ─── Modal Size ─────────────────────────────────────── */
 
 .modal-xl {
   max-width: min(1300px, 95vw) !important;
@@ -8,7 +8,7 @@
 /* ─── Modal Header ───────────────────────────────────── */
 
 .rfq-modal-header {
-  /* background: linear-gradient(135deg, #f97a29 0%, #f97929f5 100%); */
+  /* background: linear-gradient(135deg, #E3071C 0%, #f97929f5 100%); */
   border-bottom: none;
   padding: 20px 24px;
 }
@@ -94,7 +94,7 @@
 .rfq-doc-header {
   background: #fff;
   border: 1px solid #e2e8f0;
-  border-left: 6px solid #f97a29;
+  border-left: 6px solid #E3071C;
   border-radius: 12px;
   padding: 20px 24px;
 }

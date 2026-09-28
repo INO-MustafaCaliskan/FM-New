@@ -1,4 +1,4 @@
-/* PanelLink.module.css */
+﻿/* PanelLink.module.css */
 .link {
   display: flex;
   align-items: center;
@@ -18,12 +18,12 @@
 .link:hover {
   background: #fff5ef;
   border-color: #f3d1bb;
-  color: #f97a29;
+  color: #E3071C;
 }
 
 .link:hover .chevron {
   transform: translateX(2px);
-  color: #f97a29;
+  color: #E3071C;
 }
 
 .link:active {

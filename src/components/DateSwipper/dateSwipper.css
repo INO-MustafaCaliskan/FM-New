@@ -1,4 +1,4 @@
-.date-slider-card{
+﻿.date-slider-card{
     width:60px !important;
     margin-right:0 !important;
     padding: 0 !important;
@@ -16,7 +16,7 @@
 }
 .swiper-button-prev:after {
     font-size: 1.5rem;
-    color: #f97a29;
+    color: #E3071C;
 }
 .schedule-main-swiper  {
  
@@ -29,7 +29,7 @@
 
 .swiper-button-next:after {
     font-size: 1.5rem;
-    color: #f97a29;
+    color: #E3071C;
 }
 .meeting-datepicker .card {
     border: none;
@@ -44,7 +44,7 @@
 }
   
   .calendar-card .active {
-    background: #f97a29;
+    background: #E3071C;
     color: #fff;
   }
   .swiper-button-next:after, .swiper-button-prev:after {

@@ -1,4 +1,4 @@
-.auth-modal-footer-card-icon {
+﻿.auth-modal-footer-card-icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -15,7 +15,7 @@
   flex-direction: row-reverse;
 }
 .auth-modal-sign-in {
-  color: #f97a29;
+  color: #E3071C;
   font-weight: bold;
   cursor: pointer;
 }
@@ -24,7 +24,7 @@
   font-weight: bold;
 }
 .auth-modal-orange {
-  background-color: #f97a29;
+  background-color: #E3071C;
   color: #fff;
 }
 .auth-modal-green {
@@ -49,11 +49,11 @@
 .auth-modal-title-alt {
   font-weight: 600;
   font-size: 3rem;
-  color: #f97a29;
+  color: #E3071C;
 }
 .auth-modal-hr {
-  color: #f97a29;
-  border: 1px solid #f97a29;
+  color: #E3071C;
+  border: 1px solid #E3071C;
   width: 50px;
 }
 .auth-modal-description {
@@ -65,7 +65,7 @@
 }
 .auth-modal-description span {
   font-weight: 600;
-  color: #f97a29;
+  color: #E3071C;
 }
 @media (max-width: 1200px) {
   .auth-modal-image-wrapper {

@@ -1,4 +1,4 @@
-.description {
+﻿.description {
   margin-bottom: 1.5rem;
   text-align: center;
   color: #555;
@@ -39,7 +39,7 @@
 }
 
 .signupLink {
-  color: #EF6C00;
+  color: #084896;
   font-weight: 600;
 }
 
@@ -51,5 +51,5 @@
 }
 
 .forgot_link:hover {
-  color: #f97a29;
+  color: #E3071C;
 }

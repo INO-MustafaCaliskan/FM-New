@@ -11,7 +11,7 @@ export default function AboutStructuredData() {
       "@type": "Organization",
       "name": "Freight Talk",
       "url": "https://freighttalk.com/",
-      "logo": "https://freighttalk/images/freight-talk-logo.png",
+      "logo": "https://freighttalk/images/FM_Logo.png",
       "foundingDate": "2025",
       "address": {
         "@type": "PostalAddress",

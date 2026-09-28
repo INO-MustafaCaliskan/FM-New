@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="footer__app">
               <Link href="/" className="footer__logo-link ">
                 <Image
-                  src="/images/freight-talk-logo.png"
+                  src="/images/FM_Logo.png"
                   alt="Freight Talk"
                   width={125}
                   height={40}

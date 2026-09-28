@@ -1,6 +1,6 @@
 .modalBody {
-    background: radial-gradient(circle at 20% 10%, rgba(239, 108, 0, 0.12), transparent 45%),
-        radial-gradient(circle at 80% 20%, rgba(239, 108, 0, 0.08), transparent 50%),
+    background: radial-gradient(circle at 20% 10%, rgba(8, 72, 150, 0.12), transparent 45%),
+        radial-gradient(circle at 80% 20%, rgba(8, 72, 150, 0.08), transparent 50%),
         #fff;
     border-radius: 16px;
 }
@@ -22,8 +22,8 @@
     gap: 10px;
     padding: 12px 18px;
     border-radius: 12px;
-    background-color: rgba(239, 108, 0, 0.08);
-    border: 1px solid rgba(239, 108, 0, 0.18);
+    background-color: rgba(8, 72, 150, 0.08);
+    border: 1px solid rgba(8, 72, 150, 0.18);
     position: relative;
     margin-top: 4px;
 }
@@ -39,8 +39,8 @@
     width: 10px;
     height: 10px;
     border-radius: 999px;
-    background: #EF6C00;
-    box-shadow: 0 0 0 0 rgba(239, 108, 0, 0.5);
+    background: #084896;
+    box-shadow: 0 0 0 0 rgba(8, 72, 150, 0.5);
     animation: statusPulse 1.6s ease-out infinite;
 }
 
@@ -57,15 +57,15 @@
     position: absolute;
     inset: -10px;
     border-radius: 50%;
-    border: 2px solid rgba(239, 108, 0, 0.45);
-    box-shadow: 0 0 18px rgba(239, 108, 0, 0.25);
+    border: 2px solid rgba(8, 72, 150, 0.45);
+    box-shadow: 0 0 18px rgba(8, 72, 150, 0.25);
     animation: avatarHalo 2.4s ease-out infinite;
     pointer-events: none;
 }
 
 .avatarContainer::after {
     inset: -18px;
-    border-color: rgba(239, 108, 0, 0.28);
+    border-color: rgba(8, 72, 150, 0.28);
     animation-delay: 1.2s;
 }
 
@@ -123,17 +123,17 @@
 @keyframes statusPulse {
     0% {
         transform: scale(0.9);
-        box-shadow: 0 0 0 0 rgba(239, 108, 0, 0.5);
+        box-shadow: 0 0 0 0 rgba(8, 72, 150, 0.5);
         opacity: 1;
     }
     70% {
         transform: scale(1.1);
-        box-shadow: 0 0 0 10px rgba(239, 108, 0, 0);
+        box-shadow: 0 0 0 10px rgba(8, 72, 150, 0);
         opacity: 0.85;
     }
     100% {
         transform: scale(1.1);
-        box-shadow: 0 0 0 0 rgba(239, 108, 0, 0);
+        box-shadow: 0 0 0 0 rgba(8, 72, 150, 0);
         opacity: 0;
     }
 }

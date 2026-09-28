@@ -6,7 +6,7 @@ export default function HomeStructuredData() {
     "@type": "Organization",
     "name": "Freight Talk",
     "url": "https://freighttalk.com/",
-    "logo": "https://freighttalk/images/freight-talk-logo.png",
+    "logo": "https://freighttalk/images/FM_Logo.png",
     "description": "Leaders and teams from logistics, technology, finance, manufacturing, retail, agriculture, services, and dozens of other sectors actively connect, communicate, and develop new business every day on the Freight Talk Virtual Business Networking Platform.",
     "foundingDate": "2025",
     "sameAs": [

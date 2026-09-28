@@ -1,4 +1,4 @@
-.interaction_area {
+﻿.interaction_area {
   display: flex;
   gap: 8px;
   margin-top: 12px;
@@ -43,15 +43,15 @@
 .liked {
   background-color: #FFF5EE;
   border-color: #FFD9BC;
-  color: #f97a29;
+  color: #E3071C;
 }
 
 .liked:hover {
   background-color: #FFE8D4;
-  border-color: #f97a29;
-  color: #f97a29;
+  border-color: #E3071C;
+  color: #E3071C;
 }
 
 .liked svg {
-  color: #f97a29;
+  color: #E3071C;
 }

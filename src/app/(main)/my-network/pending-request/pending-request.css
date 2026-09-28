@@ -22,7 +22,7 @@
 }
 
 .pending-requests-page .back-to-network-link:hover {
-  color: #EF6C00 !important;
+  color: #084896 !important;
   background-color: #fff7ed;
   text-decoration: none !important;
 }
@@ -99,7 +99,7 @@
 }
 
 .pending-requests-page .profile-name-link:hover {
-  color: #ef6c00 !important;
+  color: #084896 !important;
 }
 
 .pending-requests-page .request-meta-text {
@@ -120,15 +120,15 @@
 
 /* ── Action Buttons ───────────────────────────────────────── */
 .pending-requests-page .btn-req-accept {
-  background: #f97a29 !important;
+  background: #E3071C !important;
   color: #ffffff !important;
   border-radius: 8px !important;
   font-size: 0.84rem !important;
   font-weight: 600 !important;
   padding: 8px 18px !important;
-  border: 1px solid #f97a29 !important;
+  border: 1px solid #E3071C !important;
   white-space: nowrap !important;
-  box-shadow: 0 1px 2px rgba(249, 122, 41, 0.2) !important;
+  box-shadow: 0 1px 2px rgba(227, 7, 28, 0.2) !important;
   transition: all 0.2s ease !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -140,10 +140,10 @@
 }
 
 .pending-requests-page .btn-req-accept:hover {
-  background: #e65100 !important;
-  border-color: #e65100 !important;
+  background: #A00111 !important;
+  border-color: #A00111 !important;
   color: #ffffff !important;
-  box-shadow: 0 2px 6px rgba(230, 81, 0, 0.3) !important;
+  box-shadow: 0 2px 6px rgba(160, 1, 17, 0.3) !important;
 }
 
 .pending-requests-page .btn-req-accept:active {

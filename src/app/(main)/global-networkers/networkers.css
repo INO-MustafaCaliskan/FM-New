@@ -4,23 +4,23 @@
 
 /* .btn-primary {
     width: 100%; height: 3.2rem;
-    background-color: #EF6C00;
-    border-color: #E65100;
+    background-color: #084896;
+    border-color: #A00111;
   }
   .btn-primary:hover {
-    background-color: #E65100;
-    border-color: #E65100;
+    background-color: #A00111;
+    border-color: #A00111;
   }
   .btn-outline-primary {
     width:100%; height: 3.2rem;
     padding: .75rem 1.5rem;
-    color: #EF6C00;
-    border-color: #EF6C00;
+    color: #084896;
+    border-color: #084896;
   }
   .btn-outline-primary:hover {
-      color: #E65100;
-    background-color: rgba(230, 81, 0, 0.25);
-    border-color: #E65100;
+      color: #A00111;
+    background-color: rgba(160, 1, 17, 0.25);
+    border-color: #A00111;
   } */
 
 .ft-btn-call,
@@ -86,8 +86,8 @@
   border: 1.5px solid;
   padding: 1rem;
   font-size: 0.8rem;
-  border-color: #f97a29;
-  color: #f97a29;
+  border-color: #E3071C;
+  color: #E3071C;
   font-weight: bold;
   border-radius: 6px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -95,7 +95,7 @@
 }
 
 .moreButtonArea button:hover {
-  background-color: #f97a29;
+  background-color: #E3071C;
   color: #fff;
 }
 
@@ -262,7 +262,7 @@
 }
 
 .ft-profile-link-text:hover {
-  color: #EF6C00 !important;
+  color: #084896 !important;
 }
 
 .btn-network-add {
@@ -270,6 +270,6 @@
 }
 
 .btn-network-add:hover svg {
-  color: #EF6C00 !important;
+  color: #084896 !important;
 }
 

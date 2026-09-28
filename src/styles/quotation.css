@@ -1,10 +1,10 @@
-/* RFQ Container */
+﻿/* RFQ Container */
 
 .rfq-wrapper {
     width: 100%;
 }
 .rfq-next-btn {
-    background: #f97a29;
+    background: #E3071C;
     border: 1px solid #b44e0f;
     color: white;
     border: none;
@@ -14,7 +14,7 @@
     transition: background .25s ease;
 }
 .rfq-next-btn:hover {
-    background: #f97a29cc;
+    background: #E3071Ccc;
 }
 .rfq-back-btn {
     background: #e5e7eb;
@@ -76,7 +76,7 @@
 }
 
 .sidebar-step.selected-step {
-    color: #f97a29;
+    color: #E3071C;
     font-weight: 600;
     display: flex;
     align-items: center;

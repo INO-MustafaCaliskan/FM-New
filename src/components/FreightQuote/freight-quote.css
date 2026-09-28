@@ -34,8 +34,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #f97a29;
-  box-shadow: 0 0 0 4px rgba(249, 122, 41, 0.16);
+  background: #E3071C;
+  box-shadow: 0 0 0 4px rgba(227, 7, 28, 0.16);
 }
 
 .freight-quote-all-btn {
@@ -43,8 +43,8 @@
   border-radius: 10px;
   padding: 8px 14px;
   font-weight: 600;
-  background: linear-gradient(135deg, #f97a29 0%, #ff9a58 100%);
-  box-shadow: 0 10px 20px rgba(249, 122, 41, 0.2);
+  background: linear-gradient(135deg, #E3071C 0%, #ff9a58 100%);
+  box-shadow: 0 10px 20px rgba(227, 7, 28, 0.2);
 }
 
 .freight-quote-all-btn:hover,
@@ -192,12 +192,12 @@
 .freight-quote-view-btn:focus {
   border-color: #ef6f1d;
   color: #ffffff;
-  background: linear-gradient(135deg, #f97a29 0%, #ff9a58 100%);
-  box-shadow: 0 8px 16px rgba(249, 122, 41, 0.22);
+  background: linear-gradient(135deg, #E3071C 0%, #ff9a58 100%);
+  box-shadow: 0 8px 16px rgba(227, 7, 28, 0.22);
 }
 
 .freight-quote-view-btn:focus-visible {
-  box-shadow: 0 0 0 0.2rem rgba(249, 122, 41, 0.28);
+  box-shadow: 0 0 0 0.2rem rgba(227, 7, 28, 0.28);
 }
 
 .freight-quote-table-shell::-webkit-scrollbar {

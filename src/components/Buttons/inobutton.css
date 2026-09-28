@@ -1,21 +1,21 @@
-/* Base Button Styles */
+﻿/* Base Button Styles */
 .ino-button {
     font-weight: 500;
-    background-color: #EF6C00;
+    background-color: #084896;
     color: #fff;
-    border: 1px solid #E65100;
+    border: 1px solid #084896;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
       height: 3.2rem;
 }
 
 .ino-button:hover {
     background-color: #fff;
-    color: #E65100;
-    border-color: #E65100;
+    color: #A00111;
+    border-color: #A00111;
 }
 
 /* .ino-button:active {
-    background-color: #EF6C00 !important;
+    background-color: #084896 !important;
     color: #fff !important;
     border-color: #fff !important;
 } */
@@ -25,15 +25,15 @@
     width: 160px;
     height: 3.2rem;
     background-color: #fff;
-    color: #E65100;
-    border: 1px solid #E65100;
+    color: #A00111;
+    border: 1px solid #A00111;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .no-background {
     background-color: transparent;
     font-weight: 800;
-    color: #E65100;
+    color: #A00111;
     border: none;
 }
 .no-background:hover{
@@ -41,15 +41,15 @@
     border: none;
 }
 .ino-button-outline:hover {
-    background-color: #EF6C00;
+    background-color: #084896;
     color: #fff;
-    border-color: #EF6C00;
+    border-color: #084896;
 }
 
 .ino-button-outline:active {
     background-color: #fff !important;
-    color: #E65100 !important;
-    border-color: #EF6C00 !important;
+    color: #A00111 !important;
+    border-color: #084896 !important;
 }
 
 /* Blue Button Styles */

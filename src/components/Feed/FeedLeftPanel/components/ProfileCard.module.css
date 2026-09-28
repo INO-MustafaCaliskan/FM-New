@@ -1,4 +1,4 @@
-.card {
+﻿.card {
   text-align: center;
   padding: 28px 20px 24px;
   border-radius: 8px;
@@ -64,5 +64,5 @@
 
 .avatar_ring{
   border: 2px solid #fff !important;
-  box-shadow: 0 0 2px 2px #f97a29;
+  box-shadow: 0 0 2px 2px #E3071C;
 }

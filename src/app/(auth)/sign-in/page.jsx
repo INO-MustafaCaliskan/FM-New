@@ -19,7 +19,7 @@ const Page = () => {
             className={"login__promotion-logo"}
             element={
               <Image
-                src="/images/freight-talk-logo.png"
+                src="/images/FM_Logo.png"
                 alt="Freight Talk"
                 height={60}
                 width={196}

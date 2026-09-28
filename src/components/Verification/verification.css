@@ -1,4 +1,4 @@
-.verification-popup {
+﻿.verification-popup {
   display: none;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -279,5 +279,5 @@
 
 .verification-popup__register-link {
   text-decoration: underline;
-  color: #ef6c00;
+  color: #084896;
 }

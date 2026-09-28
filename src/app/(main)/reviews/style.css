@@ -1,6 +1,6 @@
-.reviews-content-information {
+﻿.reviews-content-information {
   height: 120px;
-  border: 1px solid #f97a29;
+  border: 1px solid #E3071C;
   border-radius: 12px;
   padding: 10px;
   background-color: #fff3e0;
@@ -27,7 +27,7 @@
 .reviews-content-information-icon-format {
   height: 70px;
   width: 70px;
-  color: #f97a29;
+  color: #E3071C;
 
   border-radius: 50%;
   background-color: #ffffff;
@@ -40,13 +40,13 @@
   font-weight: bold;
 }
 .review-span {
-  color: #f97a29;
+  color: #E3071C;
   font-weight: bold;
   cursor: pointer;
 }
 .review-list-search {
   width: 50%;
-  border: 1px solid #f97a29;
+  border: 1px solid #E3071C;
   border-radius: 16px;
   display: flex;
   align-items: center;

@@ -1,4 +1,4 @@
-.live-now-banner__grid {
+﻿.live-now-banner__grid {
   display: flex;
   flex-wrap: nowrap;
   gap: 0;
@@ -55,7 +55,7 @@
 
 .live-now-banner__icon {
   font-size: 1.6rem;
-  color: #e65100;
+  color: #A00111;
   display: block;
   line-height: 1;
 }
@@ -181,7 +181,7 @@
   height: 38px;
   min-width: 38px;
   border-radius: 50%;
-  background-color: #e65100;
+  background-color: #A00111;
   color: #fff;
   font-size: 0.65rem;
   font-weight: 700;
@@ -283,5 +283,5 @@
 
 .live-now-banner__subtitle-highlight {
   font-weight: 700;
-  color: #e65100;
+  color: #A00111;
 }

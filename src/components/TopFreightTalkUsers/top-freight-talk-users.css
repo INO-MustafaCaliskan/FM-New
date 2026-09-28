@@ -47,7 +47,7 @@
 }
 
 .top-freight-talk-users__view-all:hover {
-  color: #f97a29;
+  color: #E3071C;
 }
 
 .top-freight-talk-users__view-all-btn {
@@ -59,8 +59,8 @@
   padding: 8px 14px;
   font-weight: 600;
   color: #ffffff;
-  background: linear-gradient(135deg, #f97a29 0%, #ff9a58 100%);
-  box-shadow: 0 10px 20px rgba(249, 122, 41, 0.2);
+  background: linear-gradient(135deg, #E3071C 0%, #ff9a58 100%);
+  box-shadow: 0 10px 20px rgba(227, 7, 28, 0.2);
 }
 
 .top-freight-talk-users__view-all-btn:hover,
@@ -155,13 +155,13 @@
 
 .top-freight-talk-users__scroll-btn:hover,
 .top-freight-talk-users__scroll-btn:focus {
-  border-color: #f97a29;
+  border-color: #E3071C;
   color: #ffffff;
-  background: #f97a29;
+  background: #E3071C;
 }
 
 .top-freight-talk-users__scroll-btn:focus-visible {
-  outline: 2px solid rgba(249, 122, 41, 0.35);
+  outline: 2px solid rgba(227, 7, 28, 0.35);
   outline-offset: 2px;
 }
 
@@ -339,7 +339,7 @@
   justify-content: center;
   flex: 0 0 auto;
   color: #ffffff;
-  background: linear-gradient(135deg, #f97a29 0%, #ffb074 100%);
+  background: linear-gradient(135deg, #E3071C 0%, #ffb074 100%);
   font-size: 11px;
   font-weight: 800;
 }
@@ -399,7 +399,7 @@
 .top-freight-talk-users__filter-option:hover,
 .top-freight-talk-users__filter-option.is-active {
   background: #fff4ea;
-  color: #f97a29;
+  color: #E3071C;
 }
 
 .top-freight-talk-users__list {

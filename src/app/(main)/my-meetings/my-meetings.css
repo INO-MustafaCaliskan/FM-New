@@ -19,7 +19,7 @@
 }
 
 #createScheduleMeeting {
-    background: #ef6c00;
+    background: #084896;
     color: #fff;
     border-radius: 50px;
     font-weight: 600;
@@ -162,7 +162,7 @@ input[type="checkbox"]:checked
 }
 
 .meeting-history-tabs li:hover {
-    background-color: #EF6C00;
+    background-color: #084896;
     color: #fff;
 }
 
