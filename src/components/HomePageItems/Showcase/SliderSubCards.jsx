@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import styles from "./Showcase.module.css";
 
@@ -17,7 +17,7 @@ export default function SliderSubCards() {
           <div className={`row g-0 ${styles.radiousSliderCard}`}>
             {MOCK_SUB_CARDS.map((card, i) => (
               <div key={i} className="col-6 col-md-6 col-lg-3">
-                <div className={`${styles.featureItem} ${(i === 0 || i === 3) ? styles.active : ""}`}>
+                <div className={`${styles.featureItem} ${(i === 0 || i === 3) ? styles.active : ""} ${i === 0 ? styles.featureItemFirst : ""} ${i === 3 ? styles.featureItemLast : ""}`}>
                   <div className={`${styles.featureIcon} ${(i === 1 || i === 2) ? styles.featureWhite : ""}`}>
                     <img src={card.ImageUrl} alt="thumb" />
                   </div>

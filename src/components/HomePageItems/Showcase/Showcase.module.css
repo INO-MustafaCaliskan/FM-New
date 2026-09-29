@@ -1,4 +1,4 @@
-﻿/* Showcase.module.css */
+/* Showcase.module.css */
 
 .heroSlider {
   position: relative;
@@ -120,6 +120,7 @@
 
 .radiousSliderCard {
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .featureItem {
@@ -129,6 +130,28 @@
   transition: all .3s;
   height: 100%;
 }
+
+.featureItemFirst {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.featureItemLast {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media (max-width: 991px) {
+  .featureItemFirst {
+    border-top-right-radius: 8px; /* For mobile stacking (col-6 means 2 per row) */
+    border-bottom-left-radius: 0;
+  }
+  .featureItemLast {
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0;
+  }
+}
+
 
 .featureItem:hover {
   background: #084896;
