@@ -3,7 +3,7 @@
   display: flex;
   min-height: 100vh;
   width: 100vw;
-  background-color: #f4f6f8;
+  background-color: #f1f4f8;
   overflow: hidden;
   font-family: var(--font-inter), sans-serif;
 }
@@ -223,6 +223,7 @@
   flex: 1;
   padding: 30px;
   overflow-y: auto;
+
 }
 
 @media (max-width: 768px) {

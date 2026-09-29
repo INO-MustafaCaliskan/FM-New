@@ -3,9 +3,10 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "./DashboardLayout.module.css";
 import { useUser } from "@/context/UserContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FiShoppingCart, FiBell } from "react-icons/fi";
 import { 
   faBars, faChevronDown, faChevronRight, faPowerOff, 
-  faCreditCard, faCog, faExternalLinkAlt, faUser, faShoppingCart, faBell, faCheckCircle
+  faCreditCard, faCog, faExternalLinkAlt, faUser, faCheckCircle
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { SignOut } from "@/utils/authActions";
@@ -57,12 +58,12 @@ export default function Header({ toggleSidebar }) {
           </div>
           
           <div className={styles.headerIconBtn}>
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <FiShoppingCart />
             <span className={styles.headerIconBadge}>7</span>
           </div>
 
           <div className={styles.headerIconBtn}>
-            <FontAwesomeIcon icon={faBell} />
+            <FiBell />
             <span className={styles.headerIconBadge}>27</span>
           </div>
 

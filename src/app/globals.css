@@ -9576,10 +9576,10 @@ header .navbar {
 main {
   display: block;
   min-height: 40rem;
-  background: linear-gradient(180deg,
+  /* background: linear-gradient(180deg,
       rgba(245, 245, 245, 1) 0%,
       rgba(245, 245, 245, 1) 5%,
-      rgba(255, 255, 255, 1) 100%);
+      rgba(255, 255, 255, 1) 100%); */
 }
 
 .verified-icon {

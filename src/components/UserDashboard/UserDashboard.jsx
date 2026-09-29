@@ -36,7 +36,7 @@ export default function UserDashboard() {
             <span className={styles.statTitle}>Countries</span>
             <span className={styles.statValue}>78</span>
             <span className={styles.statChange}>
-              <span className={styles.changeUp}><FontAwesomeIcon icon={faArrowUp} /> 8%</span> vs last 30 days
+              <span className={styles.changeUp}><FontAwesomeIcon icon={faArrowUp} /> 8%</span>  <span> vs last 30 days</span>
             </span>
           </div>
         </div>
