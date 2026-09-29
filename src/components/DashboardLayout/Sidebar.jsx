@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faHome, faUsers, faRss, faComments, faFileInvoiceDollar, faChartLine, 
   faShieldAlt, faBan, faExclamationTriangle, faCalendarAlt, faNewspaper, 
-  faHeadset, faRocket, faSignOutAlt, faChevronLeft, faChevronRight,
+  faHeadset, faRocket, faChevronLeft, faChevronRight,
   faGlobe, faBriefcase, faLock, faUserFriends, faLifeRing, faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -146,15 +146,6 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
           </div>
         ))}
       </nav>
-
-      <div className={styles.sidebarBottom}>
-        <button className={`${styles.menuItem} ${styles.logoutItem}`} style={{border:"none", background:"none", cursor:"pointer", width:"100%"}}>
-          <div className={styles.menuIconWrapper}>
-            <FontAwesomeIcon icon={faSignOutAlt} className={styles.menuIcon} />
-          </div>
-          <span className={styles.menuText}>Çıkış Yap</span>
-        </button>
-      </div>
     </aside>
   );
 }
