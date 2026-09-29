@@ -1,186 +1,112 @@
-import { FaCheckCircle } from "react-icons/fa";
-import "./showcase.css";
-import InoButton from "@/components/Buttons/InoButton";
-import useIsMobile from "@/utils/hooks/useIsMobile";
-import PropTypes from "prop-types";
-import Image from "next/image";
+﻿"use client";
+import React, { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
+import styles from "./Showcase.module.css";
+import SliderSubCards from "./SliderSubCards";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useUser } from "@/context/UserContext";
 
-// handleClick fonksiyonu
-const handleClick = (buttonUrl) => {
-  window.location.href = buttonUrl;
-};
-
-const Showcase = ({ data }) => {
-  const { user, loading } = useUser();
-  const isMobile = useIsMobile();
-
-  if (user) {
-    return (
-      <section className="home-showcase">
-        <div className="home-showcase__content">
-          <picture className="home-showcase__picture">
-            <Image
-              src="/images/banner-home-hero_1.webp"
-              alt="Alternate Text"
-              className="home-showcase__image"
-              width={1600}
-              height={800}
-            />
-          </picture>
-          <div className="container">
-            <div>
-              <div className="pt-3">
-                <h1 className="home-showcase-title mt-5">{data?.Title}</h1>
-                <p className="home-showcase__desc">{data?.Description}</p>
-                <div className="home-showcase__buttons">
-                  {data.Button1Visible && (
-                    <InoButton
-                      title="Discover"
-                      onClick={() => handleClick("/global-networkers")}
-                    />
-                  )}
-                  {data.Button2Visible && (
-                    <InoButton
-                      isOutline
-                      title={data.Button2Text}
-                      onClick={() => handleClick(data.Button2Url)}
-                    />
-                  )}
-                </div>
-
-              </div>
-
-              <div className="main-hero-content">
-                <ul className="pl-0">
-                  <li className="c1">
-                    <p className="type">
-                      {!isMobile && <FaCheckCircle className="check-icon" />}
-                      <span className="main-hero-content_span">
-                        {data.Spec1}
-                      </span>
-                    </p>
-                  </li>
-                  <li className="c1">
-                    <p className="type">
-                      {!isMobile && <FaCheckCircle className="check-icon" />}
-                      <span className="main-hero-content_span">
-                        {data.Spec2}
-                      </span>
-                    </p>
-                  </li>
-                  <li className="c1">
-                    <p className="type">
-                      {!isMobile && <FaCheckCircle className="check-icon" />}
-                      <span className="main-hero-content_span">
-                        {data.Spec3}
-                      </span>
-                    </p>
-                  </li>
-                  <li className="c1">
-                    <p className="type">
-                      {!isMobile && <FaCheckCircle className="check-icon" />}
-                      <span className="main-hero-content_span">
-                        {data.Spec4}
-                      </span>
-                    </p>
-                  </li>
-                  <li className="c1">
-                    <p className="type">
-                      {!isMobile && <FaCheckCircle className="check-icon" />}
-                      <span className="main-hero-content_span">
-                        {data.Spec5}
-                      </span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
+const MOCK_SLIDER_DATA = [
+  {
+    ImageUrl: "/images/banner-home-hero_1.webp",
+    MainTitle: "WELCOME TO\nFREIGHT MIDPOINT",
+    SubTitle: "THE RIGHT NETWORK FOR\nFREIGHT FORWARDERS",
+    Description: "Join the most reliable freight forwarders network and grow your business with trusted partners worldwide.",
+    HasFirstButton: true,
+    FirstButtonText: "Apply Now",
+    FirstButtonUrl: "/sign-up",
+    HasSecondButton: false,
+    SecondButtonText: "",
+    SecondButtonUrl: ""
+  },
+  {
+    ImageUrl: "/images/banner-home-hero.png",
+    MainTitle: "GLOBAL LOGISTICS\nNETWORK",
+    SubTitle: "CONNECTING PROFESSIONALS\nWORLDWIDE",
+    Description: "Experience seamless global logistics partnerships and expand your reach.",
+    HasFirstButton: true,
+    FirstButtonText: "Discover",
+    FirstButtonUrl: "/global-networkers",
+    HasSecondButton: true,
+    SecondButtonText: "Learn More",
+    SecondButtonUrl: "/about"
   }
+];
+
+const SLIDE_INTERVAL = 5000;
+
+export default function Showcase() {
+  const { user } = useUser();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % MOCK_SLIDER_DATA.length);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(goToNext, SLIDE_INTERVAL);
+    return () => clearInterval(timer);
+  }, [goToNext]);
 
   return (
-    <section className="home-showcase">
-      <div className="home-showcase__content">
-        <picture className="home-showcase__picture">
-          <Image
-            src="/images/banner-home-hero_1.webp"
-            alt="Alternate Text"
-            className="home-showcase__image"
-            width={1600}
-            height={800}
-          />
-        </picture>
-        <div className="container">
-          <div>
-            <div className="pt-3">
-
-
-              <h1 className="home-showcase-title">{data?.Title}</h1>
-              <p className="home-showcase__desc">{data?.Description}</p>
-              <div className="home-showcase__buttons">
-                {data.Button1Visible && (
-                  <InoButton
-                    title={data.Button1Text}
-                    onClick={() => handleClick(data.Button1Url)}
-                  />
-                )}
-                {data.Button2Visible && (
-                  <InoButton
-                    title={data.Button2Text}
-                    isOutline
-                    onClick={() => handleClick(data.Button2Url)}
-                  />
-                )}
+    <>
+      <div className={styles.heroSlider}>
+        {MOCK_SLIDER_DATA.map((item, index) => (
+          <div
+            key={index}
+            className={`${styles.heroSingle} ${index === currentIndex ? styles.active : ""}`}
+            style={{ backgroundImage: `url(${item.ImageUrl})` }}
+          >
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-md-7 col-lg-7">
+                  <div className={styles.heroContent}>
+                    <h6 className={styles.heroSubTitle}>
+                      {item.MainTitle.split('\n').map((line, i) => (
+                        <React.Fragment key={i}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
+                    </h6>
+                    <h1 className={styles.heroTitle}>
+                      {item.SubTitle.split('\n').map((line, i) => (
+                        <React.Fragment key={i}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
+                    </h1>
+                    <p className={styles.heroDesc}>
+                      {item.Description.split('\n').map((line, i) => (
+                        <React.Fragment key={i}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
+                    </p>
+                    <div className={styles.heroBtn}>
+                      {item.HasFirstButton && !user && (
+                        <Link href={item.FirstButtonUrl} className={styles.themeBtn}>
+                          {item.FirstButtonText} <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "8px"}} />
+                        </Link>
+                      )}
+                      {item.HasSecondButton && (
+                        <Link href={item.SecondButtonUrl} className={styles.themeBtn}>
+                          {item.SecondButtonText} <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "8px"}} />
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="main-hero-content">
-              <ul className="pl-0">
-                <li className="c1">
-                  <p className="type">
-                    {!isMobile && <FaCheckCircle className="check-icon" />}
-                    <span className="main-hero-content_span">{data.Spec1}</span>
-                  </p>
-                </li>
-                <li className="c1">
-                  <p className="type">
-                    {!isMobile && <FaCheckCircle className="check-icon" />}
-                    <span className="main-hero-content_span">{data.Spec2}</span>
-                  </p>
-                </li>
-                <li className="c1">
-                  <p className="type">
-                    {!isMobile && <FaCheckCircle className="check-icon" />}
-                    <span className="main-hero-content_span">{data.Spec3}</span>
-                  </p>
-                </li>
-                <li className="c1">
-                  <p className="type">
-                    {!isMobile && <FaCheckCircle className="check-icon" />}
-                    <span className="main-hero-content_span">{data.Spec4}</span>
-                  </p>
-                </li>
-                <li className="c1">
-                  <p className="type">
-                    {!isMobile && <FaCheckCircle className="check-icon" />}
-                    <span className="main-hero-content_span">{data.Spec5}</span>
-                  </p>
-                </li>
-              </ul>
-            </div>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+
+      <SliderSubCards />
+    </>
   );
-};
-
-Showcase.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-};
-
-export default Showcase;
+}
