@@ -242,9 +242,26 @@
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 30px solid #3182ce;
   margin: 0 auto 20px;
   position: relative;
+  background: conic-gradient(
+    #3182ce 0% 53.2%,
+    #38a169 53.2% 73.5%,
+    #dd6b20 73.5% 89.1%,
+    #e53e3e 89.1% 96.2%,
+    #805ad5 96.2% 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donutMock::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
 }
 .donutMock::before {
   content: "53.2%";
