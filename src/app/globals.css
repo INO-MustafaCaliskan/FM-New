@@ -2503,7 +2503,7 @@ header .available {
 
 .home-showcase {
   position: relative;
-  margin-bottom: 317px;
+
 }
 
 .home-showcase__content {
@@ -3412,7 +3412,7 @@ header .available {
   min-height: 100vh;
   padding-top: 50px;
   padding-left: 80px;
-  background: url("/images/sign-in-bg.png") no-repeat right bottom/cover;
+  background: url("/images/sing-in-back.png") no-repeat right bottom/cover;
 }
 
 @media (max-width: 768px) {
@@ -6367,7 +6367,7 @@ button.meeting-tab-link.active {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #E3071C;
+  background: #084896;
   margin: -4px 0 0 -4px;
 }
 

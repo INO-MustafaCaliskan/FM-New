@@ -4,9 +4,9 @@
   gap: 0;
   justify-content: flex-start;
 }
-.live-now-banner {
+/* .live-now-banner {
   padding-top: 8rem !important;
-}
+} */
 
 @media (max-width: 992.3px) {
   .live-now-banner__grid {

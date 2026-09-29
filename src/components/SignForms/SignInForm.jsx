@@ -122,7 +122,7 @@ const SignInForm = () => {
       <div className="login__form-wrapper">
         <FormTabs activeTabIndex={0} />
         {/* Title and description */}
-        <p className={styles.description}>
+        {/* <p className={styles.description}>
           Sign in with your email and password, or use your Google account.
         </p>
 
@@ -136,7 +136,7 @@ const SignInForm = () => {
               <SocialLoginButton provider="apple" onClick={props.onClick} disabled={loading} />
             )}
           />
-        </div>
+        </div> */}
 
         {/* Google login button - full width */}
         {/* <div className="login__google-wrapper d-flex justify-content-center mb-1 position-relative">

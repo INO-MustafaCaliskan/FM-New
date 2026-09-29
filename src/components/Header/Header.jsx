@@ -151,7 +151,7 @@ export default function Header() {
                           onClick={() => toggleDrop(item.label)}>
                           {item.label}
                           <span className={styles.dropdownCaret}>
-                            {openDropdown === item.label ? "−" : "+"}
+                            {openDropdown === item.label ? "−" : ""}
                           </span>
                         </button>
                         <ul className={`${styles.dropdownMenu}${openDropdown === item.label ? " " + styles.dropdownMenuOpen : ""}`}>

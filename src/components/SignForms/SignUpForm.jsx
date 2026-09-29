@@ -222,7 +222,7 @@ const SignUpForm = () => {
           >
             <FormTabs activeTabIndex={1} />
 
-            <p className={styles.trialText}>
+            {/* <p className={styles.trialText}>
               Start your free 7-day trial. No credit card required.
             </p>
 
@@ -241,18 +241,37 @@ const SignUpForm = () => {
                   <SocialLoginButton provider="apple" onClick={props.onClick} disabled={loading} labelText="Sign up with Apple" />
                 )}
               />
-            </div>
-            <div className={styles.divider}>
+            </div> */}
+            {/* <div className={styles.divider}>
               <hr className={styles.dividerHr} />
               <span className={styles.dividerSpan}>or</span>
               <hr className={styles.dividerHr} />
-            </div>
+            </div> */}
 
             <form
               className="needs-validation account-form"
               autoComplete="off"
               onSubmit={formik.handleSubmit}
             >
+             {/* Company Name */}
+              <div className="row">
+                <div className="col-12">
+                  <div className="form-group">
+                    <label className="form-label">Company Name</label>
+                    <FormControl
+                      type="companyName"
+                      name="companyName"
+                      value={referralData ? referralData.companyName : formik.values.companyName}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      isInvalid={formik.touched.companyName && formik.errors.companyName}
+                      disabled={!!referralData}
+                      autoComplete="off"
+                    />
+                    <Form.Control.Feedback type="invalid">{formik.errors.companyName}</Form.Control.Feedback>
+                  </div>
+                </div>
+              </div>
               {/* Email */}
               <div className="row">
                 <div className="col-12">

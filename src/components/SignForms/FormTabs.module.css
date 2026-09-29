@@ -1,4 +1,4 @@
-.login_tab {
+﻿.login_tab {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,6 +34,6 @@
 
 .login_tab_link.active {
   background-color: #fff;
-  border-bottom: 3px solid #fe7904;
-  color: #fe7904;
+  border-bottom: 3px solid #084896;
+  color: #084896;
 }
