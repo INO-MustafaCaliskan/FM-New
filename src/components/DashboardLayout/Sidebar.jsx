@@ -90,9 +90,9 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
 
       <div className={styles.sidebarLogo}>
         {isOpen ? (
-          <Image src="/images/FM_Logo.png" alt="Logo" width={160} height={45} className={styles.logoImage} />
+          <Image src="/images/FM_Logo.png" alt="Logo" width={190} height={60} className={styles.logoImage} />
         ) : (
-          <div className={styles.logoIcon}>FM</div>
+            <Image src="/images/FM_icon.png" alt="Logo" width={50} height={50} className={styles.logoImage} />
         )}
       </div>
 

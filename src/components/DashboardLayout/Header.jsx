@@ -37,7 +37,7 @@ export default function Header({ toggleSidebar }) {
 
   return (
     <div className={styles.headerWrapper}>
-      <header className={styles.header}>
+      < div className={styles.headerUser}>
         <div className={styles.headerLeft}>
           <button className={styles.mobileMenuBtn} onClick={toggleSidebar} aria-label="Menu">
             <FontAwesomeIcon icon={faBars} />
@@ -120,7 +120,7 @@ export default function Header({ toggleSidebar }) {
             )}
           </div>
         </div>
-      </header>
+      </div>
     </div>
   );
 }
