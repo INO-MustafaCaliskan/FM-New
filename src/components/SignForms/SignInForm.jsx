@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef } from "react";
 import Link from "next/link";
@@ -36,18 +36,18 @@ const SignInForm = () => {
     typeof window !== "undefined" ? localStorage.getItem("email") : ""
   );
   const searchParams = useSearchParams();
-  const redirectPath = searchParams.get("redirect") || "/global-networkers";
+  const redirectPath = searchParams.get("redirect") || "/user-dashboard";
 
   const oAuthState = { provider: 'google', redirect: redirectPath, timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }
   const appleAuthOptions = {
     clientId: process.env.NEXT_PUBLIC_APPLE_CLIENT_ID,
     scope: 'email name openid',
-    redirectURI: process.env.NEXT_PUBLIC_OAUTH_CALLBACK_URL, // Google ile aynı base URL olabilir
+    redirectURI: process.env.NEXT_PUBLIC_OAUTH_CALLBACK_URL, // Google ile aynÄ± base URL olabilir
     usePopup: false, 
     state: JSON.stringify({...oAuthState, provider : 'apple'}),
   };
 
-  // bunu açınca kullanıcı sayfayı açtığında otomatik olarak google one-tap login popup'ı açılıyor.
+  // bunu aÃ§Ä±nca kullanÄ±cÄ± sayfayÄ± aÃ§tÄ±ÄŸÄ±nda otomatik olarak google one-tap login popup'Ä± aÃ§Ä±lÄ±yor.
   // useGoogleOneTapLogin({
   //   onSuccess: async (response) => {
   //     console.log("Google One Tap login successful. Response:", response);
@@ -101,7 +101,7 @@ const SignInForm = () => {
     },
   });
 
-  // bu sadece one-tap ve <GoogleLogin /> componenti için. Googledan aldığı code'u jwt'ye dönüştürüp öyle veriyor.
+  // bu sadece one-tap ve <GoogleLogin /> componenti iÃ§in. Googledan aldÄ±ÄŸÄ± code'u jwt'ye dÃ¶nÃ¼ÅŸtÃ¼rÃ¼p Ã¶yle veriyor.
   const handleSuccess = async (credentials) => {
     setLoading(true);
     setFormError('');
@@ -130,7 +130,7 @@ const SignInForm = () => {
           <SocialLoginButton provider="google" onClick={googleLogin} disabled={loading} />
           <AppleSignin
             authOptions={appleAuthOptions}
-            onSuccess={(res) => console.log("res", res)} // redirect flow'da burası tetiklenmez
+            onSuccess={(res) => console.log("res", res)} // redirect flow'da burasÄ± tetiklenmez
             onError={(err) => console.error(err)}
             render={(props) => (
               <SocialLoginButton provider="apple" onClick={props.onClick} disabled={loading} />
@@ -146,7 +146,7 @@ const SignInForm = () => {
             onError={() => {
               setFormError('Google login failed. Please try again.')
               if(process.env.NODE_ENV === 'development'){
-                console.error("Uygulama Google consolda publish edilmediyse kendi hesabınla giremezsin. Test kullanıcılarına eklenmesi lazım.")
+                console.error("Uygulama Google consolda publish edilmediyse kendi hesabÄ±nla giremezsin. Test kullanÄ±cÄ±larÄ±na eklenmesi lazÄ±m.")
               }
             }}
             width={240}

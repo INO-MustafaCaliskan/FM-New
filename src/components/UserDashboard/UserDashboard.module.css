@@ -1,0 +1,291 @@
+﻿.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #333;
+}
+
+/* TOP STATS GRID */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.statCard {
+  background: #fff;
+  border: 1px solid #edf2f7;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.statIconWrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.iconBlue { background: #ebf8ff; color: #3182ce; }
+.iconGreen { background: #f0fff4; color: #38a169; }
+.iconPurple { background: #faf5ff; color: #805ad5; }
+.iconOrange { background: #fffaf0; color: #dd6b20; }
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+}
+.statTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 5px;
+}
+.statValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: #031F4B;
+  margin-bottom: 5px;
+}
+.statChange {
+  font-size: 11px;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.changeUp { color: #38a169; font-weight: 600; background: #f0fff4; padding: 2px 6px; border-radius: 4px;}
+.changeNeutral { color: #718096; font-size: 11px; margin-top: 2px;}
+
+/* MAIN BOTTOM GRID */
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* WIDGET CARD */
+.widgetCard {
+  background: #fff;
+  border: 1px solid #edf2f7;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+}
+.widgetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #edf2f7;
+}
+.widgetTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #031F4B;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.widgetSelect {
+  font-size: 12px;
+  color: #3182ce;
+  border: 1px solid #bee3f8;
+  border-radius: 4px;
+  padding: 2px 6px;
+  background: #fff;
+}
+.widgetBody {
+  padding: 20px;
+  flex: 1;
+}
+
+/* Payment Overview Specific */
+.balanceArea {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.balanceIcon {
+  width: 60px;
+  height: 60px;
+  background: #ebf8ff;
+  color: #3182ce;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 0 auto 10px;
+}
+.balanceLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #718096;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.balanceAmount {
+  font-size: 24px;
+  font-weight: 800;
+  color: #031F4B;
+}
+
+.invoiceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid #edf2f7;
+}
+.invoiceLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.invoiceIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.iconReceivable { background: #f0fff4; color: #38a169; }
+.iconPayable { background: #fff5f5; color: #e53e3e; }
+
+.invoiceInfo {
+  display: flex;
+  flex-direction: column;
+}
+.invoiceLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2d3748;
+}
+.invoiceCount {
+  font-size: 15px;
+  font-weight: 700;
+  color: #4a5568;
+}
+.invoiceAmountGreen { color: #38a169; font-weight: 700; font-size: 14px; }
+.invoiceAmountRed { color: #e53e3e; font-weight: 700; font-size: 14px; }
+
+/* Quotation System Specific */
+.rfqFlex {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.rfqBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.rfqIcon {
+  font-size: 24px;
+  color: #3182ce;
+  margin-bottom: 5px;
+}
+.rfqLabel {
+  font-size: 12px;
+  color: #718096;
+}
+.rfqValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: #031F4B;
+}
+.rfqDivider {
+  width: 1px;
+  background: #edf2f7;
+  height: 60px;
+}
+.rfqFooter {
+  background: #f4f6f8;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 12px;
+  color: #4a5568;
+}
+
+/* Profile Visitors */
+.visitorFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.visitorValue {
+  font-size: 26px;
+  font-weight: 800;
+  color: #031F4B;
+}
+.visitorLabel {
+  font-size: 13px;
+  color: #718096;
+  flex: 1;
+  margin-left: 15px;
+}
+
+/* Donut Chart Mock */
+.donutMock {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 30px solid #3182ce;
+  margin: 0 auto 20px;
+  position: relative;
+}
+.donutMock::before {
+  content: "53.2%";
+  position: absolute;
+  right: -10px;
+  top: 40%;
+  color: #fff;
+  font-size: 11px;
+}
+/* Legend */
+.legendGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  font-size: 12px;
+  color: #4a5568;
+}
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.dotBlue { background: #3182ce; }
+.dotGreen { background: #38a169; }
+.dotOrange { background: #dd6b20; }
+.dotRed { background: #e53e3e; }
+.dotPurple { background: #805ad5; }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .mainGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
