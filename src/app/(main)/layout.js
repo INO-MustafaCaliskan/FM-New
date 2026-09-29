@@ -1,8 +1,8 @@
-
+﻿
 "use client";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import ClientLayout from "@/components/ClientLayout";
+import DashboardLayout from "@/components/DashboardLayout/DashboardLayout";
 import InoLoading from "@/components/InoLoading/InoLoading";
 import { useUser } from "@/context/UserContext";
 import BreadcrumbRoute from "@/components/Seo/BreadcrumbRoute";
@@ -22,7 +22,7 @@ function AuthCheck({ children }) {
   if (loading) return <InoLoading />;
 
   if (user) {
-    return <ClientLayout>{children}</ClientLayout>;
+    return <DashboardLayout>{children}</DashboardLayout>;
   }
 
   return (
