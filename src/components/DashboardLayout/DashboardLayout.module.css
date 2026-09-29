@@ -110,24 +110,9 @@
   padding: 0 12px;
 }
 
-.menuGroupTitle {
-  font-size: 11px;
-  font-weight: 700;
-  color: #a0aec0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  padding-left: 14px;
-  transition: opacity 0.2s, height 0.2s;
-}
 
-.sidebarClosed .menuGroupTitle {
-  opacity: 0;
-  height: 0;
-  margin: 0;
-  overflow: hidden;
-}
+
+.sidebarClosed 
 .sidebarBottom {
   padding: 10px 12px 20px;
   display: flex;
@@ -327,4 +312,59 @@
   .header {
     padding: 0 15px;
   }
+}
+.chevronWrapper {
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+}
+.chevronWrapper.hidden {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+.chevronIcon {
+  font-size: 12px;
+  color: #a0aec0;
+  transition: transform 0.3s ease;
+}
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.submenuContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.submenuOpen {
+  max-height: 500px; /* enough to show all items */
+}
+.submenuInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 10px;
+  margin-top: 4px;
+}
+.submenuItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  color: #718096;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  outline: none;
+}
+.submenuItem:hover {
+  background-color: #f4f6f8;
+  color: #031F4B;
+}
+.submenuIcon {
+  font-size: 14px;
+  opacity: 0.7;
 }

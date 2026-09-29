@@ -1,5 +1,5 @@
 ﻿"use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./DashboardLayout.module.css";
@@ -7,19 +7,39 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faHome, faUsers, faRss, faComments, faFileInvoiceDollar, faChartLine, 
   faShieldAlt, faBan, faExclamationTriangle, faCalendarAlt, faNewspaper, 
-  faHeadset, faRocket, faSignOutAlt, faChevronLeft, faChevronRight 
+  faHeadset, faRocket, faSignOutAlt, faChevronLeft, faChevronRight,
+  faGlobe, faBriefcase, faLock, faUserFriends, faLifeRing, faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Sidebar({ isOpen, toggleSidebar }) {
+  const [openMenus, setOpenMenus] = useState({
+    "Network": false,
+    "Business Tools": false,
+    "Protection": false,
+    "Community": false,
+    "Help & Support": false
+  });
+
+  const toggleMenu = (title) => {
+    if (!isOpen) {
+      toggleSidebar();
+    }
+    setOpenMenus(prev => ({
+      ...prev,
+      [title]: !prev[title]
+    }));
+  };
+
   const menuGroups = [
     {
-      title: null, // No category header
+      title: null,
       items: [
         { label: "Dashboard", icon: faHome, href: "/" },
       ]
     },
     {
       title: "Network",
+      icon: faGlobe,
       items: [
         { label: "Directory", icon: faUsers, href: "/global-networkers" },
         { label: "News Feed", icon: faRss, href: "/feed" },
@@ -28,6 +48,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
     },
     {
       title: "Business Tools",
+      icon: faBriefcase,
       items: [
         { label: "Quotation System", icon: faFileInvoiceDollar, href: "/get-quote" },
         { label: "Payment Monitoring", icon: faChartLine, href: "/payment" },
@@ -35,6 +56,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
     },
     {
       title: "Protection",
+      icon: faLock,
       items: [
         { label: "Claim System", icon: faShieldAlt, href: "/claims" },
         { label: "Blacklisted Agents", icon: faBan, href: "/blacklisted-agents" },
@@ -43,6 +65,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
     },
     {
       title: "Community",
+      icon: faUserFriends,
       items: [
         { label: "Events", icon: faCalendarAlt, href: "/events" },
         { label: "News & Blog", icon: faNewspaper, href: "/news-and-blog" },
@@ -50,6 +73,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
     },
     {
       title: "Help & Support",
+      icon: faLifeRing,
       items: [
         { label: "Support System", icon: faHeadset, href: "/contact" },
         { label: "Get Started", icon: faRocket, href: "/get-started" },
@@ -75,19 +99,50 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
       <nav className={styles.sidebarMenu}>
         {menuGroups.map((group, groupIndex) => (
           <div key={groupIndex} className={styles.menuGroup}>
-            {group.title && (
-              <div className={styles.menuGroupTitle}>
-                {group.title}
-              </div>
-            )}
-            {group.items.map((item, itemIndex) => (
-              <Link key={itemIndex} href={item.href} className={styles.menuItem}>
-                <div className={styles.menuIconWrapper}>
-                  <FontAwesomeIcon icon={item.icon} className={styles.menuIcon} />
+            {group.title ? (
+              <>
+                <button 
+                  className={styles.menuItem} 
+                  onClick={() => toggleMenu(group.title)}
+                  style={{ border: 'none', background: 'none', cursor: 'pointer', width: '100%', outline: 'none' }}
+                >
+                  <div className={styles.menuIconWrapper}>
+                    <FontAwesomeIcon icon={group.icon} className={styles.menuIcon} />
+                  </div>
+                  <span className={styles.menuText} style={{ flex: 1, textAlign: 'left' }}>
+                    {group.title}
+                  </span>
+                  <div className={`${styles.chevronWrapper} ${isOpen ? '' : styles.hidden}`}>
+                    <FontAwesomeIcon 
+                      icon={faChevronDown} 
+                      className={`${styles.chevronIcon} ${openMenus[group.title] ? styles.chevronOpen : ''}`} 
+                    />
+                  </div>
+                </button>
+
+                <div className={`${styles.submenuContainer} ${openMenus[group.title] && isOpen ? styles.submenuOpen : ''}`}>
+                  <div className={styles.submenuInner}>
+                    {group.items.map((item, itemIndex) => (
+                      <Link key={itemIndex} href={item.href} className={styles.submenuItem}>
+                        <div className={styles.menuIconWrapper}>
+                          <FontAwesomeIcon icon={item.icon} className={styles.submenuIcon} />
+                        </div>
+                        <span className={styles.menuText}>{item.label}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-                <span className={styles.menuText}>{item.label}</span>
-              </Link>
-            ))}
+              </>
+            ) : (
+              group.items.map((item, itemIndex) => (
+                <Link key={itemIndex} href={item.href} className={styles.menuItem}>
+                  <div className={styles.menuIconWrapper}>
+                    <FontAwesomeIcon icon={item.icon} className={styles.menuIcon} />
+                  </div>
+                  <span className={styles.menuText}>{item.label}</span>
+                </Link>
+              ))
+            )}
           </div>
         ))}
       </nav>
