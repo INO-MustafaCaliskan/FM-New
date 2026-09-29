@@ -1,16 +1,17 @@
-﻿.layoutContainer {
+﻿/* Layout Container */
+.layoutContainer {
   display: flex;
   min-height: 100vh;
   width: 100vw;
-  background-color: #f4f7f6;
+  background-color: #f4f6f8;
   overflow: hidden;
+  font-family: var(--font-inter), sans-serif;
 }
 
-/* Sidebar */
+/* ─── SIDEBAR ─────────────────────────────────────── */
 .sidebar {
-  width: 250px;
-  background-color: #031F4B;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #333333;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -19,73 +20,268 @@
   left: 0;
   top: 0;
   z-index: 100;
+  border-right: 1px solid #e0e0e0;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.sidebarOpen {
+  width: 260px;
+}
+
+.sidebarClosed {
+  width: 80px;
+}
+
+/* Kulakçık (Toggle Button) */
+.sidebarToggleBtn {
+  position: absolute;
+  top: 24px;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 101;
+  color: #666;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.sidebarToggleBtn:hover {
+  background-color: #f8f9fa;
+  color: #031F4B;
+}
+
+/* Logo Area */
 .sidebarLogo {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 20px;
-  font-weight: 700;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
+.logoImage {
+  object-fit: contain;
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  background: #031F4B;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.sidebarClosed .sidebarLogo {
+  padding: 0;
+  justify-content: center;
+}
+
+/* Menu */
 .sidebarMenu {
   flex: 1;
-  padding: 20px 0;
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.menuGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 12px;
+}
+
+.sidebarBottom {
+  padding: 10px 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid #f0f0f0;
 }
 
 .menuItem {
-  padding: 12px 20px;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  color: #4a5568;
   text-decoration: none;
-  font-size: 15px;
-  transition: background 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  outline: none;
 }
 
 .menuItem:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #f4f6f8;
+  color: #031F4B;
 }
 
-/* Main Content Area */
+.menuIconWrapper {
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuIcon {
+  font-size: 16px;
+}
+
+.sidebarOpen .menuIconWrapper {
+  margin-right: 14px;
+}
+
+.sidebarClosed .menuIconWrapper {
+  margin-right: 0;
+  margin: 0 auto;
+}
+
+.menuText {
+  opacity: 1;
+  transition: opacity 0.2s, width 0.2s;
+}
+
+.sidebarClosed .menuText {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.logoutItem {
+  color: #e53e3e;
+}
+.logoutItem:hover {
+  background-color: #fff5f5;
+  color: #c53030;
+}
+
+/* ─── MAIN CONTENT ────────────────────────────────────── */
 .mainWrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 250px; /* offset for fixed sidebar */
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100vh;
 }
 
-/* Header */
+.mainExpanded {
+  margin-left: 260px;
+}
+
+.mainCollapsed {
+  margin-left: 80px;
+}
+
+/* ─── HEADER ────────────────────────────────────────── */
 .header {
   height: 70px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   padding: 0 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e0e0e0;
   position: sticky;
   top: 0;
   z-index: 90;
   justify-content: space-between;
 }
 
-.headerTitle {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
-
-.headerActions {
+.headerLeft {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #4a5568;
+  cursor: pointer;
+  margin-right: 15px;
+  padding: 5px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8f9fa;
+  padding: 6px 16px 6px 6px;
+  border-radius: 50px;
+  border: 1px solid #edf2f7;
+}
+
+.userAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #805ad5; /* Purple background from image */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.langFlags {
+  display: flex;
+  gap: 8px;
+}
+
+.flagCircle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.flagCircle:hover {
+  background: #e2e8f0;
+}
+
+/* ─── CONTENT AREA ──────────────────────────────────── */
 .contentArea {
   flex: 1;
   padding: 30px;
@@ -93,14 +289,24 @@
 }
 
 @media (max-width: 768px) {
-  .sidebar {
-    width: 60px;
+  .sidebarOpen {
+    width: 260px;
+    z-index: 1000;
   }
-  .sidebarLogo, .menuItem {
-    justify-content: center;
-    font-size: 0; /* Hide text on mobile */
+  .sidebarClosed {
+    width: 0;
+    border-right: none;
   }
-  .mainWrapper {
-    margin-left: 60px;
+  .sidebarToggleBtn {
+    display: none;
+  }
+  .mainExpanded, .mainCollapsed {
+    margin-left: 0;
+  }
+  .mobileMenuBtn {
+    display: block;
+  }
+  .header {
+    padding: 0 15px;
   }
 }
