@@ -1,4 +1,4 @@
-/* Showcase.module.css */
+﻿/* Showcase.module.css */
 
 .heroSlider {
   position: relative;
@@ -118,10 +118,7 @@
   border-radius: 8px;
 }
 
-.radiousSliderCard {
-  border-radius: 8px;
-  overflow: hidden;
-}
+.radiousSliderCard { border-radius: 8px; overflow: hidden; }
 
 .featureItem {
   padding: 25px;
@@ -143,7 +140,7 @@
 
 @media (max-width: 991px) {
   .featureItemFirst {
-    border-top-right-radius: 8px; /* For mobile stacking (col-6 means 2 per row) */
+    border-top-right-radius: 8px;
     border-bottom-left-radius: 0;
   }
   .featureItemLast {
@@ -151,8 +148,6 @@
     border-top-right-radius: 0;
   }
 }
-
-
 .featureItem:hover {
   background: #084896;
 }
