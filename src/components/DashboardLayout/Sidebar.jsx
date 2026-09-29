@@ -4,20 +4,57 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./DashboardLayout.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUsers, faCalendarAlt, faComments, faEnvelope, faCog, faGlobe, faSignOutAlt, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { 
+  faHome, faUsers, faRss, faComments, faFileInvoiceDollar, faChartLine, 
+  faShieldAlt, faBan, faExclamationTriangle, faCalendarAlt, faNewspaper, 
+  faHeadset, faRocket, faSignOutAlt, faChevronLeft, faChevronRight 
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Sidebar({ isOpen, toggleSidebar }) {
-  const menuItems = [
-    { label: "Ana Sayfa", icon: faHome, href: "/" },
-    { label: "Üyeler", icon: faUsers, href: "/global-networkers" },
-    { label: "Etkinlikler", icon: faCalendarAlt, href: "/events" },
-    { label: "Chat", icon: faComments, href: "/chat" },
-    { label: "Ziyaretçi Mesajları", icon: faEnvelope, href: "/messages" },
-  ];
-
-  const bottomItems = [
-    { label: "Profil ve Ayarlar", icon: faCog, href: "/account-settings" },
-    { label: "Siteyi Görüntüle", icon: faGlobe, href: "/" },
+  const menuGroups = [
+    {
+      title: null, // No category header
+      items: [
+        { label: "Dashboard", icon: faHome, href: "/" },
+      ]
+    },
+    {
+      title: "Network",
+      items: [
+        { label: "Directory", icon: faUsers, href: "/global-networkers" },
+        { label: "News Feed", icon: faRss, href: "/feed" },
+        { label: "Chat", icon: faComments, href: "/chat" },
+      ]
+    },
+    {
+      title: "Business Tools",
+      items: [
+        { label: "Quotation System", icon: faFileInvoiceDollar, href: "/get-quote" },
+        { label: "Payment Monitoring", icon: faChartLine, href: "/payment" },
+      ]
+    },
+    {
+      title: "Protection",
+      items: [
+        { label: "Claim System", icon: faShieldAlt, href: "/claims" },
+        { label: "Blacklisted Agents", icon: faBan, href: "/blacklisted-agents" },
+        { label: "Global Warning List", icon: faExclamationTriangle, href: "/warning-list" },
+      ]
+    },
+    {
+      title: "Community",
+      items: [
+        { label: "Events", icon: faCalendarAlt, href: "/events" },
+        { label: "News & Blog", icon: faNewspaper, href: "/news-and-blog" },
+      ]
+    },
+    {
+      title: "Help & Support",
+      items: [
+        { label: "Support System", icon: faHeadset, href: "/contact" },
+        { label: "Get Started", icon: faRocket, href: "/get-started" },
+      ]
+    }
   ];
 
   return (
@@ -36,27 +73,26 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
       </div>
 
       <nav className={styles.sidebarMenu}>
-        <div className={styles.menuGroup}>
-          {menuItems.map((item, index) => (
-            <Link key={index} href={item.href} className={styles.menuItem}>
-              <div className={styles.menuIconWrapper}>
-                <FontAwesomeIcon icon={item.icon} className={styles.menuIcon} />
+        {menuGroups.map((group, groupIndex) => (
+          <div key={groupIndex} className={styles.menuGroup}>
+            {group.title && (
+              <div className={styles.menuGroupTitle}>
+                {group.title}
               </div>
-              <span className={styles.menuText}>{item.label}</span>
-            </Link>
-          ))}
-        </div>
+            )}
+            {group.items.map((item, itemIndex) => (
+              <Link key={itemIndex} href={item.href} className={styles.menuItem}>
+                <div className={styles.menuIconWrapper}>
+                  <FontAwesomeIcon icon={item.icon} className={styles.menuIcon} />
+                </div>
+                <span className={styles.menuText}>{item.label}</span>
+              </Link>
+            ))}
+          </div>
+        ))}
       </nav>
 
       <div className={styles.sidebarBottom}>
-        {bottomItems.map((item, index) => (
-          <Link key={index} href={item.href} className={styles.menuItem}>
-             <div className={styles.menuIconWrapper}>
-                <FontAwesomeIcon icon={item.icon} className={styles.menuIcon} />
-             </div>
-            <span className={styles.menuText}>{item.label}</span>
-          </Link>
-        ))}
         <button className={`${styles.menuItem} ${styles.logoutItem}`} style={{border:"none", background:"none", cursor:"pointer", width:"100%"}}>
           <div className={styles.menuIconWrapper}>
             <FontAwesomeIcon icon={faSignOutAlt} className={styles.menuIcon} />
