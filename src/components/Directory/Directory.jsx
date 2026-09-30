@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { Suspense } from "react";
 import styles from "./Directory.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -166,7 +166,7 @@ function DirectoryContent() {
                   <th>Company Info</th>
                   <th style={{ textAlign: "center" }}>Actions</th>
                 </tr>
-              )}}
+              )}
             </thead>
             <tbody>
               {activeTab === 'companies' && MOCK_COMPANIES.map(company => (
