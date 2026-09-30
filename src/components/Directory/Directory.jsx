@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { Suspense } from "react";
 import styles from "./Directory.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,7 +28,7 @@ const MOCK_USERS = [
   { id: 5, name: "David Chen", title: "Supply Chain Analyst", avatar: "https://ui-avatars.com/api/?name=David+Chen&background=ebf8ff&color=3182ce&bold=true", country: "Singapore", countryCode: "sg", city: "Bedok", company: "The Logistical Solutions", email: "david.c@logistical.sg" },
   { id: 6, name: "Hasan Rahman", title: "Branch Manager", avatar: "https://ui-avatars.com/api/?name=Hasan+Rahman&background=ebf8ff&color=3182ce&bold=true", country: "Bangladesh", countryCode: "bd", city: "Dhaka", company: "Conveyor Logistics Ltd.", email: "hasan@conveyor.bd" },
   { id: 7, name: "Priya Sharma", title: "Export Coordinator", avatar: "https://ui-avatars.com/api/?name=Priya+Sharma&background=ebf8ff&color=3182ce&bold=true", country: "India", countryCode: "in", city: "Mumbai", company: "Ajay Logistics Pvt. Ltd.", email: "priya@ajaylogistics.com" },
-  { id: 8, name: "Kemal YÄ±lmaz", title: "Business Development", avatar: "https://ui-avatars.com/api/?name=Kemal+Yilmaz&background=ebf8ff&color=3182ce&bold=true", country: "Turkey", countryCode: "tr", city: "Istanbul", company: "Aktar Global Freight", email: "kemal@aktarglobal.com.tr" }
+  { id: 8, name: "Kemal YÃ„Â±lmaz", title: "Business Development", avatar: "https://ui-avatars.com/api/?name=Kemal+Yilmaz&background=ebf8ff&color=3182ce&bold=true", country: "Turkey", countryCode: "tr", city: "Istanbul", company: "Aktar Global Freight", email: "kemal@aktarglobal.com.tr" }
 ];
 
 function DirectoryContent() {
@@ -166,7 +166,7 @@ function DirectoryContent() {
                   <th>Company Info</th>
                   <th style={{ textAlign: "center" }}>Actions</th>
                 </tr>
-              )}
+              )}}
             </thead>
             <tbody>
               {activeTab === 'companies' && MOCK_COMPANIES.map(company => (
@@ -241,33 +241,25 @@ function DirectoryContent() {
                   </td>
                 </tr>
               ))}
-
-              {activeTab === 'available' && (
-                <tr>
-                  <td colSpan="6" style={{ textAlign: "center", padding: "50px", color: "#718096", fontSize: "16px", fontWeight: "600" }}>
-                    Coming soon...
-                  </td>
-                </tr>
-              )}
             </tbody>
           </table>
 
           {/* Pagination */}
           {activeTab !== 'available' && (
             <div className={styles.paginationArea}>
-              <div className={styles.pageInfo}>Showing 1 to 8 of {activeTab === 'companies' ? '126 companies' : '850 users'}</div>
-              <div className={styles.pageNumbers}>
-                <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronLeft} /></button>
-                <button className={`${styles.pageBtn} ${styles.pageActive}`}>1</button>
-                <button className={styles.pageBtn}>2</button>
-                <button className={styles.pageBtn}>3</button>
-                <button className={styles.pageBtn}>4</button>
-                <button className={styles.pageBtn}>5</button>
-                <button className={styles.pageBtn} style={{border: 'none'}}>...</button>
-                <button className={styles.pageBtn}>13</button>
-                <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronRight} /></button>
-              </div>
+            <div className={styles.pageInfo}>Showing 1 to 8 of {activeTab === 'companies' ? '126 companies' : '850 users'}</div>
+            <div className={styles.pageNumbers}>
+              <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronLeft} /></button>
+              <button className={`${styles.pageBtn} ${styles.pageActive}`}>1</button>
+              <button className={styles.pageBtn}>2</button>
+              <button className={styles.pageBtn}>3</button>
+              <button className={styles.pageBtn}>4</button>
+              <button className={styles.pageBtn}>5</button>
+              <button className={styles.pageBtn} style={{border: 'none'}}>...</button>
+              <button className={styles.pageBtn}>13</button>
+              <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronRight} /></button>
             </div>
+          </div>
           )}
         </div>
       </div>
