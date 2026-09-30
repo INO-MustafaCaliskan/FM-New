@@ -365,7 +365,7 @@
 .topMarketsTags {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .marketTag img {
@@ -386,10 +386,10 @@
   gap: 20px;
 }
 .mapStatsLeft {
-  flex: 0 0 180px;
+  flex: 0 0 160px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 .globalCoverageBody {
   display: flex;
@@ -398,7 +398,7 @@
   gap: 30px;
 }
 .countriesServedNumber {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 800;
   color: #3182ce;
   line-height: 1;
@@ -410,18 +410,18 @@
   font-weight: 600;
 }
 .topMarketsTitle {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-main);
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .marketTag {
   background: #f7fafc;
   border: 1px solid var(--border-color);
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 8px;

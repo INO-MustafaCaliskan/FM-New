@@ -166,7 +166,7 @@ export default function CompanyProfile() {
           <>
             {/* Biography */}
             {/* <div className={styles.card}>
-              <div className={styles.cardHeader}>
+              <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
                 <FontAwesomeIcon icon={faInfoCircle} /> My Biography
               </div>
               <div className={styles.cardBodyText}>
@@ -182,7 +182,7 @@ export default function CompanyProfile() {
 
             {/* Company Introduction */}
             <div className={styles.card}>
-              <div className={styles.cardHeader}>
+              <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
                 <FontAwesomeIcon icon={faBuilding} /> Company Introduction
               </div>
               <div className={styles.cardBodyText}>
@@ -198,7 +198,7 @@ export default function CompanyProfile() {
 
             {/* Key Performance Indicators */}
             <div className={styles.card}>
-              <div className={styles.cardHeader}>
+              <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
                 <FontAwesomeIcon icon={faChartPie} /> Key Performance Indicators
               </div>
               <div className={styles.chartsRow}>
@@ -227,8 +227,8 @@ export default function CompanyProfile() {
             <div className={styles.bottomCardsRow}>
               
               {/* Top Reviews */}
-              <div className={styles.card} style={{ marginBottom: 0 }}>
-                <div className={styles.cardHeader} style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div className={styles.card} style={{ padding: "15px 20px" }}>
+                <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }} style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <div><FontAwesomeIcon icon={faStar} style={{ color: "#3182ce" }} /> Top Reviews</div>
                   <Link href="#" style={{ fontSize: '13px', color: '#3182ce', textDecoration: 'none' }}>
                     View All Reviews &rarr;
@@ -240,8 +240,8 @@ export default function CompanyProfile() {
               </div>
 
               {/* Global Coverage */}
-              <div className={styles.card} style={{ marginBottom: 0 }}>
-              <div className={styles.cardHeader}>
+              <div className={styles.card} style={{ padding: "15px 20px" }}>
+              <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
                 <FontAwesomeIcon icon={faGlobeAmericas} /> Global Coverage
               </div>
               <div className={styles.globalCoverageBody}>
@@ -296,7 +296,7 @@ export default function CompanyProfile() {
 
             {/* Services & Solutions */}
             <div className={styles.card}>
-              <div className={styles.cardHeader}>
+              <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
                 <FontAwesomeIcon icon={faCogs} /> Services & Solutions
               </div>
               <div className={styles.servicesGrid}>
@@ -345,7 +345,7 @@ export default function CompanyProfile() {
 
             {/* Why People Connect With Us */}
             {/* <div className={styles.card}>
-              <div className={styles.cardHeader}>
+              <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
                 <FontAwesomeIcon icon={faHandshake} /> Why People Connect With Us
               </div>
               <div className={styles.tagList}>
@@ -358,7 +358,7 @@ export default function CompanyProfile() {
 
             {/* What Are We Interested In */}
             {/* <div className={styles.card}>
-              <div className={styles.cardHeader}>
+              <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
                 <FontAwesomeIcon icon={faTags} /> What Are We Interested In
               </div>
               <div className={styles.tagList}>
@@ -374,7 +374,7 @@ export default function CompanyProfile() {
         {/* REVIEWS TAB CONTENT */}
         {activeTab === 'reviews' && (
           <div className={styles.card}>
-            <div className={styles.cardHeader}>
+            <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
               <FontAwesomeIcon icon={faCheckCircle} /> Reviews
             </div>
             <div className={styles.cardBodyText}>
