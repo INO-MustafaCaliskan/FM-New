@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { Suspense } from "react";
 import styles from "./Directory.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -113,9 +113,9 @@ function DirectoryContent() {
           >
             <FontAwesomeIcon icon={faCheckCircle} className={styles.tabIcon} /> Available
           </div>
-          <button className={styles.quoteBtn}>
+          {/* <button className={styles.quoteBtn}>
             <FontAwesomeIcon icon={faQuoteLeft} /> GET QUOTE
-          </button>
+          </button> */}
         </div>
 
         <div className={styles.filterArea}>
@@ -156,14 +156,14 @@ function DirectoryContent() {
                   <th>City</th>
                   <th>Member Since <FontAwesomeIcon icon={faSort} /></th>
                   <th>Level</th>
-                  <th>Actions</th>
+                  <th style={{ textAlign: "center" }}>Actions</th>
                 </tr>
               ) : (
                 <tr>
                   <th>User Profile</th>
                   <th>Location</th>
                   <th>Company Info</th>
-                  <th>Actions</th>
+                  <th style={{ textAlign: "center" }}>Actions</th>
                 </tr>
               )}
             </thead>
@@ -189,7 +189,7 @@ function DirectoryContent() {
                       {company.level}
                     </span>
                   </td>
-                  <td>
+                  <td >
                     <div className={styles.actionsCol}>
                       <button className={styles.actionBtn}>
                         <FontAwesomeIcon icon={faEye} /> View Company
@@ -228,7 +228,7 @@ function DirectoryContent() {
                       <span className={styles.subText}>{user.email}</span>
                     </div>
                   </td>
-                  <td>
+                  <td >
                     <div className={styles.actionsCol}>
                       <button className={styles.actionBtn}>
                         <FontAwesomeIcon icon={faCommentDots} /> Chat
