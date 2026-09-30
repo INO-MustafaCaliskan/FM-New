@@ -237,9 +237,11 @@ function DirectoryContent() {
                       <button className={styles.actionBtn}>
                         <FontAwesomeIcon icon={faCommentDots} /> Chat
                       </button>
-                      <button className={styles.actionBtn}>
-                        <FontAwesomeIcon icon={faEye} /> View Profile
-                      </button>
+                      <Link href="/user-profile" style={{ flex: 1, display: "flex", textDecoration: "none" }}>
+                        <button className={styles.actionBtn} style={{ width: "100%" }}>
+                          <FontAwesomeIcon icon={faEye} /> View Profile
+                        </button>
+                      </Link>
                     </div>
                   </td>
                 </tr>
