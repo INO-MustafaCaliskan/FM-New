@@ -292,25 +292,9 @@
   }
 }
 /* TWO COLUMN CARDS ROW */
-.twoColRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-.mapWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.mapStatsArea {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: 1px solid var(--border-color);
-}
+
+
+
 .countriesServed {
   display: flex;
   flex-direction: column;
@@ -373,13 +357,8 @@
 }
 
 @media (max-width: 992px) {
-  .twoColRow {
-    grid-template-columns: 1fr;
-  }
-  .mapStatsArea {
-    flex-direction: column;
-    gap: 20px;
-  }
+  
+  
   .countriesServed {
     border-right: none;
     border-bottom: 1px solid var(--border-color);
@@ -394,5 +373,89 @@
   }
   .topMarketsTags {
     justify-content: center;
+  }
+}
+.globalCoverageBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.mapStatsLeft {
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.countriesServed {
+  display: flex;
+  flex-direction: column;
+}
+.countriesServedNumber {
+  font-size: 48px;
+  font-weight: 800;
+  color: #3182ce;
+  line-height: 1;
+}
+.countriesServedLabel {
+  font-size: 16px;
+  color: var(--text-sub);
+  margin-top: 5px;
+  font-weight: 500;
+}
+.topMarketsArea {
+  display: flex;
+  flex-direction: column;
+}
+.topMarketsTitle {
+  font-size: 15px;
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.topMarketsTags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.marketTag {
+  background: #f7fafc;
+  border: 1px solid var(--border-color);
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-main);
+}
+.marketTag img {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.mapRight {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .globalCoverageBody {
+    flex-direction: column;
+  }
+  .mapStatsLeft {
+    flex: auto;
+    width: 100%;
+    align-items: center;
+    text-align: center;
   }
 }
