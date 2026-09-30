@@ -1,12 +1,13 @@
 ﻿"use client";
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "./Directory.module.css";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faUsers, faGlobe, faAddressBook, faCity, faBuilding, 
-  faCheckCircle, faQuoteLeft, faSearch, faEye, faChevronLeft, faChevronRight, faSort
+  faCheckCircle, faQuoteLeft, faSearch, faEye, faChevronLeft, 
+  faChevronRight, faSort, faCommentDots
 } from "@fortawesome/free-solid-svg-icons";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 
 const MOCK_COMPANIES = [
   { id: 1, name: "Arrow Freight Links", logo: "https://ui-avatars.com/api/?name=Arrow+Freight&background=f7fafc&color=031F4B&bold=true", country: "Saudi Arabia", countryCode: "sa", city: "Jeddah", since: "Jan 2012", level: "Premium" },
@@ -16,15 +17,33 @@ const MOCK_COMPANIES = [
   { id: 5, name: "The Logistical Solutions Co. Pte Ltd", logo: "https://ui-avatars.com/api/?name=The+Logistical&background=f7fafc&color=031F4B&bold=true", country: "Singapore", countryCode: "sg", city: "Bedok", since: "May 2015", level: "Premium" },
   { id: 6, name: "Conveyor Logistics Ltd.", logo: "https://ui-avatars.com/api/?name=Conveyor+Logistics&background=f7fafc&color=031F4B&bold=true", country: "Bangladesh", countryCode: "bd", city: "Dhaka", since: "Jun 2011", level: "Regular" },
   { id: 7, name: "Ajay Logistics Pvt. Ltd.", logo: "https://ui-avatars.com/api/?name=Ajay+Logistics&background=f7fafc&color=031F4B&bold=true", country: "India", countryCode: "in", city: "Mumbai", since: "Feb 2009", level: "Basic" },
-  { id: 8, name: "Aktar Global Freight", logo: "https://ui-avatars.com/api/?name=Aktar+Global&background=f7fafc&color=031F4B&bold=true", country: "Turkey", countryCode: "tr", city: "Istanbul", since: "Apr 2013", level: "Premium" },
-  { id: 9, name: "Alm Shipping Solutions", logo: "https://ui-avatars.com/api/?name=Alm+Shipping&background=f7fafc&color=031F4B&bold=true", country: "United Arab Emirates", countryCode: "ae", city: "Dubai", since: "Sep 2014", level: "Basic" },
-  { id: 10, name: "Ocean Link Forwarders", logo: "https://ui-avatars.com/api/?name=Ocean+Link&background=f7fafc&color=031F4B&bold=true", country: "Netherlands", countryCode: "nl", city: "Rotterdam", since: "Jan 2016", level: "Regular" }
+  { id: 8, name: "Aktar Global Freight", logo: "https://ui-avatars.com/api/?name=Aktar+Global&background=f7fafc&color=031F4B&bold=true", country: "Turkey", countryCode: "tr", city: "Istanbul", since: "Apr 2013", level: "Premium" }
 ];
 
-export default function Directory() {
+const MOCK_USERS = [
+  { id: 1, name: "Ahmed Ali", title: "CEO", avatar: "https://ui-avatars.com/api/?name=Ahmed+Ali&background=ebf8ff&color=3182ce&bold=true", country: "Saudi Arabia", countryCode: "sa", city: "Jeddah", company: "Arrow Freight Links", email: "ahmed@arrowfreight.com" },
+  { id: 2, name: "Maria Kostopoulos", title: "Operations Manager", avatar: "https://ui-avatars.com/api/?name=Maria+Kostopoulos&background=ebf8ff&color=3182ce&bold=true", country: "Greece", countryCode: "gr", city: "Athens", company: "Tas Trans Shipping", email: "maria@tastrans.com" },
+  { id: 3, name: "Rajesh Kumar", title: "Logistics Director", avatar: "https://ui-avatars.com/api/?name=Rajesh+Kumar&background=ebf8ff&color=3182ce&bold=true", country: "India", countryCode: "in", city: "Kochi", company: "JN Freight Forwarders", email: "rajesh@jnfreight.in" },
+  { id: 4, name: "Fatima Al-Sabah", title: "Managing Partner", avatar: "https://ui-avatars.com/api/?name=Fatima+Al-Sabah&background=ebf8ff&color=3182ce&bold=true", country: "Kuwait", countryCode: "kw", city: "Kuwait City", company: "Dana Kuwait Shipping", email: "fatima@danakuwait.com" },
+  { id: 5, name: "David Chen", title: "Supply Chain Analyst", avatar: "https://ui-avatars.com/api/?name=David+Chen&background=ebf8ff&color=3182ce&bold=true", country: "Singapore", countryCode: "sg", city: "Bedok", company: "The Logistical Solutions", email: "david.c@logistical.sg" },
+  { id: 6, name: "Hasan Rahman", title: "Branch Manager", avatar: "https://ui-avatars.com/api/?name=Hasan+Rahman&background=ebf8ff&color=3182ce&bold=true", country: "Bangladesh", countryCode: "bd", city: "Dhaka", company: "Conveyor Logistics Ltd.", email: "hasan@conveyor.bd" },
+  { id: 7, name: "Priya Sharma", title: "Export Coordinator", avatar: "https://ui-avatars.com/api/?name=Priya+Sharma&background=ebf8ff&color=3182ce&bold=true", country: "India", countryCode: "in", city: "Mumbai", company: "Ajay Logistics Pvt. Ltd.", email: "priya@ajaylogistics.com" },
+  { id: 8, name: "Kemal Yılmaz", title: "Business Development", avatar: "https://ui-avatars.com/api/?name=Kemal+Yilmaz&background=ebf8ff&color=3182ce&bold=true", country: "Turkey", countryCode: "tr", city: "Istanbul", company: "Aktar Global Freight", email: "kemal@aktarglobal.com.tr" }
+];
+
+function DirectoryContent() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const activeTab = searchParams.get('tab') || 'companies';
+
+  const handleTabChange = (tab) => {
+    router.push(`${pathname}?tab=${tab}`);
+  };
+
   return (
     <div className={styles.directoryContainer}>
-      
       {/* Breadcrumb */}
       <div className={styles.breadcrumb}>
         Homepage / <span>Members</span>
@@ -76,13 +95,22 @@ export default function Directory() {
       {/* Tab Menu & Filter Area */}
       <div>
         <div className={styles.tabBar}>
-          <div className={`${styles.tab} ${styles.tabActive}`}>
+          <div 
+            className={`${styles.tab} ${activeTab === 'companies' ? styles.tabActive : ''}`}
+            onClick={() => handleTabChange('companies')}
+          >
             <FontAwesomeIcon icon={faBuilding} className={styles.tabIcon} /> Companies
           </div>
-          <div className={styles.tab}>
+          <div 
+            className={`${styles.tab} ${activeTab === 'users' ? styles.tabActive : ''}`}
+            onClick={() => handleTabChange('users')}
+          >
             <FontAwesomeIcon icon={faUsers} className={styles.tabIcon} /> Users
           </div>
-          <div className={styles.tab}>
+          <div 
+            className={`${styles.tab} ${activeTab === 'available' ? styles.tabActive : ''}`}
+            onClick={() => handleTabChange('available')}
+          >
             <FontAwesomeIcon icon={faCheckCircle} className={styles.tabIcon} /> Available
           </div>
           <button className={styles.quoteBtn}>
@@ -108,7 +136,7 @@ export default function Directory() {
           <div className={styles.filterGroup}>
             <span className={styles.filterLabel}>Search Term</span>
             <div className={styles.filterInputWrapper}>
-              <input type="text" className={styles.filterInput} placeholder="Enter Company Name or Service" />
+              <input type="text" className={styles.filterInput} placeholder={activeTab === 'users' ? "Enter User Name or Email" : "Enter Company Name or Service"} />
               <FontAwesomeIcon icon={faSearch} className={styles.searchIcon} />
             </div>
           </div>
@@ -121,22 +149,31 @@ export default function Directory() {
         <div className={styles.tableWrapper}>
           <table className={styles.table}>
             <thead>
-              <tr>
-                <th>Company</th>
-                <th>Country</th>
-                <th>City</th>
-                <th>Member Since <FontAwesomeIcon icon={faSort} /></th>
-                <th>Level</th>
-                <th>Actions</th>
-              </tr>
+              {activeTab === 'companies' ? (
+                <tr>
+                  <th>Company</th>
+                  <th>Country</th>
+                  <th>City</th>
+                  <th>Member Since <FontAwesomeIcon icon={faSort} /></th>
+                  <th>Level</th>
+                  <th>Actions</th>
+                </tr>
+              ) : (
+                <tr>
+                  <th>User Profile</th>
+                  <th>Location</th>
+                  <th>Company Info</th>
+                  <th>Actions</th>
+                </tr>
+              )}
             </thead>
             <tbody>
-              {MOCK_COMPANIES.map(company => (
+              {activeTab === 'companies' && MOCK_COMPANIES.map(company => (
                 <tr key={company.id}>
                   <td>
                     <div className={styles.companyCol}>
                       <img src={company.logo} alt={company.name} className={styles.companyLogo} />
-                      <span>{company.name}</span>
+                      <span className={styles.mainText}>{company.name}</span>
                     </div>
                   </td>
                   <td>
@@ -164,12 +201,51 @@ export default function Directory() {
                   </td>
                 </tr>
               ))}
+
+              {activeTab === 'users' && MOCK_USERS.map(user => (
+                <tr key={user.id}>
+                  <td>
+                    <div className={styles.companyCol}>
+                      <img src={user.avatar} alt={user.name} className={styles.userAvatar} />
+                      <div className={styles.stackedText}>
+                        <span className={styles.mainText}>{user.name}</span>
+                        <span className={styles.subText}>{user.title}</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div className={styles.countryCol}>
+                      <img src={`https://flagcdn.com/w40/${user.countryCode}.png`} alt={user.country} className={styles.flagIcon} />
+                      <div className={styles.stackedText}>
+                        <span className={styles.mainText}>{user.country}</span>
+                        <span className={styles.subText}>{user.city}</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div className={styles.stackedText}>
+                      <span className={styles.mainText}>{user.company}</span>
+                      <span className={styles.subText}>{user.email}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div className={styles.actionsCol}>
+                      <button className={styles.actionBtn}>
+                        <FontAwesomeIcon icon={faCommentDots} /> Chat
+                      </button>
+                      <button className={styles.actionBtn}>
+                        <FontAwesomeIcon icon={faEye} /> View Profile
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
 
           {/* Pagination */}
           <div className={styles.paginationArea}>
-            <div className={styles.pageInfo}>Showing 1 to 10 of 126 companies</div>
+            <div className={styles.pageInfo}>Showing 1 to 8 of {activeTab === 'companies' ? '126 companies' : '850 users'}</div>
             <div className={styles.pageNumbers}>
               <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronLeft} /></button>
               <button className={`${styles.pageBtn} ${styles.pageActive}`}>1</button>
@@ -186,5 +262,13 @@ export default function Directory() {
       </div>
       
     </div>
+  );
+}
+
+export default function Directory() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <DirectoryContent />
+    </Suspense>
   );
 }
