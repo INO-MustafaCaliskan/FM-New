@@ -1,4 +1,4 @@
-﻿.directoryContainer {
+.directoryContainer {
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -200,6 +200,7 @@
   font-size: 12px;
   font-weight: 700;
   color: #031F4B;
+  background-color: #f7fafc;
   border-bottom: 1px solid #edf2f7;
 }
 .table td {
