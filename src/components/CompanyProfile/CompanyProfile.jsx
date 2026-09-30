@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faBuilding, faMapMarkerAlt, faEnvelope, faPhoneAlt, faGlobe, faUsers, 
-  faCheckCircle, faShip, faPlane, faTruck, faInfoCircle, faChartPie,
+  faCheckCircle, faShip, faPlane, faTruck, faInfoCircle, faChartPie, faStar,
   faCogs, faBoxes, faRoute, faGlobeAmericas, faHandshake, faTags
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -229,7 +229,7 @@ export default function CompanyProfile() {
               {/* Top Reviews */}
               <div className={styles.card} style={{ marginBottom: 0 }}>
                 <div className={styles.cardHeader} style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <div><FontAwesomeIcon icon={faCheckCircle} /> Top Reviews</div>
+                  <div><FontAwesomeIcon icon={faStar} style={{ color: "#dd6b20" }} /> Top Reviews</div>
                   <Link href="#" style={{ fontSize: '13px', color: '#dd6b20', textDecoration: 'none' }}>
                     View All Reviews &rarr;
                   </Link>
