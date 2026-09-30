@@ -193,9 +193,11 @@ function DirectoryContent() {
                   </td>
                   <td style={{ textAlign: "center", verticalAlign: "middle" }}>
                     <div className={styles.actionsCol} style={{ display: "flex", justifyContent: "center" }}>
-                      <button className={styles.actionBtn}>
-                        <FontAwesomeIcon icon={faEye} /> View Company
-                      </button>
+                      <Link href="/company-profile" style={{ flex: 1, display: "flex", textDecoration: "none" }}>
+                        <button className={styles.actionBtn} style={{ width: "100%" }}>
+                          <FontAwesomeIcon icon={faEye} /> View Company
+                        </button>
+                      </Link>
                       <Link href="/company-users">
                         <button className={styles.actionBtn}>
                           <FontAwesomeIcon icon={faUsers} /> Users
@@ -233,12 +235,12 @@ function DirectoryContent() {
                     </div>
                   </td>
                   <td >
-                    <div className={styles.actionsCol}>
+                    <div className={styles.actionsCol }  style={{ display: "flex", justifyContent: "center" }}>
                       <button className={styles.actionBtn}>
                         <FontAwesomeIcon icon={faCommentDots} /> Chat
                       </button>
-                      <Link href="/user-profile" style={{ flex: 1, display: "flex", textDecoration: "none" }}>
-                        <button className={styles.actionBtn} style={{ width: "100%" }}>
+                      <Link href="/user-profile" >
+                        <button className={styles.actionBtn} >
                           <FontAwesomeIcon icon={faEye} /> View Profile
                         </button>
                       </Link>
