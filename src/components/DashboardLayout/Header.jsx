@@ -1,12 +1,12 @@
-﻿"use client";
+"use client";
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./DashboardLayout.module.css";
 import { useUser } from "@/context/UserContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FiShoppingCart, FiBell } from "react-icons/fi";
+import { FiShoppingCart, FiBell, FiCheckCircle } from "react-icons/fi";
 import { 
   faBars, faChevronDown, faChevronRight, faPowerOff, 
-  faCreditCard, faCog, faExternalLinkAlt, faUser, faCheckCircle
+  faCreditCard, faCog, faExternalLinkAlt, faUser
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { SignOut } from "@/utils/authActions";
@@ -54,7 +54,7 @@ export default function Header({ toggleSidebar }) {
 
         <div className={styles.headerRight}>
           <div className={styles.headerBadge}>
-            <FontAwesomeIcon icon={faCheckCircle} /> Basic Active
+            <FiCheckCircle /> Basic Active
           </div>
           
           <div className={styles.headerIconBtn}>

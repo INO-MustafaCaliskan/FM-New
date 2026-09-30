@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -34,7 +34,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
     {
       title: null,
       items: [
-        { label: "Dashboard", icon: faHome, href: "/" },
+        { label: "Dashboard", icon: faHome, href: "/user-dashboard" },
       ]
     },
     {
