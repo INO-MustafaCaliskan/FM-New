@@ -270,14 +270,13 @@ export default function CompanyProfile() {
 
               </div>
             </div>
-            </div>
 
             {/* Top Reviews & Global Coverage Side-by-Side */}
             <div className={styles.bottomCardsRow}>
               
               {/* Top Reviews */}
               <div className={styles.card} style={{ padding: "15px 20px" }}>
-                <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }} style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div className={styles.cardHeader} style={{ display: "flex", justifyContent: "space-between", marginBottom: "15px", paddingBottom: "10px" }}>
                   <div><FontAwesomeIcon icon={faStar} style={{ color: "#3182ce" }} /> Top Reviews</div>
                   <Link href="#" style={{ fontSize: '13px', color: '#3182ce', textDecoration: 'none' }}>
                     View All Reviews &rarr;
