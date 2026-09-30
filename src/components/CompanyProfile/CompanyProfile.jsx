@@ -165,7 +165,7 @@ export default function CompanyProfile() {
         {activeTab === 'profile' && (
           <>
             {/* Biography */}
-            <div className={styles.card}>
+            {/* <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <FontAwesomeIcon icon={faInfoCircle} /> My Biography
               </div>
@@ -178,7 +178,7 @@ export default function CompanyProfile() {
                   I am eager to connect with like-minded logistics professionals and agencies worldwide to foster mutually beneficial relationships and expand our service horizons.
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* Company Introduction */}
             <div className={styles.card}>
@@ -223,21 +223,68 @@ export default function CompanyProfile() {
               </div>
             </div>
 
-            {/* Global Coverage */}
-            <div className={styles.card}>
-              <div className={styles.cardHeader}>
-                <FontAwesomeIcon icon={faGlobeAmericas} /> Global Coverage (Top 6 Markets)
+            {/* Top Reviews & Global Coverage Row */}
+            <div className={styles.twoColRow}>
+              
+              {/* Top Reviews */}
+              <div className={styles.card} style={{ marginBottom: 0 }}>
+                <div className={styles.cardHeader} style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <div><FontAwesomeIcon icon={faCheckCircle} /> Top Reviews</div>
+                  <Link href="#" style={{ fontSize: '13px', color: '#dd6b20', textDecoration: 'none' }}>
+                    View All Reviews &rarr;
+                  </Link>
+                </div>
+                <div className={styles.comingSoonText}>
+                  Coming soon...
+                </div>
               </div>
-              <div className={styles.mapContainer}>
-                <WorldMap
-                  color="#3182ce"
-                  title=""
-                  value-suffix="Market"
-                  size="lg"
-                  data={mapData}
-                  backgroundColor="#f7fafc"
-                />
+
+              {/* Global Coverage */}
+              <div className={styles.card} style={{ marginBottom: 0 }}>
+                <div className={styles.cardHeader}>
+                  <FontAwesomeIcon icon={faGlobeAmericas} /> Global Coverage
+                </div>
+                <div className={styles.mapWrapper}>
+                  <WorldMap
+                    color="#dd6b20"
+                    title=""
+                    value-suffix="Market"
+                    size="sm"
+                    data={mapData}
+                    backgroundColor="#ffffff"
+                  />
+                  <div className={styles.mapStatsArea}>
+                    <div className={styles.countriesServed}>
+                      <span className={styles.countriesServedNumber}>190</span>
+                      <span className={styles.countriesServedLabel}>Countries<br/>Served</span>
+                    </div>
+                    <div className={styles.topMarketsArea}>
+                      <div className={styles.topMarketsTitle}>Top 6 Markets</div>
+                      <div className={styles.topMarketsTags}>
+                        <div className={styles.marketTag}>
+                          <img src="https://flagcdn.com/w20/cn.png" alt="China" /> China
+                        </div>
+                        <div className={styles.marketTag}>
+                          <img src="https://flagcdn.com/w20/us.png" alt="USA" /> United States of America
+                        </div>
+                        <div className={styles.marketTag}>
+                          <img src="https://flagcdn.com/w20/de.png" alt="Germany" /> Germany
+                        </div>
+                        <div className={styles.marketTag}>
+                          <img src="https://flagcdn.com/w20/my.png" alt="Malaysia" /> Malaysia
+                        </div>
+                        <div className={styles.marketTag}>
+                          <img src="https://flagcdn.com/w20/gb.png" alt="UK" /> United Kingdom
+                        </div>
+                        <div className={styles.marketTag}>
+                          <img src="https://flagcdn.com/w20/fr.png" alt="France" /> France
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
             </div>
 
             {/* Services & Solutions */}
@@ -290,7 +337,7 @@ export default function CompanyProfile() {
             </div>
 
             {/* Why People Connect With Us */}
-            <div className={styles.card}>
+            {/* <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <FontAwesomeIcon icon={faHandshake} /> Why People Connect With Us
               </div>
@@ -300,10 +347,10 @@ export default function CompanyProfile() {
                 <div className={styles.tagItem}><FontAwesomeIcon icon={faCheckCircle} /> Strong Local Market Expertise</div>
                 <div className={styles.tagItem}><FontAwesomeIcon icon={faCheckCircle} /> Customs & Compliance Support</div>
               </div>
-            </div>
+            </div> */}
 
             {/* What Are We Interested In */}
-            <div className={styles.card}>
+            {/* <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <FontAwesomeIcon icon={faTags} /> What Are We Interested In
               </div>
@@ -313,7 +360,7 @@ export default function CompanyProfile() {
                 <div className={styles.tagItem}><FontAwesomeIcon icon={faCheckCircle} /> Project Cargo Opportunities</div>
                 <div className={styles.tagItem}><FontAwesomeIcon icon={faCheckCircle} /> Cross Trade Business</div>
               </div>
-            </div>
+            </div> */}
           </>
         )}
 

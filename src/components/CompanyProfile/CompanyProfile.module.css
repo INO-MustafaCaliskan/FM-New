@@ -291,3 +291,108 @@
     grid-template-columns: 1fr;
   }
 }
+/* TWO COLUMN CARDS ROW */
+.twoColRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.mapWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mapStatsArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+.countriesServed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: 20px;
+  border-right: 1px solid var(--border-color);
+}
+.countriesServedNumber {
+  font-size: 36px;
+  font-weight: 800;
+  color: #dd6b20;
+  line-height: 1;
+}
+.countriesServedLabel {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-top: 5px;
+}
+.topMarketsArea {
+  flex: 1;
+  padding-left: 20px;
+}
+.topMarketsTitle {
+  font-size: 14px;
+  color: var(--text-main);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.topMarketsTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.marketTag {
+  background: #f7fafc;
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-main);
+}
+.marketTag img {
+  width: 16px;
+  height: 12px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.comingSoonText {
+  text-align: center;
+  padding: 50px 0;
+  color: var(--text-sub);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .twoColRow {
+    grid-template-columns: 1fr;
+  }
+  .mapStatsArea {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .countriesServed {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-right: 0;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  .topMarketsArea {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .topMarketsTags {
+    justify-content: center;
+  }
+}
