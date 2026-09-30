@@ -55,8 +55,26 @@ export default function CompanyProfile() {
   const transportData = {
     labels: ["Sea Freight", "Air Freight", "Road Freight", "Rail Freight"],
     datasets: [{
-      data: [50, 30, 15, 5],
-      backgroundColor: ["#3182ce", "#38a169", "#dd6b20", "#805ad5"],
+      data: [45, 25, 20, 10],
+      backgroundColor: ["#031F4B", "#0047b3", "#3182ce", "#bee3f8"],
+      borderWidth: 0,
+    }]
+  };
+  
+  const businessData = {
+    labels: ["Export", "Import"],
+    datasets: [{
+      data: [60, 40],
+      backgroundColor: ["#031F4B", "#3182ce"],
+      borderWidth: 0,
+    }]
+  };
+
+  const sourceData = {
+    labels: ["Partners", "Own Customers"],
+    datasets: [{
+      data: [70, 30],
+      backgroundColor: ["#0047b3", "#bee3f8"],
       borderWidth: 0,
     }]
   };
@@ -201,26 +219,57 @@ export default function CompanyProfile() {
               <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
                 <FontAwesomeIcon icon={faChartPie} /> Key Performance Indicators
               </div>
-              <div className={styles.chartsRow}>
+                            <div className={styles.chartsRow}>
+                
+                {/* Percentage Of Modes */}
                 <div className={styles.chartBox}>
-                  <div className={styles.chartTitle}>Transport Modes</div>
+                  <div className={styles.chartHeader}>
+                    <FontAwesomeIcon icon={faChartPie} style={{ color: '#e53e3e' }} />
+                    <h3 className={styles.chartTitle}>Percentage Of Modes</h3>
+                  </div>
+                  <div className={styles.chartLegendGrid}>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#031F4B' }}></div> Sea Freight</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#0047b3' }}></div> Air Freight</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#3182ce' }}></div> Road Freight</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#bee3f8' }}></div> Rail Freight</div>
+                  </div>
                   <div className={styles.chartContainer}>
                     <Doughnut data={transportData} options={chartOptions} />
                   </div>
                 </div>
+
+                {/* Percentage Of Business */}
                 <div className={styles.chartBox}>
-                  <div className={styles.chartTitle}>Freight Source</div>
+                  <div className={styles.chartHeader}>
+                    <FontAwesomeIcon icon={faChartPie} style={{ color: '#e53e3e' }} />
+                    <h3 className={styles.chartTitle}>Percentage Of Business</h3>
+                  </div>
+                  <div className={styles.chartLegendGrid}>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#031F4B' }}></div> Export</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#3182ce' }}></div> Import</div>
+                  </div>
+                  <div className={styles.chartContainer}>
+                    <Doughnut data={businessData} options={chartOptions} />
+                  </div>
+                </div>
+
+                {/* Source Of Business */}
+                <div className={styles.chartBox}>
+                  <div className={styles.chartHeader}>
+                    <FontAwesomeIcon icon={faChartPie} style={{ color: '#e53e3e' }} />
+                    <h3 className={styles.chartTitle}>Source Of Business</h3>
+                  </div>
+                  <div className={styles.chartLegendGrid}>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#0047b3' }}></div> Partners</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#bee3f8' }}></div> Own Customers</div>
+                  </div>
                   <div className={styles.chartContainer}>
                     <Doughnut data={sourceData} options={chartOptions} />
                   </div>
                 </div>
-                <div className={styles.chartBox}>
-                  <div className={styles.chartTitle}>Business Direction</div>
-                  <div className={styles.chartContainer}>
-                    <Doughnut data={directionData} options={chartOptions} />
-                  </div>
-                </div>
+
               </div>
+            </div>
             </div>
 
             {/* Top Reviews & Global Coverage Side-by-Side */}

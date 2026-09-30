@@ -174,21 +174,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.chartBox {
-  background: #f7fafc;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.chartTitle {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 15px;
-}
+
+
 .chartContainer {
   width: 180px;
   height: 180px;
@@ -455,4 +442,47 @@
     align-items: center;
     text-align: center;
   }
+}
+.chartBox {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-flat);
+}
+.chartHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.chartTitle {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+}
+.chartLegendGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 15px;
+  margin-bottom: 20px;
+}
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #4a5568;
+  font-weight: 600;
+}
+.legendColor {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
