@@ -223,21 +223,24 @@ export default function CompanyProfile() {
               </div>
             </div>
 
-            {/* Top Reviews */}
-            <div className={styles.card}>
-              <div className={styles.cardHeader} style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div><FontAwesomeIcon icon={faStar} style={{ color: "#3182ce" }} /> Top Reviews</div>
-                <Link href="#" style={{ fontSize: '13px', color: '#3182ce', textDecoration: 'none' }}>
-                  View All Reviews &rarr;
-                </Link>
+            {/* Top Reviews & Global Coverage Side-by-Side */}
+            <div className={styles.bottomCardsRow}>
+              
+              {/* Top Reviews */}
+              <div className={styles.card} style={{ marginBottom: 0 }}>
+                <div className={styles.cardHeader} style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <div><FontAwesomeIcon icon={faStar} style={{ color: "#3182ce" }} /> Top Reviews</div>
+                  <Link href="#" style={{ fontSize: '13px', color: '#3182ce', textDecoration: 'none' }}>
+                    View All Reviews &rarr;
+                  </Link>
+                </div>
+                <div className={styles.comingSoonText}>
+                  Coming soon...
+                </div>
               </div>
-              <div className={styles.comingSoonText}>
-                Coming soon...
-              </div>
-            </div>
 
-            {/* Global Coverage */}
-            <div className={styles.card}>
+              {/* Global Coverage */}
+              <div className={styles.card} style={{ marginBottom: 0 }}>
               <div className={styles.cardHeader}>
                 <FontAwesomeIcon icon={faGlobeAmericas} /> Global Coverage
               </div>
@@ -280,13 +283,15 @@ export default function CompanyProfile() {
                     color="#3182ce"
                     title=""
                     value-suffix="Market"
-                    size="lg"
+                    size="sm"
                     data={mapData}
                     backgroundColor="#f7fafc"
                   />
                 </div>
 
               </div>
+            </div>
+            
             </div>
 
             {/* Services & Solutions */}

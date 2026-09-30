@@ -303,44 +303,19 @@
   padding-right: 20px;
   border-right: 1px solid var(--border-color);
 }
-.countriesServedNumber {
-  font-size: 36px;
-  font-weight: 800;
-  color: #dd6b20;
-  line-height: 1;
-}
-.countriesServedLabel {
-  font-size: 13px;
-  color: var(--text-sub);
-  margin-top: 5px;
-}
+
+
 .topMarketsArea {
   flex: 1;
   padding-left: 20px;
 }
-.topMarketsTitle {
-  font-size: 14px;
-  color: var(--text-main);
-  font-weight: 600;
-  margin-bottom: 10px;
-}
+
 .topMarketsTags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-.marketTag {
-  background: #f7fafc;
-  border: 1px solid var(--border-color);
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text-main);
-}
+
 .marketTag img {
   width: 16px;
   height: 12px;
@@ -375,66 +350,84 @@
     justify-content: center;
   }
 }
-.globalCoverageBody {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-.mapStatsLeft {
-  flex: 0 0 350px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+
+
 .countriesServed {
   display: flex;
   flex-direction: column;
 }
-.countriesServedNumber {
-  font-size: 48px;
-  font-weight: 800;
-  color: #3182ce;
-  line-height: 1;
-}
-.countriesServedLabel {
-  font-size: 16px;
-  color: var(--text-sub);
-  margin-top: 5px;
-  font-weight: 500;
-}
+
+
 .topMarketsArea {
   display: flex;
   flex-direction: column;
 }
-.topMarketsTitle {
-  font-size: 15px;
-  color: var(--text-main);
-  font-weight: 700;
-  margin-bottom: 12px;
-}
+
 .topMarketsTags {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.marketTag {
-  background: #f7fafc;
-  border: 1px solid var(--border-color);
-  padding: 8px 15px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text-main);
-}
+
 .marketTag img {
   width: 20px;
   height: 14px;
   object-fit: cover;
   border-radius: 2px;
+}
+
+
+@media (max-width: 992px) {
+  
+  
+}
+.bottomCardsRow {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+}
+.mapStatsLeft {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.globalCoverageBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 100%;
+}
+.countriesServedNumber {
+  font-size: 38px;
+  font-weight: 800;
+  color: #3182ce;
+  line-height: 1;
+}
+.countriesServedLabel {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-top: 2px;
+  font-weight: 600;
+}
+.topMarketsTitle {
+  font-size: 13px;
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.marketTag {
+  background: #f7fafc;
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-main);
 }
 .mapRight {
   flex: 1;
@@ -444,11 +437,16 @@
   background: #f7fafc;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 20px;
+  padding: 10px;
   overflow: hidden;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
+  .bottomCardsRow {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
   .globalCoverageBody {
     flex-direction: column;
   }
