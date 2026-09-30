@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { Suspense } from "react";
 import styles from "./Directory.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,7 +28,7 @@ const MOCK_USERS = [
   { id: 5, name: "David Chen", title: "Supply Chain Analyst", avatar: "https://ui-avatars.com/api/?name=David+Chen&background=ebf8ff&color=3182ce&bold=true", country: "Singapore", countryCode: "sg", city: "Bedok", company: "The Logistical Solutions", email: "david.c@logistical.sg" },
   { id: 6, name: "Hasan Rahman", title: "Branch Manager", avatar: "https://ui-avatars.com/api/?name=Hasan+Rahman&background=ebf8ff&color=3182ce&bold=true", country: "Bangladesh", countryCode: "bd", city: "Dhaka", company: "Conveyor Logistics Ltd.", email: "hasan@conveyor.bd" },
   { id: 7, name: "Priya Sharma", title: "Export Coordinator", avatar: "https://ui-avatars.com/api/?name=Priya+Sharma&background=ebf8ff&color=3182ce&bold=true", country: "India", countryCode: "in", city: "Mumbai", company: "Ajay Logistics Pvt. Ltd.", email: "priya@ajaylogistics.com" },
-  { id: 8, name: "Kemal Yılmaz", title: "Business Development", avatar: "https://ui-avatars.com/api/?name=Kemal+Yilmaz&background=ebf8ff&color=3182ce&bold=true", country: "Turkey", countryCode: "tr", city: "Istanbul", company: "Aktar Global Freight", email: "kemal@aktarglobal.com.tr" }
+  { id: 8, name: "Kemal YÄ±lmaz", title: "Business Development", avatar: "https://ui-avatars.com/api/?name=Kemal+Yilmaz&background=ebf8ff&color=3182ce&bold=true", country: "Turkey", countryCode: "tr", city: "Istanbul", company: "Aktar Global Freight", email: "kemal@aktarglobal.com.tr" }
 ];
 
 function DirectoryContent() {
