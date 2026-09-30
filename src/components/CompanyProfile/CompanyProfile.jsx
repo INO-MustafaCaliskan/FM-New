@@ -283,7 +283,7 @@ export default function CompanyProfile() {
                     color="#3182ce"
                     title=""
                     value-suffix="Market"
-                    size="sm"
+                    size="responsive"
                     data={mapData}
                     backgroundColor="#f7fafc"
                   />

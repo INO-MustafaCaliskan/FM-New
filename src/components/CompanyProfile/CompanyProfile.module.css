@@ -394,10 +394,9 @@
 }
 .globalCoverageBody {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  gap: 20px;
-  height: 100%;
+  gap: 30px;
 }
 .countriesServedNumber {
   font-size: 38px;
@@ -436,7 +435,7 @@
   align-items: center;
   background: #f7fafc;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 10px;
   overflow: hidden;
 }
