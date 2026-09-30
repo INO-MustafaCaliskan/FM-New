@@ -196,12 +196,7 @@ export default function CompanyProfile() {
               </div>
             </div>
 
-            {/* Key Performance Indicators */}
-            <div className={styles.card}>
-              <div className={styles.cardHeader} style={{ marginBottom: "15px", paddingBottom: "10px" }}>
-                <FontAwesomeIcon icon={faChartPie} /> Key Performance Indicators
-              </div>
-                            <div className={styles.chartsRow}>
+            {/* Charts Row */}`n            <div className={styles.chartsRow}>
                 
                 {/* Percentage Of Modes */}
                 <div className={styles.chartBox}>
@@ -250,7 +245,6 @@ export default function CompanyProfile() {
                   </div>
                 </div>
 
-              </div>
             </div>
 
             {/* Top Reviews & Global Coverage Side-by-Side */}
