@@ -1,5 +1,6 @@
 ﻿"use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import styles from "./CompanyUsers.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
@@ -153,9 +154,11 @@ export default function CompanyUsers() {
                   <FontAwesomeIcon icon={faPhone} /> CALL
                 </button> 
                 */}
-                <button className={styles.actionBtn}>
-                  <FontAwesomeIcon icon={faEye} /> VIEW PROFILE
-                </button> 
+                <Link href="/user-profile" style={{ flex: 1, display: "flex", textDecoration: "none" }}>
+                  <button className={styles.actionBtn} style={{ width: "100%" }}>
+                    <FontAwesomeIcon icon={faEye} /> VIEW PROFILE
+                  </button>
+                </Link> 
                 
                 <button className={styles.actionBtn}>
                   <FontAwesomeIcon icon={faCommentDots} /> CHAT
