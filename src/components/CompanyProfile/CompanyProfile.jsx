@@ -79,24 +79,6 @@ export default function CompanyProfile() {
     }]
   };
   
-  const sourceData = {
-    labels: ["Partners", "Own Customers"],
-    datasets: [{
-      data: [65, 35],
-      backgroundColor: ["#e53e3e", "#319795"],
-      borderWidth: 0,
-    }]
-  };
-
-  const directionData = {
-    labels: ["Import", "Export"],
-    datasets: [{
-      data: [60, 40],
-      backgroundColor: ["#d69e2e", "#2b6cb0"],
-      borderWidth: 0,
-    }]
-  };
-
   // Mock Data for World Map (Global Coverage)
   const mapData = [
     { country: "sa", value: 1 },
