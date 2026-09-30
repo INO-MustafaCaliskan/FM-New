@@ -472,6 +472,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px 15px;
   margin-bottom: 20px;
+  min-height: 60px;
 }
 .legendItem {
   display: flex;
