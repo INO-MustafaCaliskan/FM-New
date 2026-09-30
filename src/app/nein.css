@@ -135,7 +135,7 @@ main {
   }
       table > thead {
           color: #fff;
-          background-color: #084896;
+          background-color: #f3f3f3;
           line-height: 32px;
           /*line-height: 5px;*/
       }

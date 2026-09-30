@@ -22,14 +22,14 @@ export default function CompanyUsers() {
     <div className={`${styles.container} ${isNeumorphic ? styles.neumorphic : ''}`}>
       
       {/* Dev Toggle for Neumorphism */}
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+      {/* <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
         <button 
           onClick={() => setIsNeumorphic(!isNeumorphic)}
           style={{ padding: '8px 16px', background: isNeumorphic ? '#3182ce' : '#e2e8f0', color: isNeumorphic ? '#fff' : '#1a202c', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}
         >
           Toggle Neumorphism (Currently: {isNeumorphic ? "ON" : "OFF"})
         </button>
-      </div>
+      </div> */}
 
       <div className={styles.breadcrumb}>
         Homepage / Members / <span>Arrow Freight Links</span> / <span>Users</span>
@@ -88,7 +88,7 @@ export default function CompanyUsers() {
               <span className={styles.rightBlockLabel}>Registered Users</span>
             </div>
           </div>
-          <div className={styles.rightBlock}>
+          {/* <div className={styles.rightBlock}>
             <div className={styles.rightBlockIcon}>
               <FontAwesomeIcon icon={faUserCheck} />
               <div className={`${styles.statusDotSmall} ${styles.dotGreen}`}></div>
@@ -97,11 +97,11 @@ export default function CompanyUsers() {
               <span className={styles.rightBlockVal}>1</span>
               <span className={styles.rightBlockLabel}>Available Now</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
-      <div className={styles.tabsArea}>
+      {/* <div className={styles.tabsArea}>
         <div className={styles.tab}>
           <FontAwesomeIcon icon={faBuilding} /> Overview
         </div>
@@ -111,7 +111,7 @@ export default function CompanyUsers() {
         <div className={styles.tab}>
           <FontAwesomeIcon icon={faStar} /> Reviews
         </div>
-      </div>
+      </div> */}
 
       <div className={styles.mainCard}>
         <div className={styles.mainCardTitle}>
@@ -128,10 +128,10 @@ export default function CompanyUsers() {
                 <div className={styles.userDetails}>
                   <div className={styles.nameRow}>
                     <span className={styles.userName}>{user.name}</span>
-                    <div className={styles.statusBadge}>
+                    {/* <div className={styles.statusBadge}>
                       <div className={`${styles.statusDot} ${user.statusClass}`}></div>
                       {user.status}
-                    </div>
+                    </div> */}
                   </div>
                   <div className={styles.userRole}>{user.role}</div>
                   <div className={styles.userEmail}>{user.email}</div>
@@ -140,9 +140,9 @@ export default function CompanyUsers() {
                     <div className={styles.locLeft}>
                       <FontAwesomeIcon icon={faMapMarkerAlt} color="#3182ce" /> {user.loc}
                     </div>
-                    <div className={styles.locRight}>
+                    {/* <div className={styles.locRight}>
                       <FontAwesomeIcon icon={faBriefcase} /> {user.dept}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

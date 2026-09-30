@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -41,7 +41,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
       title: "Network",
       icon: faGlobe,
       items: [
-        { label: "Directory", icon: faUsers, href: "/global-networkers" },
+        { label: "Directory", icon: faUsers, href: "/directory" },
         { label: "News Feed", icon: faRss, href: "/feed" },
         { label: "Chat", icon: faComments, href: "/chat" },
       ]
