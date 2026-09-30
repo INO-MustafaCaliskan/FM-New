@@ -56,7 +56,7 @@ export default function CompanyProfile() {
     labels: ["Sea Freight", "Air Freight", "Road Freight", "Rail Freight"],
     datasets: [{
       data: [45, 25, 20, 10],
-      backgroundColor: ["#031F4B", "#0047b3", "#3182ce", "#bee3f8"],
+      backgroundColor: ["#5A9BD5", "#8FAADC", "#B4C6E7", "#D9E1F2"],
       borderWidth: 0,
     }]
   };
@@ -65,7 +65,7 @@ export default function CompanyProfile() {
     labels: ["Export", "Import"],
     datasets: [{
       data: [60, 40],
-      backgroundColor: ["#031F4B", "#3182ce"],
+      backgroundColor: ["#5A9BD5", "#B4C6E7"],
       borderWidth: 0,
     }]
   };
@@ -74,7 +74,7 @@ export default function CompanyProfile() {
     labels: ["Partners", "Own Customers"],
     datasets: [{
       data: [70, 30],
-      backgroundColor: ["#0047b3", "#bee3f8"],
+      backgroundColor: ["#8FAADC", "#D9E1F2"],
       borderWidth: 0,
     }]
   };
@@ -206,14 +206,14 @@ export default function CompanyProfile() {
                 {/* Percentage Of Modes */}
                 <div className={styles.chartBox}>
                   <div className={styles.chartHeader}>
-                    <FontAwesomeIcon icon={faChartPie} style={{ color: '#e53e3e' }} />
+                    <FontAwesomeIcon icon={faChartPie} style={{ color: '#5A9BD5' }} />
                     <h3 className={styles.chartTitle}>Percentage Of Modes</h3>
                   </div>
                   <div className={styles.chartLegendGrid}>
-                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#031F4B' }}></div> Sea Freight</div>
-                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#0047b3' }}></div> Air Freight</div>
-                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#3182ce' }}></div> Road Freight</div>
-                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#bee3f8' }}></div> Rail Freight</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#5A9BD5' }}></div> Sea Freight</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#8FAADC' }}></div> Air Freight</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#B4C6E7' }}></div> Road Freight</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#D9E1F2' }}></div> Rail Freight</div>
                   </div>
                   <div className={styles.chartContainer}>
                     <Doughnut data={transportData} options={chartOptions} />
@@ -223,12 +223,12 @@ export default function CompanyProfile() {
                 {/* Percentage Of Business */}
                 <div className={styles.chartBox}>
                   <div className={styles.chartHeader}>
-                    <FontAwesomeIcon icon={faChartPie} style={{ color: '#e53e3e' }} />
+                    <FontAwesomeIcon icon={faChartPie} style={{ color: '#5A9BD5' }} />
                     <h3 className={styles.chartTitle}>Percentage Of Business</h3>
                   </div>
                   <div className={styles.chartLegendGrid}>
-                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#031F4B' }}></div> Export</div>
-                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#3182ce' }}></div> Import</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#5A9BD5' }}></div> Export</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#B4C6E7' }}></div> Import</div>
                   </div>
                   <div className={styles.chartContainer}>
                     <Doughnut data={businessData} options={chartOptions} />
@@ -238,12 +238,12 @@ export default function CompanyProfile() {
                 {/* Source Of Business */}
                 <div className={styles.chartBox}>
                   <div className={styles.chartHeader}>
-                    <FontAwesomeIcon icon={faChartPie} style={{ color: '#e53e3e' }} />
+                    <FontAwesomeIcon icon={faChartPie} style={{ color: '#5A9BD5' }} />
                     <h3 className={styles.chartTitle}>Source Of Business</h3>
                   </div>
                   <div className={styles.chartLegendGrid}>
-                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#0047b3' }}></div> Partners</div>
-                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#bee3f8' }}></div> Own Customers</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#8FAADC' }}></div> Partners</div>
+                    <div className={styles.legendItem}><div className={styles.legendColor} style={{ backgroundColor: '#D9E1F2' }}></div> Own Customers</div>
                   </div>
                   <div className={styles.chartContainer}>
                     <Doughnut data={sourceData} options={chartOptions} />
