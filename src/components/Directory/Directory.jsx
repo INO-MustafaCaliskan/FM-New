@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { Suspense } from "react";
 import styles from "./Directory.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -149,7 +149,7 @@ function DirectoryContent() {
         <div className={styles.tableWrapper}>
           <table className={styles.table}>
             <thead>
-              {activeTab === 'companies' ? (
+              {activeTab === 'companies' && (
                 <tr>
                   <th>Company</th>
                   <th>Country</th>
@@ -158,7 +158,8 @@ function DirectoryContent() {
                   <th>Level</th>
                   <th style={{ textAlign: "center" }}>Actions</th>
                 </tr>
-              ) : (
+              )}
+              {activeTab === 'users' && (
                 <tr>
                   <th>User Profile</th>
                   <th>Location</th>
@@ -240,24 +241,34 @@ function DirectoryContent() {
                   </td>
                 </tr>
               ))}
+
+              {activeTab === 'available' && (
+                <tr>
+                  <td colSpan="6" style={{ textAlign: "center", padding: "50px", color: "#718096", fontSize: "16px", fontWeight: "600" }}>
+                    Coming soon...
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
 
           {/* Pagination */}
-          <div className={styles.paginationArea}>
-            <div className={styles.pageInfo}>Showing 1 to 8 of {activeTab === 'companies' ? '126 companies' : '850 users'}</div>
-            <div className={styles.pageNumbers}>
-              <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronLeft} /></button>
-              <button className={`${styles.pageBtn} ${styles.pageActive}`}>1</button>
-              <button className={styles.pageBtn}>2</button>
-              <button className={styles.pageBtn}>3</button>
-              <button className={styles.pageBtn}>4</button>
-              <button className={styles.pageBtn}>5</button>
-              <button className={styles.pageBtn} style={{border: 'none'}}>...</button>
-              <button className={styles.pageBtn}>13</button>
-              <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronRight} /></button>
+          {activeTab !== 'available' && (
+            <div className={styles.paginationArea}>
+              <div className={styles.pageInfo}>Showing 1 to 8 of {activeTab === 'companies' ? '126 companies' : '850 users'}</div>
+              <div className={styles.pageNumbers}>
+                <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronLeft} /></button>
+                <button className={`${styles.pageBtn} ${styles.pageActive}`}>1</button>
+                <button className={styles.pageBtn}>2</button>
+                <button className={styles.pageBtn}>3</button>
+                <button className={styles.pageBtn}>4</button>
+                <button className={styles.pageBtn}>5</button>
+                <button className={styles.pageBtn} style={{border: 'none'}}>...</button>
+                <button className={styles.pageBtn}>13</button>
+                <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronRight} /></button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
       
