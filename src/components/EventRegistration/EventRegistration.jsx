@@ -358,10 +358,20 @@ export default function EventRegistration() {
                         setSelectedSponsors(prev => [...prev, sp.id]);
                       }
                       setDetailModalOpen(null);
-                      </div>
-                    );
-                  })}
+                    }}
+                  >
+                    Select {sp.title}
+                    <span>USD {sp.price.toLocaleString()}</span>
+                  </button>
                 </div>
+              </div>
+            );
+          })()}
+        </div>
+      )}
+    </div>
+  );
+}
 
                 {!showAllSponsors && sponsorshipOptions.length > 8 && (
                   <div className={styles.showMoreBtnWrapper}>
