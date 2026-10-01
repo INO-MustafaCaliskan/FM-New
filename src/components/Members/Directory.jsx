@@ -193,8 +193,8 @@ function DirectoryContent() {
                   </td>
                   <td style={{ textAlign: "center", verticalAlign: "middle" }}>
                     <div className={styles.actionsCol} style={{ display: "flex", justifyContent: "center" }}>
-                      <Link href="/company-profile" style={{ flex: 1, display: "flex", textDecoration: "none" }}>
-                        <button className={styles.actionBtn} style={{ width: "100%" }}>
+                      <Link href="/company-profile" >
+                        <button className={styles.actionBtn} >
                           <FontAwesomeIcon icon={faEye} /> View Company
                         </button>
                       </Link>

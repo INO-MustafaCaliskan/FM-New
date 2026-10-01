@@ -14,14 +14,14 @@ export default function UserProfile() {
       
       {/* Breadcrumb */}
       <div className={styles.breadcrumb}>
-        Homepage / Members / <span>Arrow Freight Links</span> / Users / <span>AbdulRahim Syed</span>
+        Homepage / Members / Arrow Freight Links /  <span>AbdulRahim Syed</span>
       </div>
 
       {/* Header Profile Card */}
       <div className={styles.headerCard}>
         <div className={styles.avatarBox}>
           <img src="https://ui-avatars.com/api/?name=AbdulRahim+Syed&background=f7fafc&color=031F4B&size=200" alt="AbdulRahim Syed" className={styles.avatar} />
-          <div className={styles.statusIndicator}></div>
+          {/* <div className={styles.statusIndicator}></div> */}
         </div>
 
         <div className={styles.userInfo}>
@@ -47,12 +47,12 @@ export default function UserProfile() {
           <button className={styles.btnPrimary}>
             <FontAwesomeIcon icon={faCommentDots} /> CHAT
           </button>
-          <button className={styles.btnSecondary}>
+          {/* <button className={styles.btnSecondary}>
             <FontAwesomeIcon icon={faPhoneAlt} /> CALL
           </button>
           <button className={styles.btnSecondary}>
             <FontAwesomeIcon icon={faCalendarAlt} /> SCHEDULE
-          </button>
+          </button> */}
         </div>
       </div>
 

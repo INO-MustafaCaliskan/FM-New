@@ -196,7 +196,8 @@ export default function CompanyProfile() {
               </div>
             </div>
 
-            {/* Charts Row */}`n            <div className={styles.chartsRow}>
+            {/* Charts Row */}         
+             <div className={styles.chartsRow}>
                 
                 {/* Percentage Of Modes */}
                 <div className={styles.chartBox}>

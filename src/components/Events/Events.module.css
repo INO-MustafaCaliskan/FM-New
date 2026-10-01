@@ -7,8 +7,8 @@
   --shadow-flat: 0 2px 4px rgba(0,0,0,0.02);
   --btn-border: #e2e8f0;
   
-  background-color: var(--bg-color);
-  padding: 20px;
+
+
   min-height: 100vh;
 }
 
@@ -32,7 +32,7 @@
   display: flex;
   gap: 30px;
   border-bottom: 1px solid var(--border-color);
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 .tab {
   padding: 10px 5px;
