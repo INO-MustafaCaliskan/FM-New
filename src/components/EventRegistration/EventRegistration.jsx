@@ -17,8 +17,8 @@ const VipTableIcon = () => (
     <path d="M16 44 L16 34 L22 34" stroke="currentColor" strokeWidth="2" fill="none"/>
     <path d="M52 44 L52 28 C52 25 48 25 48 25 L44 25" stroke="currentColor" strokeWidth="2" fill="none"/>
     <path d="M48 44 L48 34 L42 34" stroke="currentColor" strokeWidth="2" fill="none"/>
-    <ellipse cx="32" cy="34" rx="14" ry="5" fill="#ffffff" stroke="currentColor" strokeWidth="2"/>
-    <path d="M18 34 L18 46 C18 48 46 48 46 46 L46 34" fill="#ffffff" stroke="currentColor" strokeWidth="2"/>
+    <ellipse cx="32" cy="34" rx="14" ry="5" fill="none" stroke="currentColor" strokeWidth="2"/>
+    <path d="M18 34 L18 46 C18 48 46 48 46 46 L46 34" fill="none" stroke="currentColor" strokeWidth="2"/>
     <line x1="25" y1="38" x2="25" y2="47" stroke="currentColor" strokeWidth="1.5"/>
     <line x1="32" y1="39" x2="32" y2="47" stroke="currentColor" strokeWidth="1.5"/>
     <line x1="39" y1="38" x2="39" y2="47" stroke="currentColor" strokeWidth="1.5"/>
