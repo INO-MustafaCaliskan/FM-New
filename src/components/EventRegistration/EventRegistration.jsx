@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faCalendarAlt, faClock, faMapMarkerAlt, faInfoCircle, 
   faCheckCircle, faUser, faUserFriends, faUsers, faArrowRight, faArrowLeft,
-  faShieldAlt, faFileAlt, faGem, faMinusCircle
+  faShieldAlt, faFileAlt, faGem, faMinusCircle, faMedal, faAward, faShieldAlt, faCertificate, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils
 } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -29,6 +29,8 @@ export default function EventRegistration() {
   const [delegates, setDelegates] = useState(2);
   const [spouses, setSpouses] = useState(1);
   const [vipTables, setVipTables] = useState(1);
+  const [selectedSponsors, setSelectedSponsors] = useState([]);
+  const [showAllSponsors, setShowAllSponsors] = useState(false);
 
   const delegateOptions = [
     { value: 1, label: "1 Delegate", price: 1150 },
@@ -55,7 +57,32 @@ export default function EventRegistration() {
   const getDelegatePrice = () => delegateOptions.find(o => o.value === delegates)?.price || 0;
   const getSpousePrice = () => spouseOptions.find(o => o.value === spouses)?.price || 0;
   const getVipPrice = () => vipOptions.find(o => o.value === vipTables)?.price || 0;
-  const totalFee = getDelegatePrice() + getSpousePrice() + getVipPrice();
+  const sponsorshipOptions = [
+    { id: 1, title: "Platinum Sponsor", price: 5550, icon: "medal", color: "#3182ce" },
+    { id: 2, title: "Gold Sponsor", price: 4250, icon: "award", color: "#dd6b20" },
+    { id: 3, title: "Silver Sponsor", price: 3270, icon: "shield", color: "#718096" },
+    { id: 4, title: "Bronze Sponsor", price: 2180, icon: "certificate", color: "#e53e3e" },
+    { id: 5, title: "Mouse Pad Sponsor", price: 1500, icon: "mouse", color: "#0047b3" },
+    { id: 6, title: "Folder Sponsor", price: 1000, icon: "folder", color: "#3182ce" },
+    { id: 7, title: "Pen Sponsor", price: 750, icon: "pen", color: "#38a169" },
+    { id: 8, title: "Lanyard Sponsor", price: 1500, icon: "id-badge", color: "#805ad5" },
+    { id: 9, title: "Coffee Break Sponsor", price: 2000, icon: "coffee", color: "#d69e2e" },
+    { id: 10, title: "Gala Dinner Sponsor", price: 5000, icon: "utensils", color: "#e53e3e" }
+  ];
+
+  const toggleSponsor = (id) => {
+    setSelectedSponsors(prev => 
+      prev.includes(id) ? prev.filter(sId => sId !== id) : [...prev, id]
+    );
+  };
+
+  const getSponsorshipPrice = () => {
+    return selectedSponsors.reduce((total, id) => {
+      const sp = sponsorshipOptions.find(o => o.id === id);
+      return total + (sp ? sp.price : 0);
+    }, 0);
+  };
+  const totalFee = getDelegatePrice() + getSpousePrice() + getVipPrice() + getSponsorshipPrice();
 
   const handleNext = () => {
     if (currentStep < 5) setCurrentStep(currentStep + 1);
@@ -68,6 +95,22 @@ export default function EventRegistration() {
     if (count === 1) return <FontAwesomeIcon icon={faUser} className={styles.optionIcon} />;
     if (count === 2) return <FontAwesomeIcon icon={faUserFriends} className={styles.optionIcon} />;
     return <FontAwesomeIcon icon={faUsers} className={styles.optionIcon} />;
+  };
+
+    const getSponsorIcon = (iconName) => {
+    switch(iconName) {
+      case "medal": return faMedal;
+      case "award": return faAward;
+      case "shield": return faShieldAlt;
+      case "certificate": return faCertificate;
+      case "mouse": return faMouse;
+      case "folder": return faFolder;
+      case "pen": return faPen;
+      case "id-badge": return faIdBadge;
+      case "coffee": return faCoffee;
+      case "utensils": return faUtensils;
+      default: return faAward;
+    }
   };
 
   const renderSpouseIcons = (count) => {
@@ -224,8 +267,62 @@ export default function EventRegistration() {
               </div>
             )}
 
+            {/* STEP 4: Sponsorship */}
+            {currentStep === 4 && (
+              <div>
+                <h2 className={styles.stepTitle}>Would you like to promote your company more with sponsorship?</h2>
+                <p className={styles.stepSubtitle}>Choose the sponsorship package that best fits your visibility goals during the event.</p>
+                
+                <div className={styles.sponsorGrid}>
+                  {sponsorshipOptions.slice(0, showAllSponsors ? sponsorshipOptions.length : 8).map(opt => {
+                    const isSelected = selectedSponsors.includes(opt.id);
+                    return (
+                      <div 
+                        key={opt.id} 
+                        className={`${styles.sponsorCard} ${isSelected ? styles.sponsorCardActive : ''}`}
+                        onClick={() => toggleSponsor(opt.id)}
+                      >
+                        <div className={styles.sponsorHeader}>
+                          <div className={styles.sponsorIconWrapper} style={{ color: opt.color, backgroundColor: `${opt.color}15` }}>
+                            <FontAwesomeIcon icon={getSponsorIcon(opt.icon)} />
+                          </div>
+                          <div className={styles.sponsorInfo}>
+                            <span className={styles.sponsorTitle}>{opt.title}</span>
+                            <span className={styles.sponsorPrice}>USD {opt.price.toLocaleString()}</span>
+                          </div>
+                        </div>
+                        <div className={styles.sponsorActions}>
+                          <input 
+                            type="checkbox" 
+                            className={styles.sponsorCheckbox} 
+                            checked={isSelected}
+                            onChange={() => {}} // handled by parent div onClick
+                            onClick={(e) => e.stopPropagation()} // Let card click handle it, or we can just let it bubble
+                          />
+                          <span className={styles.viewDetailsLink}>View Details</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {!showAllSponsors && sponsorshipOptions.length > 8 && (
+                  <div className={styles.showMoreBtnWrapper}>
+                    <button className={styles.showMoreBtn} onClick={() => setShowAllSponsors(true)}>
+                      Show More Sponsorships
+                    </button>
+                  </div>
+                )}
+
+                <div className={styles.infoBanner}>
+                  <FontAwesomeIcon icon={faInfoCircle} />
+                  You can select more than one sponsorship package.
+                </div>
+              </div>
+            )}
+
             {/* Placeholder for other steps */}
-            {currentStep > 3 && (
+            {currentStep > 4 && (
               <div style={{ textAlign: 'center', padding: '50px 0', color: '#718096' }}>
                 <h3>Step {currentStep} content coming soon...</h3>
               </div>
@@ -238,9 +335,13 @@ export default function EventRegistration() {
                 </button>
               ) : <div></div>}
               
-              {currentStep < 5 ? (
+{currentStep < 4 ? (
                 <button className={styles.btnNext} onClick={handleNext}>
                   Continue <FontAwesomeIcon icon={faArrowRight} />
+                </button>
+              ) : currentStep === 4 ? (
+                <button className={styles.btnNext} onClick={handleNext}>
+                  Complete Registration and Create Invoice <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               ) : (
                 <button className={styles.btnNext}>
@@ -255,7 +356,7 @@ export default function EventRegistration() {
         {/* RIGHT COLUMN - Summary */}
         <div className={styles.summaryCard}>
           <div className={styles.summaryHeader}>
-            <FontAwesomeIcon icon={faFileAlt, faGem, faMinusCircle} style={{ color: '#0047b3' }} /> Registration Summary
+            <FontAwesomeIcon icon={faFileAlt, faGem, faMinusCircle, faMedal, faAward, faShieldAlt, faCertificate, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils} style={{ color: '#0047b3' }} /> Registration Summary
           </div>
           
           <div className={styles.summaryList}>
@@ -282,9 +383,18 @@ export default function EventRegistration() {
               )}
             </div>
             
-            <div className={styles.summaryItem} style={{ borderBottom: 'none', paddingBottom: 0 }}>
+                        <div className={styles.summaryItem} style={{ borderBottom: 'none', paddingBottom: 0, alignItems: 'flex-start' }}>
               <span className={styles.summaryLabel}>Sponsorship</span>
-              <span className={styles.summaryValue}>—</span>
+              {selectedSponsors.length > 0 ? (
+                <div className={styles.summarySponsorList}>
+                  {selectedSponsors.map(id => {
+                    const sp = sponsorshipOptions.find(o => o.id === id);
+                    return <span key={id} className={styles.summaryValue}>{sp.title} — USD {sp.price.toLocaleString()}</span>;
+                  })}
+                </div>
+              ) : (
+                <span className={styles.summaryValue}>—</span>
+              )}
             </div>
           </div>
           
