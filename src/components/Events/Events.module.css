@@ -1,0 +1,293 @@
+﻿.container {
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-main: #031F4B;
+  --text-sub: #718096;
+  --border-color: #edf2f7;
+  --shadow-flat: 0 2px 4px rgba(0,0,0,0.02);
+  --btn-border: #e2e8f0;
+  
+  background-color: var(--bg-color);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Header & Tabs */
+.pageHeader {
+  margin-bottom: 25px;
+}
+.pageTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0 0 5px 0;
+}
+.pageSubtitle {
+  font-size: 14px;
+  color: var(--text-sub);
+  margin: 0;
+}
+
+.tabsArea {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 25px;
+}
+.tab {
+  padding: 10px 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-sub);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+.tabActive {
+  color: #3182ce;
+  border-bottom: 3px solid #3182ce;
+}
+
+/* Search Area */
+.searchArea {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.searchInputBox {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 15px;
+  width: 300px;
+}
+.searchInputBox input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  color: var(--text-main);
+}
+.searchInputBox input::placeholder {
+  color: #a0aec0;
+}
+.searchIcon {
+  color: #a0aec0;
+  font-size: 14px;
+}
+
+/* Events Grid */
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Event Card */
+.eventCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: var(--shadow-flat);
+  height: 250px; /* Fixed height for consistent look */
+}
+.eventImageCol {
+  width: 200px;
+  position: relative;
+  flex-shrink: 0;
+}
+.eventImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.badgeVirtual, .badgePhysical {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 2;
+}
+.badgeVirtual { background: #3182ce; }
+.badgePhysical { background: #38a169; }
+
+.eventContentCol {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.bookmarkIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #a0aec0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.bookmarkIcon:hover {
+  color: #3182ce;
+}
+.eventTitle {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0 0 10px 0;
+  padding-right: 25px; /* space for bookmark */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.eventDetailsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--text-sub);
+}
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.detailItem svg {
+  color: #3182ce;
+}
+
+.eventDesc {
+  font-size: 12px;
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 10px 0 auto 0; /* push buttons to bottom */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.eventActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.btnPrimary, .btnSecondary {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+.btnPrimary {
+  background: #0047b3;
+  color: #fff;
+  border: 1px solid #0047b3;
+}
+.btnPrimary:hover {
+  background: #003688;
+}
+.btnSecondary {
+  background: transparent;
+  color: #3182ce;
+  border: 1px solid #bee3f8;
+}
+.btnSecondary:hover {
+  background: #ebf8ff;
+}
+
+/* Pagination */
+.paginationArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: var(--text-sub);
+}
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.pageBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  border-radius: 6px;
+  color: var(--text-sub);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pageBtn:hover {
+  background: #f7fafc;
+}
+.pageBtnActive {
+  background: #0047b3;
+  color: #fff;
+  border-color: #0047b3;
+}
+.pageBtnActive:hover {
+  background: #0047b3;
+}
+.perPageSelect {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.perPageSelect select {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: var(--text-main);
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  .eventsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .eventCard {
+    flex-direction: column;
+    height: auto;
+  }
+  .eventImageCol {
+    width: 100%;
+    height: 180px;
+  }
+  .searchArea {
+    justify-content: flex-start;
+  }
+  .searchInputBox {
+    width: 100%;
+  }
+  .tabsArea {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .paginationArea {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
