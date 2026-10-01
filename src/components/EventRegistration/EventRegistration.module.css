@@ -256,6 +256,7 @@
 }
 .btnBack {
   background: transparent;
+  transition: all 0.2s ease;
   border: 1px solid var(--primary-blue);
   color: var(--primary-blue);
   padding: 10px 20px;
@@ -267,8 +268,12 @@
   align-items: center;
   gap: 8px;
 }
+.btnBack:hover {
+  background: #ebf8ff;
+}
 .btnNext {
   background: var(--primary-blue);
+  transition: all 0.2s ease;
   border: 1px solid var(--primary-blue);
   color: #fff;
   padding: 10px 25px;
@@ -282,6 +287,9 @@
 }
 
 /* Right Column - Summary */
+.btnNext:hover {
+  background: #003688;
+}
 .summaryCard {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -359,7 +367,10 @@
   .layoutGrid {
     grid-template-columns: 1fr;
   }
-  .summaryCard {
+  .btnNext:hover {
+  background: #003688;
+}
+.summaryCard {
     position: static;
   }
 }
@@ -483,7 +494,8 @@
   transition: all 0.2s;
 }
 .showMoreBtn:hover {
-  background: var(--light-blue);
+  background: var(--primary-blue);
+  color: #fff;
 }
 
 .summarySponsorList {
@@ -643,7 +655,7 @@
   transition: all 0.2s;
 }
 .modalBtnClose:hover {
-  background: #f7fafc;
+  background: #e2e8f0;
 }
 .modalBtnSelect {
   flex: 2;
@@ -661,7 +673,7 @@
   transition: all 0.2s;
 }
 .modalBtnSelect:hover {
-  background: #002b6b;
+  background: #002255;
 }
 .modalBtnSelect span {
   font-size: 12px;
