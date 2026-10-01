@@ -301,7 +301,6 @@ export default function EventRegistration() {
                       <div 
                         key={opt.id} 
                         className={`${styles.sponsorCard} ${isSelected ? styles.sponsorCardActive : ''}`}
-                        onClick={() => toggleSponsor(opt.id)}
                       >
                         <div className={styles.sponsorHeader}>
                           <div className={styles.sponsorIconWrapper} style={{ color: opt.color, backgroundColor: `${opt.color}15` }}>
