@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faCalendarAlt, faClock, faMapMarkerAlt, faInfoCircle, 
   faCheckCircle, faUser, faUserFriends, faUsers, faArrowRight, faArrowLeft,
-  faShieldAlt, faFileAlt, faGem, faMinusCircle, faMedal, faAward, faShieldAlt, faCertificate, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils
+  faShieldAlt, faFileAlt, faGem, faMinusCircle, faMedal, faAward, faCertificate, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils
 } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -356,7 +356,7 @@ export default function EventRegistration() {
         {/* RIGHT COLUMN - Summary */}
         <div className={styles.summaryCard}>
           <div className={styles.summaryHeader}>
-            <FontAwesomeIcon icon={faFileAlt, faGem, faMinusCircle, faMedal, faAward, faShieldAlt, faCertificate, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils} style={{ color: '#0047b3' }} /> Registration Summary
+            <FontAwesomeIcon icon={faFileAlt, faGem, faMinusCircle, faMedal, faAward, faCertificate, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils} style={{ color: '#0047b3' }} /> Registration Summary
           </div>
           
           <div className={styles.summaryList}>
