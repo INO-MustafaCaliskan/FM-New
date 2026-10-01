@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import styles from "./EventRegistration.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCcVisa, faCcMastercard } from "@fortawesome/free-brands-svg-icons";
 import { 
   faCalendarAlt, faClock, faMapMarkerAlt, faInfoCircle, 
   faCheckCircle, faUser, faUserFriends, faUsers, faArrowRight, faArrowLeft,
   faFileAlt, faGem, faMinusCircle, faMedal, faAward, faShieldAlt, faCertificate, 
-  faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils, faCheck, faTimes
+  faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils, faCheck, faTimes, faDownload, faCreditCard, faQuestionCircle, faLock, faHourglassHalf, faUniversity
 } from "@fortawesome/free-solid-svg-icons";
 
 const VipTableIcon = () => (
@@ -336,13 +337,106 @@ export default function EventRegistration() {
               </div>
             )}
 
+            {/* STEP 5: Payment */}
+            {currentStep === 5 && (
+              <div>
+                <div className={styles.invoiceBanner}>
+                  <div className={styles.invoiceBannerLeft}>
+                    <div className={styles.invoiceIconWrapper}>
+                      <FontAwesomeIcon icon={faFileAlt} />
+                      <div className={styles.checkOverlay}><FontAwesomeIcon icon={faCheck} /></div>
+                    </div>
+                    <div className={styles.invoiceText}>
+                      <div className={styles.invoiceTitle}>
+                        Invoice Created <span className={styles.invoiceBadge}>Ready for Payment</span>
+                      </div>
+                      <div className={styles.invoiceMeta}>
+                        <span>Invoice No:</span> INV-2025-1048 &nbsp;|&nbsp; <span>Status:</span> <strong>Ready for Payment</strong>
+                      </div>
+                      <div className={styles.invoiceDesc}>
+                        Your invoice has been created successfully. You can download it now and pay either by credit card or bank transfer.
+                      </div>
+                    </div>
+                  </div>
+                  <button className={styles.btnDownload}>
+                    <FontAwesomeIcon icon={faDownload} /> Download Invoice
+                  </button>
+                </div>
+
+                <h2 className={styles.stepTitle}>Secure Credit Card Payment</h2>
+                <p className={styles.stepSubtitle} style={{ marginBottom: "20px" }}>Your registration is almost complete. Complete your payment to confirm your registration.</p>
+
+                <div className={styles.ccForm}>
+                  <div className={styles.ccFormHeader}>
+                    <div className={styles.ccFormTitle}>Payment Details</div>
+                    <div className={styles.ccLogos}>
+                      We accept: 
+                      <FontAwesomeIcon icon={faCcVisa} className={styles.visaLogo} />
+                      <FontAwesomeIcon icon={faCcMastercard} className={styles.mcLogo} />
+                    </div>
+                  </div>
+
+                  <div className={styles.formRow}>
+                    <div className={styles.formGroup}>
+                      <label>Cardholder Name</label>
+                      <div className={styles.formInputBox}>
+                        <input type="text" placeholder="Enter cardholder name" />
+                      </div>
+                    </div>
+                    <div className={styles.formGroup}>
+                      <label>Card Number</label>
+                      <div className={styles.formInputBox}>
+                        <FontAwesomeIcon icon={faCreditCard} className={styles.formInputIcon} />
+                        <input type="text" placeholder="1234 5678 9012 3456" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className={styles.formRow}>
+                    <div className={styles.formGroup}>
+                      <label>Expiry Date</label>
+                      <div className={styles.formInputBox}>
+                        <input type="text" placeholder="MM / YY" />
+                      </div>
+                    </div>
+                    <div className={styles.formGroup}>
+                      <label>CVV</label>
+                      <div className={styles.formInputBox}>
+                        <input type="text" placeholder="123" />
+                        <FontAwesomeIcon icon={faQuestionCircle} className={styles.formInputIcon} style={{ marginLeft: "auto" }} />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className={styles.termsRow}>
+                    <input type="checkbox" className={styles.sponsorCheckbox} />
+                    <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Cancellation Policy</a>.</span>
+                  </div>
+
+                  <div className={styles.ccFormFooter}>
+                    <div className={styles.sslInfo}>
+                      <FontAwesomeIcon icon={faShieldAlt} className={styles.sslIcon} />
+                      <div className={styles.sslText}>
+                        <strong>256-bit SSL secure payment</strong>
+                        Your payment is processed securely.
+                      </div>
+                    </div>
+                    <button className={styles.btnPay}>
+                      <FontAwesomeIcon icon={faLock} /> Pay USD {totalFee.toLocaleString()}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Placeholder for other steps */}
-            {currentStep > 4 && (
+            {currentStep > 5 && (
               <div style={{ textAlign: 'center', padding: '50px 0', color: '#718096' }}>
                 <h3>Step {currentStep} content coming soon...</h3>
               </div>
             )}
 
+            {currentStep < 5 && (
             <div className={styles.formActions}>
               {currentStep > 1 ? (
                 <button className={styles.btnBack} onClick={handleBack}>
@@ -360,10 +454,10 @@ export default function EventRegistration() {
                 </button>
               ) : (
                 <button className={styles.btnNext}>
-                  Pay Now <FontAwesomeIcon icon={faArrowRight} />
-                </button>
+                  Pay Now <FontAwesomeIcon icon={faArrowRight} />                </button>
               )}
             </div>
+            )}
 
           </div>
         </div>
@@ -424,6 +518,21 @@ export default function EventRegistration() {
             <FontAwesomeIcon icon={faShieldAlt} />
             Current Membership: Basic
           </div>
+
+          {currentStep === 5 && (
+            <>
+              <div className={styles.paymentPendingBanner}>
+                <FontAwesomeIcon icon={faHourglassHalf} className={styles.pendingIcon} />
+                <div className={styles.pendingText}>
+                  <div className={styles.pendingTitle}>Payment Status: Pending</div>
+                  <div className={styles.pendingDesc}>Registration will be confirmed after successful payment.</div>
+                </div>
+              </div>
+              <button className={styles.btnGoToRegistrations}>
+                <FontAwesomeIcon icon={faUniversity} /> Go to My Registrations
+              </button>
+            </>
+          )}
         </div>
 
       </div>
