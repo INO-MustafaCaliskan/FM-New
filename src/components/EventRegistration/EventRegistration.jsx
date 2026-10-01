@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faCalendarAlt, faClock, faMapMarkerAlt, faInfoCircle, 
   faCheckCircle, faUser, faUserFriends, faUsers, faArrowRight, faArrowLeft,
-  faShieldAlt, faFileAlt, faGem, faMinusCircle, faMedal, faAward, faCertificate, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils
+  faShieldAlt, faFileAlt, faGem, faMinusCircle, faMedal, faAward, faCertificate, faCheck, faTimes, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils
 } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -31,6 +31,7 @@ export default function EventRegistration() {
   const [vipTables, setVipTables] = useState(1);
   const [selectedSponsors, setSelectedSponsors] = useState([]);
   const [showAllSponsors, setShowAllSponsors] = useState(false);
+  const [detailModalOpen, setDetailModalOpen] = useState(null);
 
   const delegateOptions = [
     { value: 1, label: "1 Delegate", price: 1150 },
@@ -57,17 +58,28 @@ export default function EventRegistration() {
   const getDelegatePrice = () => delegateOptions.find(o => o.value === delegates)?.price || 0;
   const getSpousePrice = () => spouseOptions.find(o => o.value === spouses)?.price || 0;
   const getVipPrice = () => vipOptions.find(o => o.value === vipTables)?.price || 0;
+  const mockFeatures = [
+    "Company logo on event website",
+    "Logo on event materials",
+    "Recognition during the event",
+    "Company visibility in selected event areas",
+    "Promotional exposure to attending members",
+    "One (1) complimentary delegate registration",
+    "Opportunity to include promotional item in delegate bags",
+    "Social media mention before and after the event"
+  ];
+
   const sponsorshipOptions = [
-    { id: 1, title: "Platinum Sponsor", price: 5550, icon: "medal", color: "#3182ce" },
-    { id: 2, title: "Gold Sponsor", price: 4250, icon: "award", color: "#dd6b20" },
-    { id: 3, title: "Silver Sponsor", price: 3270, icon: "shield", color: "#718096" },
-    { id: 4, title: "Bronze Sponsor", price: 2180, icon: "certificate", color: "#e53e3e" },
-    { id: 5, title: "Mouse Pad Sponsor", price: 1500, icon: "mouse", color: "#0047b3" },
-    { id: 6, title: "Folder Sponsor", price: 1000, icon: "folder", color: "#3182ce" },
-    { id: 7, title: "Pen Sponsor", price: 750, icon: "pen", color: "#38a169" },
-    { id: 8, title: "Lanyard Sponsor", price: 1500, icon: "id-badge", color: "#805ad5" },
-    { id: 9, title: "Coffee Break Sponsor", price: 2000, icon: "coffee", color: "#d69e2e" },
-    { id: 10, title: "Gala Dinner Sponsor", price: 5000, icon: "utensils", color: "#e53e3e" }
+    { id: 1, title: "Platinum Sponsor", price: 5550, icon: "medal", color: "#3182ce", features: mockFeatures, availability: 2 },
+    { id: 2, title: "Gold Sponsor", price: 4250, icon: "award", color: "#dd6b20", features: mockFeatures, availability: 3 },
+    { id: 3, title: "Silver Sponsor", price: 3270, icon: "shield", color: "#718096", features: mockFeatures, availability: 5 },
+    { id: 4, title: "Bronze Sponsor", price: 2180, icon: "certificate", color: "#e53e3e", features: mockFeatures, availability: 8 },
+    { id: 5, title: "Mouse Pad Sponsor", price: 1500, icon: "mouse", color: "#0047b3", features: mockFeatures, availability: 10 },
+    { id: 6, title: "Folder Sponsor", price: 1000, icon: "folder", color: "#3182ce", features: mockFeatures, availability: 5 },
+    { id: 7, title: "Pen Sponsor", price: 750, icon: "pen", color: "#38a169", features: mockFeatures, availability: 4 },
+    { id: 8, title: "Lanyard Sponsor", price: 1500, icon: "id-badge", color: "#805ad5", features: mockFeatures, availability: 2 },
+    { id: 9, title: "Coffee Break Sponsor", price: 2000, icon: "coffee", color: "#d69e2e", features: mockFeatures, availability: 1 },
+    { id: 10, title: "Gala Dinner Sponsor", price: 5000, icon: "utensils", color: "#e53e3e", features: mockFeatures, availability: 1 }
   ];
 
   const toggleSponsor = (id) => {
@@ -299,11 +311,67 @@ export default function EventRegistration() {
                             onChange={() => {}} // handled by parent div onClick
                             onClick={(e) => e.stopPropagation()} // Let card click handle it, or we can just let it bubble
                           />
-                          <span className={styles.viewDetailsLink}>View Details</span>
-                        </div>
+                          <span className={styles.viewDetailsLink} onClick={(e) => { e.stopPropagation(); setDetailModalOpen(opt.id); }}>View Details</span>
+                          {/* Detail Modal */}
+      {detailModalOpen && (
+        <div className={styles.modalOverlay} onClick={() => setDetailModalOpen(null)}>
+          {(() => {
+            const sp = sponsorshipOptions.find(o => o.id === detailModalOpen);
+            if (!sp) return null;
+            return (
+              <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
+                <button className={styles.closeModalBtn} onClick={() => setDetailModalOpen(null)}>
+                  <FontAwesomeIcon icon={faTimes} />
+                </button>
+                
+                <div className={styles.modalHeader}>
+                  <div className={styles.modalIconWrapper} style={{ color: sp.color, backgroundColor: `${sp.color}15` }}>
+                    <FontAwesomeIcon icon={getSponsorIcon(sp.icon)} />
+                  </div>
+                  <div className={styles.modalTitleBox}>
+                    <h3 className={styles.modalTitle}>{sp.title}</h3>
+                    <span className={styles.modalPrice}>USD {sp.price.toLocaleString()}</span>
+                    <span className={styles.modalAvailability}>Availability: {sp.availability} remaining</span>
+                  </div>
+                </div>
+
+                <div className={styles.modalBody}>
+                  <div className={styles.modalSubtitle}>Package includes:</div>
+                  <div className={styles.featuresList}>
+                    {sp.features.map((feat, idx) => (
+                      <div key={idx} className={styles.featureItem}>
+                        <FontAwesomeIcon icon={faCheck} className={styles.featureCheck} />
+                        <span>{feat}</span>
                       </div>
-                    );
-                  })}
+                    ))}
+                  </div>
+                </div>
+
+                <div className={styles.modalFooter}>
+                  <button className={styles.modalBtnClose} onClick={() => setDetailModalOpen(null)}>
+                    Close
+                  </button>
+                  <button 
+                    className={styles.modalBtnSelect} 
+                    onClick={() => {
+                      if (!selectedSponsors.includes(sp.id)) {
+                        setSelectedSponsors(prev => [...prev, sp.id]);
+                      }
+                      setDetailModalOpen(null);
+                    }}
+                  >
+                    Select {sp.title}
+                    <span>USD {sp.price.toLocaleString()}</span>
+                  </button>
+                </div>
+              </div>
+            );
+          })()}
+        </div>
+      )}
+    </div>
+  );
+})}
                 </div>
 
                 {!showAllSponsors && sponsorshipOptions.length > 8 && (
@@ -356,7 +424,7 @@ export default function EventRegistration() {
         {/* RIGHT COLUMN - Summary */}
         <div className={styles.summaryCard}>
           <div className={styles.summaryHeader}>
-            <FontAwesomeIcon icon={faFileAlt, faGem, faMinusCircle, faMedal, faAward, faCertificate, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils} style={{ color: '#0047b3' }} /> Registration Summary
+            <FontAwesomeIcon icon={faFileAlt, faGem, faMinusCircle, faMedal, faAward, faCertificate, faCheck, faTimes, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils} style={{ color: '#0047b3' }} /> Registration Summary
           </div>
           
           <div className={styles.summaryList}>
@@ -411,7 +479,63 @@ export default function EventRegistration() {
           </div>
         </div>
 
-      </div>
+        {/* Detail Modal */}
+      {detailModalOpen && (
+        <div className={styles.modalOverlay} onClick={() => setDetailModalOpen(null)}>
+          {(() => {
+            const sp = sponsorshipOptions.find(o => o.id === detailModalOpen);
+            if (!sp) return null;
+            return (
+              <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
+                <button className={styles.closeModalBtn} onClick={() => setDetailModalOpen(null)}>
+                  <FontAwesomeIcon icon={faTimes} />
+                </button>
+                
+                <div className={styles.modalHeader}>
+                  <div className={styles.modalIconWrapper} style={{ color: sp.color, backgroundColor: `${sp.color}15` }}>
+                    <FontAwesomeIcon icon={getSponsorIcon(sp.icon)} />
+                  </div>
+                  <div className={styles.modalTitleBox}>
+                    <h3 className={styles.modalTitle}>{sp.title}</h3>
+                    <span className={styles.modalPrice}>USD {sp.price.toLocaleString()}</span>
+                    <span className={styles.modalAvailability}>Availability: {sp.availability} remaining</span>
+                  </div>
+                </div>
+
+                <div className={styles.modalBody}>
+                  <div className={styles.modalSubtitle}>Package includes:</div>
+                  <div className={styles.featuresList}>
+                    {sp.features.map((feat, idx) => (
+                      <div key={idx} className={styles.featureItem}>
+                        <FontAwesomeIcon icon={faCheck} className={styles.featureCheck} />
+                        <span>{feat}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className={styles.modalFooter}>
+                  <button className={styles.modalBtnClose} onClick={() => setDetailModalOpen(null)}>
+                    Close
+                  </button>
+                  <button 
+                    className={styles.modalBtnSelect} 
+                    onClick={() => {
+                      if (!selectedSponsors.includes(sp.id)) {
+                        setSelectedSponsors(prev => [...prev, sp.id]);
+                      }
+                      setDetailModalOpen(null);
+                    }}
+                  >
+                    Select {sp.title}
+                    <span>USD {sp.price.toLocaleString()}</span>
+                  </button>
+                </div>
+              </div>
+            );
+          })()}
+        </div>
+      )}
     </div>
   );
 }
