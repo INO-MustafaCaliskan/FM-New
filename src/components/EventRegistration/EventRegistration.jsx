@@ -5,13 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faCalendarAlt, faClock, faMapMarkerAlt, faInfoCircle, 
   faCheckCircle, faUser, faUserFriends, faUsers, faArrowRight, faArrowLeft,
-  faShieldAlt, faFileAlt
+  faShieldAlt, faFileAlt, faGem, faMinusCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function EventRegistration() {
   const [currentStep, setCurrentStep] = useState(1);
   const [delegates, setDelegates] = useState(2);
   const [spouses, setSpouses] = useState(1);
+  const [vipTables, setVipTables] = useState(1);
 
   const delegateOptions = [
     { value: 1, label: "1 Delegate", price: 1150 },
@@ -28,9 +29,17 @@ export default function EventRegistration() {
     { value: 4, label: "4 Spouses", price: 2000 },
   ];
 
+  const vipOptions = [
+    { value: 1, label: "One VIP Table", price: 850 },
+    { value: 2, label: "Two VIP Tables", price: 1700 },
+    { value: 3, label: "Three VIP Tables", price: 2550 },
+    { value: 0, label: "No, Thanks", price: 0 },
+  ];
+
   const getDelegatePrice = () => delegateOptions.find(o => o.value === delegates)?.price || 0;
   const getSpousePrice = () => spouseOptions.find(o => o.value === spouses)?.price || 0;
-  const totalFee = getDelegatePrice() + getSpousePrice();
+  const getVipPrice = () => vipOptions.find(o => o.value === vipTables)?.price || 0;
+  const totalFee = getDelegatePrice() + getSpousePrice() + getVipPrice();
 
   const handleNext = () => {
     if (currentStep < 5) setCurrentStep(currentStep + 1);
@@ -163,8 +172,44 @@ export default function EventRegistration() {
               </div>
             )}
 
+            {/* STEP 3: Add-Ons (VIP Table) */}
+            {currentStep === 3 && (
+              <div>
+                <h2 className={styles.stepTitle}>Would you like to have a VIP table?</h2>
+                <p className={styles.stepSubtitle}>Reserve a VIP table to create a premium meeting experience during the event.</p>
+                
+                <div className={styles.optionsGrid}>
+                  {vipOptions.map(opt => (
+                    <div 
+                      key={opt.value} 
+                      className={`${styles.optionCard} ${vipTables === opt.value ? styles.optionCardActive : ''}`}
+                      onClick={() => setVipTables(opt.value)}
+                    >
+                      {vipTables === opt.value && <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />}
+                      {opt.value === 0 ? (
+                        <FontAwesomeIcon icon={faMinusCircle} className={styles.optionIcon} />
+                      ) : (
+                        <div style={{ display: 'flex', gap: '5px' }}>
+                          {[...Array(opt.value)].map((_, i) => (
+                            <FontAwesomeIcon key={i} icon={faGem} className={styles.optionIcon} />
+                          ))}
+                        </div>
+                      )}
+                      <span className={styles.optionTitle}>{opt.label}</span>
+                      <span className={styles.optionPrice}>USD {opt.price.toLocaleString()}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className={styles.infoBanner}>
+                  <FontAwesomeIcon icon={faInfoCircle} />
+                  You will attend all your meetings at your own table.
+                </div>
+              </div>
+            )}
+
             {/* Placeholder for other steps */}
-            {currentStep > 2 && (
+            {currentStep > 3 && (
               <div style={{ textAlign: 'center', padding: '50px 0', color: '#718096' }}>
                 <h3>Step {currentStep} content coming soon...</h3>
               </div>
@@ -194,7 +239,7 @@ export default function EventRegistration() {
         {/* RIGHT COLUMN - Summary */}
         <div className={styles.summaryCard}>
           <div className={styles.summaryHeader}>
-            <FontAwesomeIcon icon={faFileAlt} style={{ color: '#0047b3' }} /> Registration Summary
+            <FontAwesomeIcon icon={faFileAlt, faGem, faMinusCircle} style={{ color: '#0047b3' }} /> Registration Summary
           </div>
           
           <div className={styles.summaryList}>
@@ -212,9 +257,13 @@ export default function EventRegistration() {
               )}
             </div>
             
-            <div className={styles.summaryItem}>
+                        <div className={styles.summaryItem}>
               <span className={styles.summaryLabel}>VIP Table</span>
-              <span className={styles.summaryValue}>—</span>
+              {vipTables > 0 ? (
+                <span className={styles.summaryValue}>{vipTables} VIP Table{vipTables > 1 ? 's' : ''} — USD {getVipPrice().toLocaleString()}</span>
+              ) : (
+                <span className={styles.summaryValue}>—</span>
+              )}
             </div>
             
             <div className={styles.summaryItem} style={{ borderBottom: 'none', paddingBottom: 0 }}>
