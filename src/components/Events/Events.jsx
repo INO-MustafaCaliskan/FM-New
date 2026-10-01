@@ -1,5 +1,6 @@
 ﻿"use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import styles from "./Events.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
@@ -135,7 +136,7 @@ export default function Events() {
               <p className={styles.eventDesc}>{event.desc}</p>
               
               <div className={styles.eventActions}>
-                <button className={styles.btnPrimary}>Register Now</button>
+                <Link href="/events/registration" style={{ textDecoration: "none" }}><button className={styles.btnPrimary} style={{ width: "100%" }}>Register Now</button></Link>
                 <button className={styles.btnSecondary}>Become a Sponsor</button>
                 <button className={styles.btnSecondary}>View Details</button>
               </div>
