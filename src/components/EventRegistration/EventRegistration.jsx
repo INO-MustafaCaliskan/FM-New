@@ -313,11 +313,11 @@ export default function EventRegistration() {
                           </div>
                         </div>
                         <div className={styles.sponsorActions}>
-                          <input 
+                                                    <input 
                             type="checkbox" 
                             className={styles.sponsorCheckbox} 
                             checked={isSelected}
-                            onChange={() => {}}
+                            onChange={() => toggleSponsor(opt.id)}
                             onClick={(e) => e.stopPropagation()} 
                           />
                           <span className={styles.viewDetailsLink} onClick={(e) => { e.stopPropagation(); setDetailModalOpen(opt.id); }}>View Details</span>
@@ -369,16 +369,7 @@ export default function EventRegistration() {
 
           {currentStep === 5 && (
               <div>
-                {/* Temporary Test Toggle */}
-                {paymentStatus === 'pending' && (
-                  <div style={{ marginBottom: '15px', padding: '10px', background: '#edf2f7', borderRadius: '6px', fontSize: '12px', display: 'flex', gap: '10px', alignItems: 'center' }}>
-                    <strong>Developer Test Mode:</strong>
-                    <label style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                      <input type="checkbox" checked={testSuccess} onChange={e => setTestSuccess(e.target.checked)} />
-                      Simulate Successful Payment
-                    </label>
-                  </div>
-                )}
+
 
                 {paymentStatus === 'pending' && (
                   <>
@@ -463,7 +454,11 @@ export default function EventRegistration() {
                         Your payment is processed securely.
                       </div>
                     </div>
-                                        <button 
+                                        <label style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: '#a0aec0', cursor: 'pointer', marginRight: '15px' }}>
+                      <input type="checkbox" checked={testSuccess} onChange={e => setTestSuccess(e.target.checked)} style={{ accentColor: 'var(--primary-blue)' }} />
+                      Success
+                    </label>
+                    <button 
                       className={styles.btnPay} 
                       onClick={() => setPaymentStatus(testSuccess ? 'success' : 'failed')}
                     >
