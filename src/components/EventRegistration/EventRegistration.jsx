@@ -185,7 +185,6 @@ export default function EventRegistration() {
                 if (stepNum === 5 && paymentStatus === 'success') {
                   isCompleted = true;
                 }
-                const isCompleted = stepNum < currentStep;
                 return (
                   <div key={stepNum} className={`${styles.step} ${isActive ? styles.stepActive : ''} ${isCompleted ? styles.stepCompleted : ''}`}>
                     <div className={styles.stepCircle}>
