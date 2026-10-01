@@ -8,6 +8,22 @@ import {
   faShieldAlt, faFileAlt, faGem, faMinusCircle
 } from "@fortawesome/free-solid-svg-icons";
 
+
+const VipTableIcon = () => (
+  <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.optionIcon} style={{ margin: "0 -5px" }}>
+    <rect x="20" y="6" width="24" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
+    <text x="32" y="15" fill="currentColor" fontSize="8" fontWeight="bold" textAnchor="middle" alignmentBaseline="middle">VIP</text>
+    <path d="M12 44 L12 28 C12 25 16 25 16 25 L20 25" stroke="currentColor" strokeWidth="2" fill="none"/>
+    <path d="M16 44 L16 34 L22 34" stroke="currentColor" strokeWidth="2" fill="none"/>
+    <path d="M52 44 L52 28 C52 25 48 25 48 25 L44 25" stroke="currentColor" strokeWidth="2" fill="none"/>
+    <path d="M48 44 L48 34 L42 34" stroke="currentColor" strokeWidth="2" fill="none"/>
+    <ellipse cx="32" cy="34" rx="14" ry="5" fill="#ffffff" stroke="currentColor" strokeWidth="2"/>
+    <path d="M18 34 L18 46 C18 48 46 48 46 46 L46 34" fill="#ffffff" stroke="currentColor" strokeWidth="2"/>
+    <line x1="25" y1="38" x2="25" y2="47" stroke="currentColor" strokeWidth="1.5"/>
+    <line x1="32" y1="39" x2="32" y2="47" stroke="currentColor" strokeWidth="1.5"/>
+    <line x1="39" y1="38" x2="39" y2="47" stroke="currentColor" strokeWidth="1.5"/>
+  </svg>
+);
 export default function EventRegistration() {
   const [currentStep, setCurrentStep] = useState(1);
   const [delegates, setDelegates] = useState(2);
@@ -189,9 +205,9 @@ export default function EventRegistration() {
                       {opt.value === 0 ? (
                         <FontAwesomeIcon icon={faMinusCircle} className={styles.optionIcon} />
                       ) : (
-                        <div style={{ display: 'flex', gap: '5px' }}>
+                                                <div style={{ display: 'flex', alignItems: 'center' }}>
                           {[...Array(opt.value)].map((_, i) => (
-                            <FontAwesomeIcon key={i} icon={faGem} className={styles.optionIcon} />
+                            <VipTableIcon key={i} />
                           ))}
                         </div>
                       )}
