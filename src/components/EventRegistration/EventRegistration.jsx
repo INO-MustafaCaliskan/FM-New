@@ -7,7 +7,7 @@ import {
   faCalendarAlt, faClock, faMapMarkerAlt, faInfoCircle, 
   faCheckCircle, faUser, faUserFriends, faUsers, faArrowRight, faArrowLeft,
   faFileAlt, faGem, faMinusCircle, faMedal, faAward, faShieldAlt, faCertificate, 
-  faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils, faCheck, faTimes, faDownload, faCreditCard, faQuestionCircle, faLock, faHourglassHalf, faUniversity
+  faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils, faCheck, faTimes, faDownload, faCreditCard, faQuestionCircle, faLock, faHourglassHalf, faUniversity, faBullhorn, faChartLine, faUserPlus
 } from "@fortawesome/free-solid-svg-icons";
 
 const VipTableIcon = () => (
@@ -34,6 +34,8 @@ export default function EventRegistration() {
   const [selectedSponsors, setSelectedSponsors] = useState([]);
   const [showAllSponsors, setShowAllSponsors] = useState(false);
   const [detailModalOpen, setDetailModalOpen] = useState(null);
+  const [paymentStatus, setPaymentStatus] = useState('pending'); // 'pending', 'success', 'failed'
+  const [testSuccess, setTestSuccess] = useState(true);
 
   const delegateOptions = [
     { value: 1, label: "1 Delegate", price: 1150 },
@@ -179,6 +181,10 @@ export default function EventRegistration() {
               {['Delegates', 'Spouses', 'Add-Ons', 'Sponsorship', 'Payment'].map((stepName, idx) => {
                 const stepNum = idx + 1;
                 const isActive = stepNum === currentStep;
+                let isCompleted = stepNum < currentStep;
+                if (stepNum === 5 && paymentStatus === 'success') {
+                  isCompleted = true;
+                }
                 const isCompleted = stepNum < currentStep;
                 return (
                   <div key={stepNum} className={`${styles.step} ${isActive ? styles.stepActive : ''} ${isCompleted ? styles.stepCompleted : ''}`}>
@@ -338,9 +344,46 @@ export default function EventRegistration() {
             )}
 
             {/* STEP 5: Payment */}
-            {currentStep === 5 && (
+            {currentStep === 5 && paymentStatus === 'pending' && (
+            <div className={styles.paymentPendingBanner}>
+              <FontAwesomeIcon icon={faHourglassHalf} className={styles.pendingIcon} />
+              <div className={styles.pendingText}>
+                <div className={styles.pendingTitle}>Payment Status: Pending</div>
+                <div className={styles.pendingDesc}>Registration will be confirmed after successful payment.</div>
+              </div>
+            </div>
+          )}
+          
+          {currentStep === 5 && paymentStatus === 'success' && (
+            <div className={styles.paymentSuccessBanner}>
+              <FontAwesomeIcon icon={faCheckCircle} />
+              Payment Status: Paid by Credit Card
+            </div>
+          )}
+
+          {currentStep === 5 && paymentStatus === 'failed' && (
+            <div className={styles.paymentFailedBanner}>
+              <FontAwesomeIcon icon={faTimes} />
+              Payment Status: Failed
+            </div>
+          )}
+
+          {currentStep === 5 && (
               <div>
-                <div className={styles.invoiceBanner}>
+                {/* Temporary Test Toggle */}
+                {paymentStatus === 'pending' && (
+                  <div style={{ marginBottom: '15px', padding: '10px', background: '#edf2f7', borderRadius: '6px', fontSize: '12px', display: 'flex', gap: '10px', alignItems: 'center' }}>
+                    <strong>Developer Test Mode:</strong>
+                    <label style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                      <input type="checkbox" checked={testSuccess} onChange={e => setTestSuccess(e.target.checked)} />
+                      Simulate Successful Payment
+                    </label>
+                  </div>
+                )}
+
+                {paymentStatus === 'pending' && (
+                  <>
+                    <div className={styles.invoiceBanner}>
                   <div className={styles.invoiceBannerLeft}>
                     <div className={styles.invoiceIconWrapper}>
                       <FontAwesomeIcon icon={faFileAlt} />
@@ -421,12 +464,126 @@ export default function EventRegistration() {
                         Your payment is processed securely.
                       </div>
                     </div>
-                    <button className={styles.btnPay}>
+                                        <button 
+                      className={styles.btnPay} 
+                      onClick={() => setPaymentStatus(testSuccess ? 'success' : 'failed')}
+                    >
                       <FontAwesomeIcon icon={faLock} /> Pay USD {totalFee.toLocaleString()}
                     </button>
                   </div>
                 </div>
+              </>
+            )}
+
+            {paymentStatus === 'success' && (
+              <div>
+                <div className={styles.paymentResultHeader}>
+                  <div className={`${styles.paymentResultIcon} ${styles.iconSuccess}`}>
+                    <FontAwesomeIcon icon={faCheck} />
+                  </div>
+                  <div>
+                    <h2 className={styles.paymentResultTitle}>Payment Successful</h2>
+                    <div className={styles.paymentResultSubtitle}>
+                      Your registration has been confirmed. Please add your participant names<br/>
+                      below to complete your event profile.
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.promoBanner}>
+                  <div className={styles.promoBannerLeft}>
+                    <FontAwesomeIcon icon={faBullhorn} />
+                    <span>Add participant names now and we'll promote your delegates<br/>in the event system and attendee visibility areas.</span>
+                  </div>
+                  <FontAwesomeIcon icon={faChartLine} className={styles.promoBannerRight} />
+                </div>
+
+                <div className={styles.participantFormSection}>
+                  <h3 className={styles.participantFormTitle}>Add Participant Names</h3>
+                  <div className={styles.participantFormSubtitle}>
+                    You have selected {delegates} delegate{delegates > 1 ? 's' : ''} {spouses > 0 ? `and ${spouses} spouse${spouses > 1 ? 's' : ''}` : ''}. Please provide their names below.
+                  </div>
+
+                  <div className={styles.infoAlert}>
+                    <FontAwesomeIcon icon={faInfoCircle} />
+                    Please enter each participant's First Name and Last Name exactly as they should appear on the name badge.
+                  </div>
+                  <div className={styles.infoAlert}>
+                    <FontAwesomeIcon icon={faInfoCircle} />
+                    Name badges will be printed based on the information entered below.
+                  </div>
+
+                  {/* Delegates Rows */}
+                  {[...Array(delegates)].map((_, i) => (
+                    <div key={`del-${i}`} className={styles.participantRow}>
+                      <div className={styles.participantLabel}>
+                        <FontAwesomeIcon icon={faUser} className={styles.iconDelegate} />
+                        Delegate {i + 1}
+                      </div>
+                      <div className={styles.participantInputs}>
+                        <div className={styles.formInputBox}><input type="text" placeholder="First Name" /></div>
+                        <div className={styles.formInputBox}><input type="text" placeholder="Last Name" /></div>
+                        <div className={styles.formInputBox}><input type="text" placeholder="Email Address" /></div>
+                        <select defaultValue="">
+                          <option value="" disabled>T-Shirt Size</option>
+                          <option value="S">Small</option>
+                          <option value="M">Medium</option>
+                          <option value="L">Large</option>
+                          <option value="XL">X-Large</option>
+                        </select>
+                      </div>
+                    </div>
+                  ))}
+
+                  {/* Spouses Rows */}
+                  {[...Array(spouses)].map((_, i) => (
+                    <div key={`spo-${i}`} className={styles.participantRow}>
+                      <div className={styles.participantLabel}>
+                        <FontAwesomeIcon icon={faUser} className={styles.iconSpouse} />
+                        Spouse {spouses > 1 ? i + 1 : ''}
+                      </div>
+                      <div className={styles.participantInputs}>
+                        <div className={styles.formInputBox}><input type="text" placeholder="First Name" /></div>
+                        <div className={styles.formInputBox}><input type="text" placeholder="Last Name" /></div>
+                      </div>
+                    </div>
+                  ))}
+
+                  <div className={styles.infoAlert}>
+                    <FontAwesomeIcon icon={faInfoCircle} />
+                    You can also update these details later in Community {'>'} Events {'>'} My Registrations.
+                  </div>
+
+                  <button className={styles.btnPay} style={{ marginTop: '20px' }}>
+                    <FontAwesomeIcon icon={faUserPlus} /> Save
+                  </button>
+                </div>
               </div>
+            )}
+
+            {paymentStatus === 'failed' && (
+              <div>
+                <div className={styles.paymentResultHeader}>
+                  <div className={`${styles.paymentResultIcon} ${styles.iconFailed}`}>
+                    <FontAwesomeIcon icon={faTimes} />
+                  </div>
+                  <div>
+                    <h2 className={styles.paymentResultTitle}>Payment Failed</h2>
+                    <div className={styles.paymentResultSubtitle}>
+                      We couldn't process your payment. Please check your card details<br/>
+                      and try again, or use a different payment method.
+                    </div>
+                  </div>
+                </div>
+                <button 
+                  className={styles.btnNext} 
+                  onClick={() => setPaymentStatus('pending')}
+                  style={{ marginTop: '20px' }}
+                >
+                  <FontAwesomeIcon icon={faArrowLeft} /> Try Again
+                </button>
+              </div>
+            )}</div>
             )}
 
             {/* Placeholder for other steps */}
@@ -518,6 +675,30 @@ export default function EventRegistration() {
             <FontAwesomeIcon icon={faShieldAlt} />
             Current Membership: Basic
           </div>
+
+          {currentStep === 5 && paymentStatus === 'pending' && (
+            <div className={styles.paymentPendingBanner}>
+              <FontAwesomeIcon icon={faHourglassHalf} className={styles.pendingIcon} />
+              <div className={styles.pendingText}>
+                <div className={styles.pendingTitle}>Payment Status: Pending</div>
+                <div className={styles.pendingDesc}>Registration will be confirmed after successful payment.</div>
+              </div>
+            </div>
+          )}
+          
+          {currentStep === 5 && paymentStatus === 'success' && (
+            <div className={styles.paymentSuccessBanner}>
+              <FontAwesomeIcon icon={faCheckCircle} />
+              Payment Status: Paid by Credit Card
+            </div>
+          )}
+
+          {currentStep === 5 && paymentStatus === 'failed' && (
+            <div className={styles.paymentFailedBanner}>
+              <FontAwesomeIcon icon={faTimes} />
+              Payment Status: Failed
+            </div>
+          )}
 
           {currentStep === 5 && (
             <>
