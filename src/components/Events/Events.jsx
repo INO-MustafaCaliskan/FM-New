@@ -137,7 +137,7 @@ export default function Events() {
               
               <div className={styles.eventActions}>
                 <Link href="/events/registration" style={{ textDecoration: "none" }}><button className={styles.btnPrimary} style={{ width: "100%" }}>Register Now</button></Link>
-                <button className={styles.btnSecondary}>Become a Sponsor</button>
+                {/* <button className={styles.btnSecondary}>Become a Sponsor</button> */}
                 <button className={styles.btnSecondary}>View Details</button>
               </div>
             </div>

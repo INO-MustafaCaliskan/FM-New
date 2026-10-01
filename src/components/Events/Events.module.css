@@ -3,12 +3,14 @@
   --card-bg: #ffffff;
   --text-main: #031F4B;
   --text-sub: #718096;
-  --border-color: #edf2f7;
+  --border-color: #e6e6e6;
   --shadow-flat: 0 2px 4px rgba(0,0,0,0.02);
   --btn-border: #e2e8f0;
   
-
-
+  background: var(--card-bg);
+  padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   min-height: 100vh;
 }
 
@@ -32,7 +34,7 @@
   display: flex;
   gap: 30px;
   border-bottom: 1px solid var(--border-color);
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 .tab {
   padding: 10px 5px;
@@ -88,7 +90,7 @@
 /* Event Card */
 .eventCard {
   background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  border: 1px solid rgb(216, 216, 216);
   border-radius: 12px;
   display: flex;
   overflow: hidden;

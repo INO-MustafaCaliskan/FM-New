@@ -342,7 +342,7 @@ export default function EventRegistration() {
             )}
 
             {/* STEP 5: Payment */}
-            {currentStep === 5 && paymentStatus === 'pending' && (
+            {/* {currentStep === 5 && paymentStatus === 'pending' && (
             <div className={styles.paymentPendingBanner}>
               <FontAwesomeIcon icon={faHourglassHalf} className={styles.pendingIcon} />
               <div className={styles.pendingText}>
@@ -351,7 +351,7 @@ export default function EventRegistration() {
               </div>
             </div>
           )}
-          
+           */}
           {currentStep === 5 && paymentStatus === 'success' && (
             <div className={styles.paymentSuccessBanner}>
               <FontAwesomeIcon icon={faCheckCircle} />
@@ -669,7 +669,7 @@ export default function EventRegistration() {
             Current Membership: Basic
           </div>
 
-          {currentStep === 5 && paymentStatus === 'pending' && (
+          {/* {currentStep === 5 && paymentStatus === 'pending' && (
             <div className={styles.paymentPendingBanner}>
               <FontAwesomeIcon icon={faHourglassHalf} className={styles.pendingIcon} />
               <div className={styles.pendingText}>
@@ -678,7 +678,7 @@ export default function EventRegistration() {
               </div>
             </div>
           )}
-          
+           */}
           {currentStep === 5 && paymentStatus === 'success' && (
             <div className={styles.paymentSuccessBanner}>
               <FontAwesomeIcon icon={faCheckCircle} />
