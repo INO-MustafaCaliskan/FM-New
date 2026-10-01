@@ -469,6 +469,8 @@
   height: 16px;
   cursor: pointer;
   accent-color: var(--primary-blue);
+  border: 1px solid #a0aec0;
+  border-radius: 4px;
 }
 .viewDetailsLink {
   font-size: 11px;
@@ -679,4 +681,307 @@
   font-size: 12px;
   font-weight: 500;
   opacity: 0.9;
+}
+
+/* Step 5 Payment */
+.invoiceBanner {
+  border: 1px solid #68d391;
+  background: #f0fff4;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.invoiceBannerLeft {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.invoiceIconWrapper {
+  width: 50px;
+  height: 50px;
+  background: #c6f6d5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #2f855a;
+  position: relative;
+}
+.invoiceIconWrapper .checkOverlay {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: #38a169;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #f0fff4;
+}
+.invoiceText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.invoiceTitle {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.invoiceBadge {
+  background: #c6f6d5;
+  color: #2f855a;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.invoiceMeta {
+  font-size: 13px;
+  color: var(--text-main);
+  font-weight: 600;
+}
+.invoiceMeta span {
+  font-weight: 400;
+  color: var(--text-sub);
+}
+.invoiceMeta strong {
+  color: #2f855a;
+}
+.invoiceDesc {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-top: 4px;
+}
+.btnDownload {
+  background: transparent;
+  white-space: nowrap;
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+.btnDownload:hover {
+  background: var(--light-blue);
+}
+
+.ccForm {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 25px;
+  background: var(--card-bg);
+}
+.ccFormHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ccFormTitle {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+.ccLogos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-sub);
+  font-weight: 600;
+}
+.ccLogos svg {
+  font-size: 24px;
+}
+.visaLogo { color: #1a1f71; }
+.mcLogo { color: #eb001b; }
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.formGroup label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+.formInputBox {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e0;
+  transition: border-color 0.2s;
+  border-radius: 6px;
+  padding: 10px 12px;
+  gap: 10px;
+}
+.formInputBox:focus-within {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 1px var(--primary-blue);
+}
+.formInputBox input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  color: var(--text-main);
+}
+.formInputBox input::placeholder {
+  color: #a0aec0;
+}
+.formInputIcon {
+  color: #a0aec0;
+  font-size: 14px;
+}
+
+.termsRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-bottom: 30px;
+}
+.termsRow a {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+.ccFormFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+.sslInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sslIcon {
+  font-size: 24px;
+  color: var(--primary-blue);
+}
+.sslText {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: var(--text-sub);
+}
+.sslText strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+.btnPay {
+  background: #c53030;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+.btnPay:hover {
+  background: #9b2c2c;
+}
+
+/* Payment Pending Status */
+.paymentPendingBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #fffaf0;
+  border: 1px solid #feebc8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.pendingIcon {
+  font-size: 24px;
+  color: #dd6b20;
+}
+.pendingText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pendingTitle {
+  font-size: 14px;
+  font-weight: 800;
+  color: #c05621;
+}
+.pendingDesc {
+  font-size: 12px;
+  color: var(--primary-blue);
+}
+.btnGoToRegistrations {
+  width: 100%;
+  background: var(--primary-blue);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  transition: all 0.2s;
+}
+.btnGoToRegistrations:hover {
+  background: #003688;
+}
+
+@media (max-width: 768px) {
+  .invoiceBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+  .ccFormFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .btnPay {
+    width: 100%;
+    justify-content: center;
+  }
 }
