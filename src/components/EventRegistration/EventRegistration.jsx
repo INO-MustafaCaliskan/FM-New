@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faCalendarAlt, faClock, faMapMarkerAlt, faInfoCircle, 
   faCheckCircle, faUser, faUserFriends, faUsers, faArrowRight, faArrowLeft,
-  faShieldAlt, faFileAlt, faGem, faMinusCircle, faMedal, faAward, faCertificate, faCheck, faTimes, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils
+  faFileAlt, faGem, faMinusCircle, faMedal, faAward, faShieldAlt, faCertificate, 
+  faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils, faCheck, faTimes
 } from "@fortawesome/free-solid-svg-icons";
-
 
 const VipTableIcon = () => (
   <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.optionIcon} style={{ margin: "0 -5px" }}>
@@ -24,6 +24,7 @@ const VipTableIcon = () => (
     <line x1="39" y1="38" x2="39" y2="47" stroke="currentColor" strokeWidth="1.5"/>
   </svg>
 );
+
 export default function EventRegistration() {
   const [currentStep, setCurrentStep] = useState(1);
   const [delegates, setDelegates] = useState(2);
@@ -55,9 +56,6 @@ export default function EventRegistration() {
     { value: 0, label: "No, Thanks", price: 0 },
   ];
 
-  const getDelegatePrice = () => delegateOptions.find(o => o.value === delegates)?.price || 0;
-  const getSpousePrice = () => spouseOptions.find(o => o.value === spouses)?.price || 0;
-  const getVipPrice = () => vipOptions.find(o => o.value === vipTables)?.price || 0;
   const mockFeatures = [
     "Company logo on event website",
     "Logo on event materials",
@@ -94,22 +92,14 @@ export default function EventRegistration() {
       return total + (sp ? sp.price : 0);
     }, 0);
   };
+
+  const getDelegatePrice = () => delegateOptions.find(o => o.value === delegates)?.price || 0;
+  const getSpousePrice = () => spouseOptions.find(o => o.value === spouses)?.price || 0;
+  const getVipPrice = () => vipOptions.find(o => o.value === vipTables)?.price || 0;
+  
   const totalFee = getDelegatePrice() + getSpousePrice() + getVipPrice() + getSponsorshipPrice();
 
-  const handleNext = () => {
-    if (currentStep < 5) setCurrentStep(currentStep + 1);
-  };
-  const handleBack = () => {
-    if (currentStep > 1) setCurrentStep(currentStep - 1);
-  };
-
-  const renderDelegateIcons = (count) => {
-    if (count === 1) return <FontAwesomeIcon icon={faUser} className={styles.optionIcon} />;
-    if (count === 2) return <FontAwesomeIcon icon={faUserFriends} className={styles.optionIcon} />;
-    return <FontAwesomeIcon icon={faUsers} className={styles.optionIcon} />;
-  };
-
-    const getSponsorIcon = (iconName) => {
+  const getSponsorIcon = (iconName) => {
     switch(iconName) {
       case "medal": return faMedal;
       case "award": return faAward;
@@ -123,6 +113,19 @@ export default function EventRegistration() {
       case "utensils": return faUtensils;
       default: return faAward;
     }
+  };
+
+  const handleNext = () => {
+    if (currentStep < 5) setCurrentStep(currentStep + 1);
+  };
+  const handleBack = () => {
+    if (currentStep > 1) setCurrentStep(currentStep - 1);
+  };
+
+  const renderDelegateIcons = (count) => {
+    if (count === 1) return <FontAwesomeIcon icon={faUser} className={styles.optionIcon} />;
+    if (count === 2) return <FontAwesomeIcon icon={faUserFriends} className={styles.optionIcon} />;
+    return <FontAwesomeIcon icon={faUsers} className={styles.optionIcon} />;
   };
 
   const renderSpouseIcons = (count) => {
@@ -260,7 +263,7 @@ export default function EventRegistration() {
                       {opt.value === 0 ? (
                         <FontAwesomeIcon icon={faMinusCircle} className={styles.optionIcon} />
                       ) : (
-                                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
                           {[...Array(opt.value)].map((_, i) => (
                             <VipTableIcon key={i} />
                           ))}
@@ -308,70 +311,15 @@ export default function EventRegistration() {
                             type="checkbox" 
                             className={styles.sponsorCheckbox} 
                             checked={isSelected}
-                            onChange={() => {}} // handled by parent div onClick
-                            onClick={(e) => e.stopPropagation()} // Let card click handle it, or we can just let it bubble
+                            onChange={() => {}}
+                            onClick={(e) => e.stopPropagation()} 
                           />
                           <span className={styles.viewDetailsLink} onClick={(e) => { e.stopPropagation(); setDetailModalOpen(opt.id); }}>View Details</span>
-                          {/* Detail Modal */}
-      {detailModalOpen && (
-        <div className={styles.modalOverlay} onClick={() => setDetailModalOpen(null)}>
-          {(() => {
-            const sp = sponsorshipOptions.find(o => o.id === detailModalOpen);
-            if (!sp) return null;
-            return (
-              <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-                <button className={styles.closeModalBtn} onClick={() => setDetailModalOpen(null)}>
-                  <FontAwesomeIcon icon={faTimes} />
-                </button>
-                
-                <div className={styles.modalHeader}>
-                  <div className={styles.modalIconWrapper} style={{ color: sp.color, backgroundColor: `${sp.color}15` }}>
-                    <FontAwesomeIcon icon={getSponsorIcon(sp.icon)} />
-                  </div>
-                  <div className={styles.modalTitleBox}>
-                    <h3 className={styles.modalTitle}>{sp.title}</h3>
-                    <span className={styles.modalPrice}>USD {sp.price.toLocaleString()}</span>
-                    <span className={styles.modalAvailability}>Availability: {sp.availability} remaining</span>
-                  </div>
-                </div>
-
-                <div className={styles.modalBody}>
-                  <div className={styles.modalSubtitle}>Package includes:</div>
-                  <div className={styles.featuresList}>
-                    {sp.features.map((feat, idx) => (
-                      <div key={idx} className={styles.featureItem}>
-                        <FontAwesomeIcon icon={faCheck} className={styles.featureCheck} />
-                        <span>{feat}</span>
+                        </div>
                       </div>
-                    ))}
-                  </div>
+                    );
+                  })}
                 </div>
-
-                <div className={styles.modalFooter}>
-                  <button className={styles.modalBtnClose} onClick={() => setDetailModalOpen(null)}>
-                    Close
-                  </button>
-                  <button 
-                    className={styles.modalBtnSelect} 
-                    onClick={() => {
-                      if (!selectedSponsors.includes(sp.id)) {
-                        setSelectedSponsors(prev => [...prev, sp.id]);
-                      }
-                      setDetailModalOpen(null);
-                    }}
-                  >
-                    Select {sp.title}
-                    <span>USD {sp.price.toLocaleString()}</span>
-                  </button>
-                </div>
-              </div>
-            );
-          })()}
-        </div>
-      )}
-    </div>
-  );
-}
 
                 {!showAllSponsors && sponsorshipOptions.length > 8 && (
                   <div className={styles.showMoreBtnWrapper}>
@@ -402,7 +350,7 @@ export default function EventRegistration() {
                 </button>
               ) : <div></div>}
               
-{currentStep < 4 ? (
+              {currentStep < 4 ? (
                 <button className={styles.btnNext} onClick={handleNext}>
                   Continue <FontAwesomeIcon icon={faArrowRight} />
                 </button>
@@ -423,7 +371,7 @@ export default function EventRegistration() {
         {/* RIGHT COLUMN - Summary */}
         <div className={styles.summaryCard}>
           <div className={styles.summaryHeader}>
-            <FontAwesomeIcon icon={faFileAlt, faGem, faMinusCircle, faMedal, faAward, faCertificate, faCheck, faTimes, faMouse, faFolder, faPen, faIdBadge, faCoffee, faUtensils} style={{ color: '#0047b3' }} /> Registration Summary
+            <FontAwesomeIcon icon={faFileAlt} style={{ color: '#0047b3' }} /> Registration Summary
           </div>
           
           <div className={styles.summaryList}>
@@ -441,7 +389,7 @@ export default function EventRegistration() {
               )}
             </div>
             
-                        <div className={styles.summaryItem}>
+            <div className={styles.summaryItem}>
               <span className={styles.summaryLabel}>VIP Table</span>
               {vipTables > 0 ? (
                 <span className={styles.summaryValue}>{vipTables} VIP Table{vipTables > 1 ? 's' : ''} — USD {getVipPrice().toLocaleString()}</span>
@@ -450,7 +398,7 @@ export default function EventRegistration() {
               )}
             </div>
             
-                        <div className={styles.summaryItem} style={{ borderBottom: 'none', paddingBottom: 0, alignItems: 'flex-start' }}>
+            <div className={styles.summaryItem} style={{ borderBottom: 'none', paddingBottom: 0, alignItems: 'flex-start' }}>
               <span className={styles.summaryLabel}>Sponsorship</span>
               {selectedSponsors.length > 0 ? (
                 <div className={styles.summarySponsorList}>
@@ -478,7 +426,9 @@ export default function EventRegistration() {
           </div>
         </div>
 
-        {/* Detail Modal */}
+      </div>
+
+      {/* Detail Modal */}
       {detailModalOpen && (
         <div className={styles.modalOverlay} onClick={() => setDetailModalOpen(null)}>
           {(() => {
