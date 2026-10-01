@@ -470,6 +470,11 @@
   accent-color: var(--primary-blue);
   border: 1px solid #a0aec0;
   border-radius: 4px;
+  transition: all 0.2s;
+}
+.sponsorCheckbox:hover {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 2px rgba(0, 71, 179, 0.2);
 }
 .viewDetailsLink {
   font-size: 11px;

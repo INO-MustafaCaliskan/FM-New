@@ -317,7 +317,7 @@ export default function EventRegistration() {
                             className={styles.sponsorCheckbox} 
                             checked={isSelected}
                             onChange={() => toggleSponsor(opt.id)}
-                            onClick={(e) => e.stopPropagation()} 
+                            
                           />
                           <span className={styles.viewDetailsLink} onClick={(e) => { e.stopPropagation(); setDetailModalOpen(opt.id); }}>View Details</span>
                         </div>
