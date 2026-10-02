@@ -230,13 +230,13 @@ export default function Events() {
           One to One Scheduler
         </div>
       </div>
-
+{/* 
       <div className={styles.searchArea}>
         <div className={styles.searchInputBox}>
           <input type="text" placeholder="Search events by title, keyword..." />
           <FontAwesomeIcon icon={faSearch} className={styles.searchIcon} />
         </div>
-      </div>
+      </div> */}
 
       {activeTab === 'upcoming' && (
         <div className={styles.eventsGrid}>
@@ -333,9 +333,7 @@ export default function Events() {
 
             {activeTab === 'registrations' && (
         <div style={{ marginTop: '20px' }}>
-          <div className={styles.registrationsSubtitle}>
-            Manage your upcoming event registrations, participant details, invoices, and past event records in one place.
-          </div>
+          
 
           {/* Active Registrations Section */}
           <div>
@@ -345,6 +343,10 @@ export default function Events() {
                 2
               </span>
             </div>
+
+            <div className={styles.registrationsSubtitle}>
+            Manage your upcoming event registrations, participant details, invoices, and past event records in one place.
+          </div>
 
             {/* Card 1 */}
             <div className={styles.horizontalCard}>

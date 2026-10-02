@@ -39,7 +39,7 @@
   margin-bottom: 20px;
 }
 .tab {
-  padding: 10px 5px;
+  padding: 10px 0px;
   font-weight: 600;
   font-size: 14px;
   color: var(--text-sub);
@@ -294,7 +294,7 @@
 /* My Registrations Tab */
 .registrationsSubtitle {
   font-size: 13px;
-  color: var(--primary-blue);
+  color: var(--text-sub);
   font-weight: 600;
   margin-bottom: 25px;
 }
@@ -504,12 +504,12 @@
   background: #f7fafc;
 }
 .filterTabActive {
-  background: var(--dark-blue);
-  border-color: var(--dark-blue);
+  background:#3182ce;;
+  border-color: #3182ce;;
   color: #fff;
 }
 .filterTabActive:hover {
-  background: var(--dark-blue);
+  background: #3182ce;
 }
 
 .historySearchBox {
