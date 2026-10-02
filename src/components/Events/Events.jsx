@@ -9,13 +9,24 @@ import {
 
 export default function Events() {
   const [activeTab, setActiveTab] = useState("upcoming");
+  const [filterTab, setFilterTab] = useState("All");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const savedTab = localStorage.getItem("eventsActiveTab");
       if (savedTab) setActiveTab(savedTab);
+      
+      const savedFilter = localStorage.getItem("registrationsFilterTab");
+      if (savedFilter) setFilterTab(savedFilter);
     }
   }, []);
+
+  const handleFilterChange = (tab) => {
+    setFilterTab(tab);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("registrationsFilterTab", tab);
+    }
+  };
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
@@ -95,6 +106,95 @@ export default function Events() {
       imgUrl: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&q=80"
     }
   ];
+
+  const MOCK_REGISTRATIONS = [
+    {
+      id: 1,
+      name: "FM Annual Conference 2027",
+      date: "Jun 28-30, 2027",
+      location: "Istanbul, Türkiye",
+      delegates: 2,
+      spouses: 1,
+      vipTables: 1,
+      sponsor: "Gold Sponsor",
+      paymentStatus: "Paid",
+      attendanceStatus: "Confirmed",
+      isUpcoming: true
+    },
+    {
+      id: 2,
+      name: "INO Summit 2027 Annual General Meeting",
+      date: "Aug 18-20, 2027",
+      location: "Singapore, Singapore",
+      delegates: 1,
+      spouses: 0,
+      vipTables: 0,
+      sponsor: "Silver Sponsor",
+      paymentStatus: "Unpaid",
+      attendanceStatus: "Pending",
+      isUpcoming: true
+    },
+    {
+      id: 3,
+      name: "FM Annual Conference 2026",
+      date: "Jan 24-27, 2026",
+      location: "Barcelona, Spain",
+      delegates: 2,
+      spouses: 1,
+      vipTables: 0,
+      sponsor: "Bronze Sponsor",
+      paymentStatus: "Paid",
+      attendanceStatus: "Attended",
+      isUpcoming: false
+    },
+    {
+      id: 4,
+      name: "FM Regional Meeting 2025",
+      date: "Oct 05-06, 2025",
+      location: "Dubai, UAE",
+      delegates: 1,
+      spouses: 0,
+      vipTables: 0,
+      sponsor: null,
+      paymentStatus: "Paid",
+      attendanceStatus: "Attended",
+      isUpcoming: false
+    },
+    {
+      id: 5,
+      name: "FM AGM 2024",
+      date: "Mar 18-19, 2024",
+      location: "Bangkok, Thailand",
+      delegates: 2,
+      spouses: 0,
+      vipTables: 1,
+      sponsor: "Silver Sponsor",
+      paymentStatus: "Paid",
+      attendanceStatus: "Attended",
+      isUpcoming: false
+    },
+    {
+      id: 6,
+      name: "Global Forwarders Webinar",
+      date: "Dec 10, 2023",
+      location: "Virtual",
+      delegates: 3,
+      spouses: 0,
+      vipTables: 0,
+      sponsor: null,
+      paymentStatus: "Unpaid",
+      attendanceStatus: "No Show",
+      isUpcoming: false
+    }
+  ];
+
+  const filteredRegistrations = MOCK_REGISTRATIONS.filter(reg => {
+    if (filterTab === 'Upcoming') return reg.isUpcoming;
+    if (filterTab === 'Previous') return !reg.isUpcoming;
+    if (filterTab === 'Paid') return reg.paymentStatus === 'Paid';
+    if (filterTab === 'Unpaid') return reg.paymentStatus === 'Unpaid';
+    return true; // 'All'
+  });
 
   return (
     <div className={styles.container}>
@@ -331,11 +431,15 @@ export default function Events() {
             
             <div className={styles.historyHeaderRow}>
               <div className={styles.filterTabs}>
-                <button className={`${styles.filterTab} ${styles.filterTabActive}`}>All</button>
-                <button className={styles.filterTab}>Upcoming</button>
-                <button className={styles.filterTab}>Previous</button>
-                <button className={styles.filterTab}>Paid</button>
-                <button className={styles.filterTab}>Unpaid</button>
+                {['All', 'Upcoming', 'Previous', 'Paid', 'Unpaid'].map(tab => (
+                  <button 
+                    key={tab}
+                    className={`${styles.filterTab} ${filterTab === tab ? styles.filterTabActive : ''}`}
+                    onClick={() => handleFilterChange(tab)}
+                  >
+                    {tab}
+                  </button>
+                ))}
               </div>
               <div className={styles.historySearchBox}>
                 <input type="text" placeholder="Search events..." />
@@ -357,83 +461,57 @@ export default function Events() {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* Row 1 */}
-                  <tr>
-                    <td>
-                      <div className={styles.eventNameCell}>
-                        <div className={`${styles.eventIconBadge} ${styles.bgBlue}`}><FontAwesomeIcon icon={faCalendarAlt} /></div>
-                        FM Annual Conference 2026
-                      </div>
-                    </td>
-                    <td><div className={styles.textCell}>Jan 27-24, 2026</div></td>
-                    <td>
-                      <div className={styles.textCell}>
-                        <FontAwesomeIcon icon={faMapMarkerAlt} /> Barcelona, Spain
-                      </div>
-                    </td>
-                    <td>
-                      <div className={styles.tagsCell}>
-                        <span className={`${styles.tagPill} ${styles.tagBlue}`}>2 Delegates</span>
-                        <span className={`${styles.tagPill} ${styles.tagOrange}`}>1 Spouse</span>
-                        <span className={`${styles.tagPill} ${styles.tagOrange}`}>Bronze Sponsor</span>
-                      </div>
-                    </td>
-                    <td><span className={styles.badgeGreen}>Paid</span></td>
-                    <td><span className={styles.badgeGreen} style={{ background: '#f0fff4', borderColor: 'transparent', padding: '4px 10px' }}><FontAwesomeIcon icon={faCheckCircle} /> Attended</span></td>
-                    <td><span className={styles.actionLink}>View Details <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '10px' }} /></span></td>
-                  </tr>
-
-                  {/* Row 2 */}
-                  <tr>
-                    <td>
-                      <div className={styles.eventNameCell}>
-                        <div className={`${styles.eventIconBadge} ${styles.bgOrange}`}><FontAwesomeIcon icon={faCalendarAlt} /></div>
-                        FM Regional Meeting 2025
-                      </div>
-                    </td>
-                    <td><div className={styles.textCell}>Oct 05-06, 2025</div></td>
-                    <td>
-                      <div className={styles.textCell}>
-                        <FontAwesomeIcon icon={faMapMarkerAlt} /> Dubai, UAE
-                      </div>
-                    </td>
-                    <td>
-                      <div className={styles.tagsCell}>
-                        <span className={`${styles.tagPill} ${styles.tagBlue}`}>1 Delegate</span>
-                        <span className={`${styles.tagPill} ${styles.tagGray}`}>No Spouse</span>
-                        <span className={`${styles.tagPill} ${styles.tagGray}`}>No VIP Table</span>
-                      </div>
-                    </td>
-                    <td><span className={styles.badgeGreen}>Paid</span></td>
-                    <td><span className={styles.badgeGreen} style={{ background: '#f0fff4', borderColor: 'transparent', padding: '4px 10px' }}><FontAwesomeIcon icon={faCheckCircle} /> Attended</span></td>
-                    <td><span className={styles.actionLink}>View Details <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '10px' }} /></span></td>
-                  </tr>
-
-                  {/* Row 3 */}
-                  <tr>
-                    <td>
-                      <div className={styles.eventNameCell}>
-                        <div className={`${styles.eventIconBadge} ${styles.bgGreen}`}><FontAwesomeIcon icon={faCalendarAlt} /></div>
-                        FM AGM 2024
-                      </div>
-                    </td>
-                    <td><div className={styles.textCell}>Mar 18-19, 2024</div></td>
-                    <td>
-                      <div className={styles.textCell}>
-                        <FontAwesomeIcon icon={faMapMarkerAlt} /> Bangkok, Thailand
-                      </div>
-                    </td>
-                    <td>
-                      <div className={styles.tagsCell}>
-                        <span className={`${styles.tagPill} ${styles.tagBlue}`}>2 Delegates</span>
-                        <span className={`${styles.tagPill} ${styles.tagPurple}`}>1 VIP Table</span>
-                        <span className={`${styles.tagPill} ${styles.tagGray}`}>Silver Sponsor</span>
-                      </div>
-                    </td>
-                    <td><span className={styles.badgeGreen}>Paid</span></td>
-                    <td><span className={styles.badgeGreen} style={{ background: '#f0fff4', borderColor: 'transparent', padding: '4px 10px' }}><FontAwesomeIcon icon={faCheckCircle} /> Attended</span></td>
-                    <td><span className={styles.actionLink}>View Details <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '10px' }} /></span></td>
-                  </tr>
+                  {filteredRegistrations.length > 0 ? filteredRegistrations.map((reg, idx) => (
+                    <tr key={reg.id}>
+                      <td>
+                        <div className={styles.eventNameCell}>
+                          <div className={`${styles.eventIconBadge} ${idx % 3 === 0 ? styles.bgBlue : idx % 3 === 1 ? styles.bgOrange : styles.bgGreen}`}>
+                            <FontAwesomeIcon icon={faCalendarAlt} />
+                          </div>
+                          {reg.name}
+                        </div>
+                      </td>
+                      <td><div className={styles.textCell}>{reg.date}</div></td>
+                      <td>
+                        <div className={styles.textCell}>
+                          <FontAwesomeIcon icon={reg.location === 'Virtual' ? faVideo : faMapMarkerAlt} /> {reg.location}
+                        </div>
+                      </td>
+                      <td>
+                        <div className={styles.tagsCell}>
+                          <span className={`${styles.tagPill} ${styles.tagBlue}`}>{reg.delegates} Delegate{reg.delegates > 1 ? 's' : ''}</span>
+                          {reg.spouses > 0 ? (
+                            <span className={`${styles.tagPill} ${styles.tagOrange}`}>{reg.spouses} Spouse{reg.spouses > 1 ? 's' : ''}</span>
+                          ) : (
+                            <span className={`${styles.tagPill} ${styles.tagGray}`}>No Spouse</span>
+                          )}
+                          {reg.vipTables > 0 && (
+                            <span className={`${styles.tagPill} ${styles.tagPurple}`}>{reg.vipTables} VIP Table</span>
+                          )}
+                          {reg.sponsor && (
+                            <span className={`${styles.tagPill} ${styles.tagOrange}`}>{reg.sponsor}</span>
+                          )}
+                        </div>
+                      </td>
+                      <td>
+                        <span className={reg.paymentStatus === 'Paid' ? styles.badgeGreen : styles.badgeRed}>
+                          {reg.paymentStatus}
+                        </span>
+                      </td>
+                      <td>
+                        <span className={reg.attendanceStatus === 'Attended' || reg.attendanceStatus === 'Confirmed' ? styles.badgeGreen : reg.attendanceStatus === 'No Show' ? styles.badgeRed : styles.badgeYellow} style={{ background: reg.attendanceStatus === 'Attended' || reg.attendanceStatus === 'Confirmed' ? '#f0fff4' : reg.attendanceStatus === 'No Show' ? '#fff5f5' : '#fffaf0', borderColor: 'transparent', padding: '4px 10px' }}>
+                          {reg.attendanceStatus === 'Attended' || reg.attendanceStatus === 'Confirmed' ? <FontAwesomeIcon icon={faCheckCircle} /> : null} {reg.attendanceStatus}
+                        </span>
+                      </td>
+                      <td><span className={styles.actionLink}>View Details <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '10px' }} /></span></td>
+                    </tr>
+                  )) : (
+                    <tr>
+                      <td colSpan="7" style={{ textAlign: 'center', padding: '30px' }}>
+                        No registrations found for the selected filter.
+                      </td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
             </div>
