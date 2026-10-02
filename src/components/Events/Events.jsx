@@ -644,26 +644,27 @@ export default function Events() {
           </div>
         </div>
       )}
-{/* 
-      <div className={styles.paginationArea}>
-        <span>Showing 1 to 4 of 12 events</span>
-        <div className={styles.paginationControls}>
-          <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronLeft} /></button>
-          <button className={`${styles.pageBtn} ${styles.pageBtnActive}`}>1</button>
-          <button className={styles.pageBtn}>2</button>
-          <button className={styles.pageBtn}>3</button>
-          <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronRight} /></button>
-          <div className={styles.perPageSelect}>
-            <span>Show</span>
-            <select defaultValue="8">
-              <option value="4">4</option>
-              <option value="8">8</option>
-              <option value="12">12</option>
-            </select>
-            <span>per page</span>
+      {(activeTab === 'upcoming' || activeTab === 'previous') && (
+        <div className={styles.paginationArea}>
+          <span>Showing 1 to 4 of 12 events</span>
+          <div className={styles.paginationControls}>
+            <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronLeft} /></button>
+            <button className={`${styles.pageBtn} ${styles.pageBtnActive}`}>1</button>
+            <button className={styles.pageBtn}>2</button>
+            <button className={styles.pageBtn}>3</button>
+            <button className={styles.pageBtn}><FontAwesomeIcon icon={faChevronRight} /></button>
+            <div className={styles.perPageSelect}>
+              <span>Show</span>
+              <select defaultValue="8">
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+              </select>
+              <span>per page</span>
+            </div>
           </div>
         </div>
-      </div> */}
+      )}
 
     </div>
   );
