@@ -1,15 +1,28 @@
 ﻿"use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Events.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
-  faSearch, faBookmark, faCalendarAlt, faClock, faVideo, faMapMarkerAlt, 
-  faChevronLeft, faChevronRight 
+  faSearch, faBookmark, faCalendarAlt, faClock, faVideo, faMapMarkerAlt, faChevronLeft, faChevronRight, faCog, faWallet, faCheckCircle 
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Events() {
   const [activeTab, setActiveTab] = useState("upcoming");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedTab = localStorage.getItem("eventsActiveTab");
+      if (savedTab) setActiveTab(savedTab);
+    }
+  }, []);
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("eventsActiveTab", tab);
+    }
+  };
 
   const MOCK_EVENTS = [
     {
@@ -94,25 +107,25 @@ export default function Events() {
       <div className={styles.tabsArea}>
         <div 
           className={`${styles.tab} ${activeTab === 'upcoming' ? styles.tabActive : ''}`}
-          onClick={() => setActiveTab('upcoming')}
+          onClick={() => handleTabChange('upcoming')}
         >
           Upcoming Events
         </div>
         <div 
           className={`${styles.tab} ${activeTab === 'previous' ? styles.tabActive : ''}`}
-          onClick={() => setActiveTab('previous')}
+          onClick={() => handleTabChange('previous')}
         >
           Previous Events
         </div>
         <div 
           className={`${styles.tab} ${activeTab === 'registrations' ? styles.tabActive : ''}`}
-          onClick={() => setActiveTab('registrations')}
+          onClick={() => handleTabChange('registrations')}
         >
           My Registrations
         </div>
         <div 
           className={`${styles.tab} ${activeTab === 'scheduler' ? styles.tabActive : ''}`}
-          onClick={() => setActiveTab('scheduler')}
+          onClick={() => handleTabChange('scheduler')}
         >
           One to One Scheduler
         </div>
@@ -218,9 +231,211 @@ export default function Events() {
         </div>
       )}
 
-      {activeTab === 'registrations' && (
-        <div style={{ padding: '40px 0', textAlign: 'center', color: '#718096' }}>
-          <h3>My Registrations content coming soon...</h3>
+            {activeTab === 'registrations' && (
+        <div style={{ marginTop: '20px' }}>
+          <div className={styles.registrationsSubtitle}>
+            Manage your upcoming event registrations, participant details, invoices, and past event records in one place.
+          </div>
+
+          {/* Active Registrations Section */}
+          <div>
+            <div className={styles.sectionTitleRow}>
+              <h2 className={styles.sectionTitle}>Upcoming / Active Registrations</h2>
+              <span className={styles.countBadge}>2</span>
+            </div>
+
+            {/* Card 1 */}
+            <div className={styles.horizontalCard}>
+              <img src="https://images.unsplash.com/photo-1596395819057-e37f55a8516b?w=500&q=80" alt="Istanbul" className={styles.horizontalCardImg} />
+              <div className={styles.horizontalCardContent}>
+                <h3 className={styles.horizTitle}>FM Annual Conference 2027</h3>
+                <div className={styles.horizMeta}>
+                  <span><FontAwesomeIcon icon={faMapMarkerAlt} /> Istanbul, Türkiye</span>
+                  <span style={{ color: '#cbd5e0' }}>•</span>
+                  <span><FontAwesomeIcon icon={faCalendarAlt} /> Jun 28-30, 2027</span>
+                </div>
+                
+                <div className={styles.statusGrid}>
+                  <div className={styles.statusGroup}>
+                    <span className={styles.statusLabel}>Registration Status</span>
+                    <span className={styles.badgeGreen}>Confirmed</span>
+                  </div>
+                  <div className={styles.statusGroup}>
+                    <span className={styles.statusLabel}>Payment Status</span>
+                    <span className={styles.badgeGreen}>Paid by Credit Card</span>
+                  </div>
+                </div>
+
+                <div className={styles.tagsRow}>
+                  <span className={`${styles.tagPill} ${styles.tagBlue}`}>2 Delegates</span>
+                  <span className={`${styles.tagPill} ${styles.tagOrange}`}>1 Spouse</span>
+                  <span className={`${styles.tagPill} ${styles.tagPurple}`}>1 VIP Table</span>
+                  <span className={`${styles.tagPill} ${styles.tagOrange}`}>Gold Sponsor</span>
+                </div>
+
+                <div className={styles.cardActionsRow}>
+                  <button className={styles.btnOutlineBlue}>
+                    <FontAwesomeIcon icon={faCog} /> Manage Registration
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className={styles.horizontalCard}>
+              <img src="https://images.unsplash.com/photo-1525625299384-f5fec53a525f?w=500&q=80" alt="Singapore" className={styles.horizontalCardImg} />
+              <div className={styles.horizontalCardContent}>
+                <h3 className={styles.horizTitle}>INO Summit 2027 Annual General Meeting</h3>
+                <div className={styles.horizMeta}>
+                  <span><FontAwesomeIcon icon={faMapMarkerAlt} /> Singapore, Singapore</span>
+                  <span style={{ color: '#cbd5e0' }}>•</span>
+                  <span><FontAwesomeIcon icon={faCalendarAlt} /> Aug 18-20, 2027</span>
+                </div>
+                
+                <div className={styles.statusGrid}>
+                  <div className={styles.statusGroup}>
+                    <span className={styles.statusLabel}>Registration Status</span>
+                    <span className={styles.badgeYellow}>Pending</span>
+                  </div>
+                  <div className={styles.statusGroup}>
+                    <span className={styles.statusLabel}>Payment Status</span>
+                    <span className={styles.badgeRed}>Unpaid</span>
+                  </div>
+                </div>
+
+                <div className={styles.tagsRow}>
+                  <span className={`${styles.tagPill} ${styles.tagBlue}`}>1 Delegate</span>
+                  <span className={`${styles.tagPill} ${styles.tagGray}`}>No Spouse</span>
+                  <span className={`${styles.tagPill} ${styles.tagGray}`}>No VIP Table</span>
+                  <span className={`${styles.tagPill} ${styles.tagGray}`}>Silver Sponsor</span>
+                  <span className={`${styles.tagPill} ${styles.tagBlue}`}>Total USD 2,450.00</span>
+                </div>
+
+                <div className={styles.cardActionsRow}>
+                  <button className={styles.btnOutlineBlue}>
+                    <FontAwesomeIcon icon={faCog} /> Manage Registration
+                  </button>
+                  <button className={styles.btnSolidBlue}>
+                    <FontAwesomeIcon icon={faWallet} /> Pay Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* History Section */}
+          <div className={styles.historySection}>
+            <h2 className={styles.sectionTitle} style={{ marginBottom: '20px' }}>Event Registrations</h2>
+            
+            <div className={styles.historyHeaderRow}>
+              <div className={styles.filterTabs}>
+                <button className={`${styles.filterTab} ${styles.filterTabActive}`}>All</button>
+                <button className={styles.filterTab}>Upcoming</button>
+                <button className={styles.filterTab}>Previous</button>
+                <button className={styles.filterTab}>Paid</button>
+                <button className={styles.filterTab}>Unpaid</button>
+              </div>
+              <div className={styles.historySearchBox}>
+                <input type="text" placeholder="Search events..." />
+                <FontAwesomeIcon icon={faSearch} />
+              </div>
+            </div>
+
+            <div className={styles.historyTableWrapper}>
+              <table className={styles.historyTable}>
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Registration Details</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Row 1 */}
+                  <tr>
+                    <td>
+                      <div className={styles.eventNameCell}>
+                        <div className={`${styles.eventIconBadge} ${styles.bgBlue}`}><FontAwesomeIcon icon={faCalendarAlt} /></div>
+                        FM Annual Conference 2026
+                      </div>
+                    </td>
+                    <td><div className={styles.textCell}>Jan 27-24, 2026</div></td>
+                    <td>
+                      <div className={styles.textCell}>
+                        <FontAwesomeIcon icon={faMapMarkerAlt} /> Barcelona, Spain
+                      </div>
+                    </td>
+                    <td>
+                      <div className={styles.tagsCell}>
+                        <span className={`${styles.tagPill} ${styles.tagBlue}`}>2 Delegates</span>
+                        <span className={`${styles.tagPill} ${styles.tagOrange}`}>1 Spouse</span>
+                        <span className={`${styles.tagPill} ${styles.tagOrange}`}>Bronze Sponsor</span>
+                      </div>
+                    </td>
+                    <td><span className={styles.badgeGreen}>Paid</span></td>
+                    <td><span className={styles.badgeGreen} style={{ background: '#f0fff4', borderColor: 'transparent', padding: '4px 10px' }}><FontAwesomeIcon icon={faCheckCircle} /> Attended</span></td>
+                    <td><span className={styles.actionLink}>View Details <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '10px' }} /></span></td>
+                  </tr>
+
+                  {/* Row 2 */}
+                  <tr>
+                    <td>
+                      <div className={styles.eventNameCell}>
+                        <div className={`${styles.eventIconBadge} ${styles.bgOrange}`}><FontAwesomeIcon icon={faCalendarAlt} /></div>
+                        FM Regional Meeting 2025
+                      </div>
+                    </td>
+                    <td><div className={styles.textCell}>Oct 05-06, 2025</div></td>
+                    <td>
+                      <div className={styles.textCell}>
+                        <FontAwesomeIcon icon={faMapMarkerAlt} /> Dubai, UAE
+                      </div>
+                    </td>
+                    <td>
+                      <div className={styles.tagsCell}>
+                        <span className={`${styles.tagPill} ${styles.tagBlue}`}>1 Delegate</span>
+                        <span className={`${styles.tagPill} ${styles.tagGray}`}>No Spouse</span>
+                        <span className={`${styles.tagPill} ${styles.tagGray}`}>No VIP Table</span>
+                      </div>
+                    </td>
+                    <td><span className={styles.badgeGreen}>Paid</span></td>
+                    <td><span className={styles.badgeGreen} style={{ background: '#f0fff4', borderColor: 'transparent', padding: '4px 10px' }}><FontAwesomeIcon icon={faCheckCircle} /> Attended</span></td>
+                    <td><span className={styles.actionLink}>View Details <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '10px' }} /></span></td>
+                  </tr>
+
+                  {/* Row 3 */}
+                  <tr>
+                    <td>
+                      <div className={styles.eventNameCell}>
+                        <div className={`${styles.eventIconBadge} ${styles.bgGreen}`}><FontAwesomeIcon icon={faCalendarAlt} /></div>
+                        FM AGM 2024
+                      </div>
+                    </td>
+                    <td><div className={styles.textCell}>Mar 18-19, 2024</div></td>
+                    <td>
+                      <div className={styles.textCell}>
+                        <FontAwesomeIcon icon={faMapMarkerAlt} /> Bangkok, Thailand
+                      </div>
+                    </td>
+                    <td>
+                      <div className={styles.tagsCell}>
+                        <span className={`${styles.tagPill} ${styles.tagBlue}`}>2 Delegates</span>
+                        <span className={`${styles.tagPill} ${styles.tagPurple}`}>1 VIP Table</span>
+                        <span className={`${styles.tagPill} ${styles.tagGray}`}>Silver Sponsor</span>
+                      </div>
+                    </td>
+                    <td><span className={styles.badgeGreen}>Paid</span></td>
+                    <td><span className={styles.badgeGreen} style={{ background: '#f0fff4', borderColor: 'transparent', padding: '4px 10px' }}><FontAwesomeIcon icon={faCheckCircle} /> Attended</span></td>
+                    <td><span className={styles.actionLink}>View Details <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '10px' }} /></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       )}
 
