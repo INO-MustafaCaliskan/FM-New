@@ -387,7 +387,10 @@
   border-radius: 4px;
   font-size: 11px;
   font-weight: 700;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
 }
 .badgeYellow {
   background: #fffaf0;
@@ -397,7 +400,10 @@
   border-radius: 4px;
   font-size: 11px;
   font-weight: 700;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
 }
 .badgeRed {
   background: #fff5f5;
@@ -407,7 +413,10 @@
   border-radius: 4px;
   font-size: 11px;
   font-weight: 700;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
 }
 
 .tagsRow {
