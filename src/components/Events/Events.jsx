@@ -537,8 +537,21 @@ export default function Events() {
 
             <div className={styles.schBodyRow}>
               <div className={styles.schIllustrationBox}>
-                {/* Fallback illustration using a generic vector/image style */}
-                <img src="https://cdni.iconscout.com/illustration/premium/thumb/calendar-schedule-4537617-3772242.png" alt="Scheduler Illustration" className={styles.schIllustrationImg} style={{ opacity: 0.8 }} />
+                                <svg width="100%" height="180" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="30" y="30" width="140" height="100" rx="12" fill="#fff" stroke="#3182ce" strokeWidth="6"/>
+                  <path d="M50 15 L50 45 M150 15 L150 45" stroke="#3182ce" strokeWidth="8" strokeLinecap="round"/>
+                  <rect x="30" y="60" width="140" height="6" fill="#3182ce"/>
+                  <rect x="50" y="80" width="15" height="15" rx="3" fill="#bee3f8"/>
+                  <rect x="75" y="80" width="15" height="15" rx="3" fill="#bee3f8"/>
+                  <rect x="100" y="80" width="15" height="15" rx="3" fill="#3182ce"/>
+                  <rect x="125" y="80" width="15" height="15" rx="3" fill="#bee3f8"/>
+                  <rect x="50" y="105" width="15" height="15" rx="3" fill="#bee3f8"/>
+                  <rect x="75" y="105" width="15" height="15" rx="3" fill="#bee3f8"/>
+                  <rect x="100" y="105" width="15" height="15" rx="3" fill="#bee3f8"/>
+                  <rect x="125" y="105" width="15" height="15" rx="3" fill="#bee3f8"/>
+                  <circle cx="150" cy="115" r="25" fill="#0047b3" stroke="#fff" strokeWidth="4"/>
+                  <path d="M150 102 V115 H158" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
               <div className={styles.schInfoList}>
                 <div className={styles.schInfoItem}>
