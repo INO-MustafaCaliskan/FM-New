@@ -162,8 +162,8 @@ export default function Events() {
                 <p className={styles.eventDesc}>{event.desc}</p>
                 
                 <div className={styles.eventActions}>
-                  <Link href="/events/registration" style={{ textDecoration: "none", width: "100%" }}>
-                    <button className={styles.btnPrimary} style={{ width: "100%" }}>Register Now</button>
+                  <Link href="/events/registration" style={{ textDecoration: "none", }}>
+                    <button className={styles.btnPrimary} >Register Now</button>
                   </Link>
                   <button className={styles.btnSecondary}>View Details</button>
                 </div>
@@ -210,7 +210,7 @@ export default function Events() {
                 <p className={styles.eventDesc}>{event.desc}</p>
                 
                 <div className={styles.eventActions}>
-                  <button className={styles.btnSecondary} style={{ width: "100%" }}>View Details</button>
+                  <button className={styles.btnSecondary} >View Details</button>
                 </div>
               </div>
             </div>
