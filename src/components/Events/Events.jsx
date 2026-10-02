@@ -644,7 +644,7 @@ export default function Events() {
           </div>
         </div>
       )}
-
+{/* 
       <div className={styles.paginationArea}>
         <span>Showing 1 to 4 of 12 events</span>
         <div className={styles.paginationControls}>
@@ -663,7 +663,7 @@ export default function Events() {
             <span>per page</span>
           </div>
         </div>
-      </div>
+      </div> */}
 
     </div>
   );
