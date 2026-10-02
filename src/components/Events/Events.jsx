@@ -241,7 +241,9 @@ export default function Events() {
           <div>
             <div className={styles.sectionTitleRow}>
               <h2 className={styles.sectionTitle}>Upcoming / Active Registrations</h2>
-              <span className={styles.countBadge}>2</span>
+              <span className={styles.countBadge} style={{ marginBottom: '0px' }}>
+                2
+              </span>
             </div>
 
             {/* Card 1 */}
@@ -283,7 +285,7 @@ export default function Events() {
 
             {/* Card 2 */}
             <div className={styles.horizontalCard}>
-              <img src="https://images.unsplash.com/photo-1525625299384-f5fec53a525f?w=500&q=80" alt="Singapore" className={styles.horizontalCardImg} />
+              <img src="https://images.unsplash.com/photo-1596395819057-e37f55a8516b?w=500&q=80" alt="Singapore" className={styles.horizontalCardImg} />
               <div className={styles.horizontalCardContent}>
                 <h3 className={styles.horizTitle}>INO Summit 2027 Annual General Meeting</h3>
                 <div className={styles.horizMeta}>

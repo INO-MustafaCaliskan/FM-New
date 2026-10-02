@@ -330,7 +330,6 @@
 }
 .horizontalCardImg {
   width: 260px;
-  height: 180px;
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
