@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./Events.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
-  faSearch, faBookmark, faCalendarAlt, faClock, faVideo, faMapMarkerAlt, faChevronLeft, faChevronRight, faCog, faWallet, faCheckCircle 
+  faSearch, faBookmark, faCalendarAlt, faClock, faVideo, faMapMarkerAlt, faChevronLeft, faChevronRight, faCog, faWallet, faCheckCircle, faLock, faStar, faBell, faInfoCircle, faCheck 
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Events() {
@@ -502,7 +502,7 @@ export default function Events() {
                       </td>
                       <td>
                         <span className={reg.attendanceStatus === 'Attended' || reg.attendanceStatus === 'Confirmed' ? styles.badgeGreen : reg.attendanceStatus === 'No Show' ? styles.badgeRed : styles.badgeYellow} style={{ background: reg.attendanceStatus === 'Attended' || reg.attendanceStatus === 'Confirmed' ? '#f0fff4' : reg.attendanceStatus === 'No Show' ? '#fff5f5' : '#fffaf0', borderColor: 'transparent', padding: '4px 10px' }}>
-                          {reg.attendanceStatus === 'Attended' || reg.attendanceStatus === 'Confirmed' ? <FontAwesomeIcon icon={faCheckCircle} /> : null} {reg.attendanceStatus}
+                          {reg.attendanceStatus === 'Attended' || reg.attendanceStatus === 'Confirmed' ? <FontAwesomeIcon icon={faCheckCircle, faLock, faStar, faBell, faInfoCircle, faCheck} /> : null} {reg.attendanceStatus}
                         </span>
                       </td>
                       <td><span className={styles.actionLink}>View Details <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '10px' }} /></span></td>
@@ -521,9 +521,114 @@ export default function Events() {
         </div>
       )}
 
-      {activeTab === 'scheduler' && (
-        <div style={{ padding: '40px 0', textAlign: 'center', color: '#718096' }}>
-          <h3>One to One Scheduler content coming soon...</h3>
+            {activeTab === 'scheduler' && (
+        <div className={styles.schedulerGrid}>
+          {/* Left Column */}
+          <div className={styles.schedulerCard}>
+            <div className={styles.schHeaderRow}>
+              <div className={styles.schHeaderIcon}>
+                <FontAwesomeIcon icon={faCalendarAlt} />
+              </div>
+              <div className={styles.schHeaderText}>
+                <h2>One to One Scheduler <span className={styles.badgeComingSoon}><FontAwesomeIcon icon={faLock} style={{fontSize: '10px'}}/> Coming Soon</span></h2>
+                <p>Plan one-to-one meetings with other participants once scheduling opens.</p>
+              </div>
+            </div>
+
+            <div className={styles.schBodyRow}>
+              <div className={styles.schIllustrationBox}>
+                {/* Fallback illustration using a generic vector/image style */}
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/calendar-schedule-4537617-3772242.png" alt="Scheduler Illustration" className={styles.schIllustrationImg} style={{ opacity: 0.8 }} />
+              </div>
+              <div className={styles.schInfoList}>
+                <div className={styles.schInfoItem}>
+                  <div className={styles.schInfoIcon}><FontAwesomeIcon icon={faCalendarAlt} /></div>
+                  <div className={styles.schInfoText}>
+                    <h4>One to One Scheduler will open 2 weeks before the event.</h4>
+                    <p>Available for paid members only.</p>
+                  </div>
+                </div>
+                <div className={styles.schInfoItem}>
+                  <div className={styles.schInfoIcon}><FontAwesomeIcon icon={faStar} /></div>
+                  <div className={styles.schInfoText}>
+                    <h4>Sponsors will receive early access.</h4>
+                    <p>Sponsors can start scheduling before general paid members.</p>
+                  </div>
+                </div>
+                <div className={styles.schInfoItem}>
+                  <div className={styles.schInfoIcon}><FontAwesomeIcon icon={faBell} /></div>
+                  <div className={styles.schInfoText}>
+                    <h4>You will be notified once scheduling becomes available.</h4>
+                    <p>We'll send you an email and in-app notification.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.schFooterBanner}>
+              <FontAwesomeIcon icon={faInfoCircle} />
+              You will be able to book, accept, and manage meetings when the scheduler becomes available.
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className={styles.schedulerCardRight}>
+            
+            <div>
+              <div className={styles.rightSectionTitle}>Selected Event</div>
+              <div className={styles.selectedEventBox}>
+                <div className={styles.selectedEventLogo}>
+                  INO<br/>SUMMIT
+                </div>
+                <div className={styles.selectedEventInfo}>
+                  <h4>INO SUMMIT FM 10TH AGM 2025 <span className={styles.badgeGreen} style={{marginTop: '4px'}}>Registered</span></h4>
+                  <p><FontAwesomeIcon icon={faCalendarAlt} style={{color: 'var(--primary-blue)'}} /> Jun 10 - Jun 12, 2025</p>
+                  <p><FontAwesomeIcon icon={faMapMarkerAlt} style={{color: 'var(--primary-blue)'}} /> Athens, Greece</p>
+                </div>
+              </div>
+            </div>
+
+            <hr style={{ border: 'none', borderTop: '1px solid var(--border-color)', margin: '0' }} />
+
+            <div>
+              <div className={styles.rightSectionTitle}>Scheduler Opening Window</div>
+              <div className={styles.schAlertBox}>
+                <FontAwesomeIcon icon={faClock} />
+                <div>
+                  <h5>Opens 2 weeks before the event</h5>
+                  <p>May 27, 2025 at 2:00 PM Hong Kong Time (GMT+8)</p>
+                </div>
+              </div>
+            </div>
+
+            <hr style={{ border: 'none', borderTop: '1px solid var(--border-color)', margin: '0' }} />
+
+            <div>
+              <div className={styles.rightSectionTitle}>Who Can Access</div>
+              <div className={styles.whoAccessList}>
+                <div className={styles.whoAccessItem}>
+                  <FontAwesomeIcon icon={faCheckCircle} className={`${styles.whoAccessIcon} ${styles.iconGreen}`} />
+                  <div>
+                    <h5>Paid Members</h5>
+                    <p>Access opens for all paid members when the scheduler opens.</p>
+                  </div>
+                </div>
+                <div className={styles.whoAccessItem}>
+                  <FontAwesomeIcon icon={faStar} className={`${styles.whoAccessIcon} ${styles.iconOrange}`} />
+                  <div>
+                    <h5>Sponsors (Early Access)</h5>
+                    <p>Sponsors get early access to schedule meetings before paid members.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.infoSmBanner}>
+              <FontAwesomeIcon icon={faInfoCircle} />
+              All times shown in Hong Kong Time (GMT+8)
+            </div>
+
+          </div>
         </div>
       )}
 
