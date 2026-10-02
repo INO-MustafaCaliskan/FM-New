@@ -58,6 +58,31 @@ export default function Events() {
     }
   ];
 
+  const MOCK_PREVIOUS_EVENTS = [
+    {
+      id: 101,
+      type: "Physical",
+      title: "INO Summit 2025 Annual General Meeting",
+      date: "Oct 10, 2025 - Oct 11, 2025",
+      time: "09:00 AM - 05:00 PM (UTC+3)",
+      locationType: "physical",
+      location: "Hilton Bomonti, Istanbul, Turkey",
+      desc: "Last year's successful networking event with over 500 delegates from 60 countries.",
+      imgUrl: "https://images.unsplash.com/photo-1561489413-985b06da5bee?w=500&q=80"
+    },
+    {
+      id: 102,
+      type: "Virtual",
+      title: "Logistics Digitalization Conference",
+      date: "May 20, 2025 - May 21, 2025",
+      time: "10:00 AM - 02:00 PM (UTC+3)",
+      locationType: "virtual",
+      location: "Zoom",
+      desc: "Discussed the future of freight forwarding and digital supply chain solutions.",
+      imgUrl: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&q=80"
+    }
+  ];
+
   return (
     <div className={styles.container}>
       
@@ -100,50 +125,110 @@ export default function Events() {
         </div>
       </div>
 
-      <div className={styles.eventsGrid}>
-        {MOCK_EVENTS.map(event => (
-          <div key={event.id} className={styles.eventCard}>
-            <div className={styles.eventImageCol}>
-              <div className={event.type === 'Virtual' ? styles.badgeVirtual : styles.badgePhysical}>
-                {event.type}
-              </div>
-              <img src={event.imgUrl} alt={event.title} className={styles.eventImg} />
-            </div>
-            
-            <div className={styles.eventContentCol}>
-              <FontAwesomeIcon icon={faBookmark} className={styles.bookmarkIcon} />
-              
-              <h3 className={styles.eventTitle}>{event.title}</h3>
-              
-              <div className={styles.eventDetailsRow}>
-                <div className={styles.detailItem}>
-                  <FontAwesomeIcon icon={faCalendarAlt} />
-                  <span>{event.date}</span>
+      {activeTab === 'upcoming' && (
+        <div className={styles.eventsGrid}>
+          {MOCK_EVENTS.map(event => (
+            <div key={event.id} className={styles.eventCard}>
+              <div className={styles.eventImageCol}>
+                <div className={event.type === 'Virtual' ? styles.badgeVirtual : styles.badgePhysical}>
+                  {event.type}
                 </div>
-                <div className={styles.detailItem}>
-                  <FontAwesomeIcon icon={faClock} />
-                  <span>{event.time}</span>
-                </div>
+                <img src={event.imgUrl} alt={event.title} className={styles.eventImg} />
               </div>
               
-              <div className={styles.eventDetailsRow}>
-                <div className={styles.detailItem}>
-                  <FontAwesomeIcon icon={event.locationType === 'virtual' ? faVideo : faMapMarkerAlt} />
-                  <span>{event.location}</span>
+              <div className={styles.eventContentCol}>
+                <FontAwesomeIcon icon={faBookmark} className={styles.bookmarkIcon} />
+                
+                <h3 className={styles.eventTitle}>{event.title}</h3>
+                
+                <div className={styles.eventDetailsRow}>
+                  <div className={styles.detailItem}>
+                    <FontAwesomeIcon icon={faCalendarAlt} />
+                    <span>{event.date}</span>
+                  </div>
+                  <div className={styles.detailItem}>
+                    <FontAwesomeIcon icon={faClock} />
+                    <span>{event.time}</span>
+                  </div>
                 </div>
-              </div>
+                
+                <div className={styles.eventDetailsRow}>
+                  <div className={styles.detailItem}>
+                    <FontAwesomeIcon icon={event.locationType === 'virtual' ? faVideo : faMapMarkerAlt} />
+                    <span>{event.location}</span>
+                  </div>
+                </div>
 
-              <p className={styles.eventDesc}>{event.desc}</p>
-              
-              <div className={styles.eventActions}>
-                <Link href="/events/registration" style={{ textDecoration: "none" }}><button className={styles.btnPrimary} style={{ width: "100%" }}>Register Now</button></Link>
-                {/* <button className={styles.btnSecondary}>Become a Sponsor</button> */}
-                <button className={styles.btnSecondary}>View Details</button>
+                <p className={styles.eventDesc}>{event.desc}</p>
+                
+                <div className={styles.eventActions}>
+                  <Link href="/events/registration" style={{ textDecoration: "none", width: "100%" }}>
+                    <button className={styles.btnPrimary} style={{ width: "100%" }}>Register Now</button>
+                  </Link>
+                  <button className={styles.btnSecondary}>View Details</button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
+
+      {activeTab === 'previous' && (
+        <div className={styles.eventsGrid}>
+          {MOCK_PREVIOUS_EVENTS.map(event => (
+            <div key={event.id} className={styles.eventCard}>
+              <div className={styles.eventImageCol}>
+                <div className={event.type === 'Virtual' ? styles.badgeVirtual : styles.badgePhysical}>
+                  {event.type}
+                </div>
+                <img src={event.imgUrl} alt={event.title} className={styles.eventImg} />
+              </div>
+              
+              <div className={styles.eventContentCol}>
+                <FontAwesomeIcon icon={faBookmark} className={styles.bookmarkIcon} />
+                
+                <h3 className={styles.eventTitle}>{event.title}</h3>
+                
+                <div className={styles.eventDetailsRow}>
+                  <div className={styles.detailItem}>
+                    <FontAwesomeIcon icon={faCalendarAlt} />
+                    <span>{event.date}</span>
+                  </div>
+                  <div className={styles.detailItem}>
+                    <FontAwesomeIcon icon={faClock} />
+                    <span>{event.time}</span>
+                  </div>
+                </div>
+                
+                <div className={styles.eventDetailsRow}>
+                  <div className={styles.detailItem}>
+                    <FontAwesomeIcon icon={event.locationType === 'virtual' ? faVideo : faMapMarkerAlt} />
+                    <span>{event.location}</span>
+                  </div>
+                </div>
+
+                <p className={styles.eventDesc}>{event.desc}</p>
+                
+                <div className={styles.eventActions}>
+                  <button className={styles.btnSecondary} style={{ width: "100%" }}>View Details</button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {activeTab === 'registrations' && (
+        <div style={{ padding: '40px 0', textAlign: 'center', color: '#718096' }}>
+          <h3>My Registrations content coming soon...</h3>
+        </div>
+      )}
+
+      {activeTab === 'scheduler' && (
+        <div style={{ padding: '40px 0', textAlign: 'center', color: '#718096' }}>
+          <h3>One to One Scheduler content coming soon...</h3>
+        </div>
+      )}
 
       <div className={styles.paginationArea}>
         <span>Showing 1 to 4 of 12 events</span>
