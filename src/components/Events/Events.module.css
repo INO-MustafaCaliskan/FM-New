@@ -593,6 +593,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  max-width: 220px;
 }
 .actionLink {
   color: var(--primary-blue);
@@ -604,6 +605,7 @@
   gap: 5px;
   transition: color 0.2s;
   cursor: pointer;
+  white-space: nowrap;
 }
 .actionLink:hover {
   color: #003688;
