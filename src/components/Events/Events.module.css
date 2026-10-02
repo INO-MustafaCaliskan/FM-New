@@ -3,6 +3,8 @@
   --card-bg: #ffffff;
   --text-main: #031F4B;
   --text-sub: #718096;
+  --primary-blue: #0047b3;
+  --dark-blue: #031F4B;
   --border-color: #e6e6e6;
   --shadow-flat: 0 2px 4px rgba(0,0,0,0.02);
   --btn-border: #e2e8f0;
@@ -502,12 +504,12 @@
   background: #f7fafc;
 }
 .filterTabActive {
-  background: var(--primary-blue);
-  border-color: var(--primary-blue);
+  background: var(--dark-blue);
+  border-color: var(--dark-blue);
   color: #fff;
 }
 .filterTabActive:hover {
-  background: var(--primary-blue);
+  background: var(--dark-blue);
 }
 
 .historySearchBox {
